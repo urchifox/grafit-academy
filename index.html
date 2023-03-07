@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="" sizes="">
+    <link rel="icon" type="image/svg" href="" sizes="">
+    <link rel="icon" type="image/x-icon" href="" sizes="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link href="css/outline.css" rel="stylesheet">  <link href="css/outline-settings.css" rel="stylesheet">  -->
+    <title>Grafit Academy</title>
+  </head>
+  <body>
+    <header>
+        <nav class="main-nav">
+            <a href="#" class="logo"><img src="img/logo.png" alt="Логотип"></a>
+            <ul class="main-nav-list">
+                <li class="main-nav-item">
+                    <a href="#">Рефы</a>
+                </li>
+                <li class="main-nav-item dropdown">
+                    <a href="#">Курсы <!-- (разворачиваемый список) --></a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="#">Туториалы</a>
+                </li>
+                <li class="main-nav-item">
+                    <a href="#">Статьи</a>
+                </li>
+            </ul>
+           <section class="buttons-header">
+                <button class="bucket"><img src="../img/shop-bucket.svg" width="34px" height="34px"></button>
+                <div class="sign-in-buttons">
+                    <button class="login"><img src="../img/user_icon.svg" width="30px" height="30px"></button> 
+                    <button class="registration"><img src="../img/sign-in.svg" width="30px" height="30px"></button> 
+                </div>
+           </section>
+        </nav>
+         <!-- переключение темы -->
+        <!-- переключение языка -->
+    </header>
+    <main>
+        <section class="hero">
+            <h1 >Учись в Графите!</h1>
+            <section class="lead">Смотри какие классные работы делают наши студенты:</section>
+            <div class="slider">
+                <input type="radio" id="btn-1" class="toggle" name="toggle" checked>
+                <input type="radio" id="btn-2" class="toggle" name="toggle">
+                <input type="radio" id="btn-3" class="toggle" name="toggle">
+                <div class="slider-controls">
+                    <label for="btn-1"></label>
+                    <label for="btn-2"></label>
+                    <label for="btn-3"></label>
+                </div>
+                <button class="arrow left"></button>
+                <div class="slider-inner">
+                    <div class="slider-slides">
+                        <figure class="main-photo">
+                            <img src="img/main-photo-1.jpg" alt="работы наших учеников">
+                            <figcaption>Работа нашего ученика Михаила Пищулина </figcaption>
+                        </figure>
+                        <figure class="main-photo">
+                            <img src="img/main-photo-2.jpg" alt="работы наших учеников">
+                            <figcaption>Работа нашей ученицы Александры Беловой </figcaption>
+                        </figure>
+                        <figure class="main-photo">
+                            <img src="img/main-photo-3.jpg" alt="работы наших учеников">
+                            <figcaption>Работа нашей ученицы Екатерины Грачевой </figcaption>
+                        </figure>  
+                    </div>
+                </div>
+                <button class="arrow right"></button>
+            </div>
+        </section>
+        <article class="new-packs">
+             <h2 class="">Популярные паки</h2>
+             <ul class="new-packs-list">
+                <li class="new-pack-card">
+                    <a href="#" class="pack-link">
+                      <h3>530+ Male Couple</h3>
+                    </a>
+                    <a href="#" class="pack-link">
+                        <!-- надо сделать тут слайдер -->
+                        <img src="img/refpack-1-1.jpg" alt="" class="pack-cover">  
+                     </a>
+                    <div class="price-buy">
+                        <span class="price">900руб.</span>
+                        <button class="btn-buy">
+                            <img src="../img/buy.svg" width="30px" height="30px">
+                        </button>
+                        <button class="add-favorites">
+                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                            <span class="material-icons favorite_border">
+                                favorite_border
+                            </span>
+                            <span class="material-icons  favorite_checked hidden">
+                                favorite
+                            </span>
+                        </button>  
+                    </div>
+                </li>
+                <li class="new-pack-card">
+                    <a href="#" class="pack-link">
+                        <h3>440+ Epic Rainforest</h3>
+                    </a>
+                    <a href="#" class="pack-link">
+                        <!-- надо сделать тут слайдер -->
+                        <img src="img/refpack-2-1.jpg" alt="" class="pack-cover">
+                    </a>
+                    <div class="price-buy">
+                        <span class="price">900руб.</span>
+                       <button class="btn-buy"><img src="../img/buy.svg" width="30px" height="30px">
+                        <!-- <button class="add-favorites"><img src="../img/favorites.svg" width="30px" height="30px"> -->
+                        <button class="add-favorites">
+                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                            <span class="material-icons favorite_border">
+                                favorite_border
+                            </span>
+                            <span class="material-icons  favorite_checked hidden">
+                                favorite
+                            </span>
+                        </button>
+                </li>
+                <li class="new-pack-card">
+                    <a href="#" class="pack-link">
+                        <h3>510+ Space Cowboy</h3>
+                    </a>
+                    <a href="#" class="pack-link">
+                        <!-- надо сделать тут слайдер -->
+                        <img src="img/refpack-3-1.jpg" alt=""  class="pack-cover">
+                    </a>
+                    <div class="price-buy">
+                        <span class="price">900руб.</span>
+                        <button class="btn-buy"><img src="../img/buy.svg" width="30px" height="30px"> 
+                        <!-- <button class="add-favorites"><img src="../img/favorites.svg" width="30px" height="30px">    -->
+                        <button class="add-favorites">
+                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                            <span class="material-icons favorite_border">
+                                favorite_border
+                            </span>
+                            <span class="material-icons  favorite_checked hidden">
+                                favorite
+                            </span>
+                        </button>
+                    </div>
+                </li>
+                <li class="new-pack-card">
+                    <a href="#" class="pack-link">
+                        <h3>770+ Castle </h3>
+                    </a>
+                    <a href="#" class="pack-link">
+                      <!-- надо сделать тут слайдер -->
+                        <img src="img/refpack-4-1.jpg" alt="" class="pack-cover">  
+                    </a>
+                    <div class="price-buy">
+                        <span class="price">900руб.</span>
+                        <button class="btn-buy"><img src="../img/buy.svg" width="30px" height="30px">
+                        <!-- <button class="add-favorites"><img src="../img/favorites.svg" width="30px" height="30px">     -->
+                        <button class="add-favorites">
+                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                            <span class="material-icons favorite_border">
+                                favorite_border
+                            </span>
+                            <span class="material-icons  favorite_checked hidden">
+                                favorite
+                            </span>
+                        </button>
+                    </div>
+                </li>
+             </ul>
+        </article>
+        <article class="next-courses">
+            <h2>Ближайшие открытые потоки курсов</h2>
+            <section class="next-course">
+                <h3><a href="" class="course-link">Курс по стилизации</a></h3>
+                <a href="" class="course-link"><img src="img/course-1.jpg" alt=""></a>
+                <div class="info">
+                    <div class="dates">
+                        Даты: 
+                        <time datetime="2023-2-10">10 февраля</time> 
+                        - 
+                        <time datetime="2023-4-20">20 апреля</time>
+                    </div>
+                    <div class="desc">
+                        Освой приемы стилизации вместе с нашим лид-артистом по иллюстрации Михаилом Бабкиным!
+                    </div>
+                    <a href="#" class="details">Узнать подробности</a>
+                    <div class="price-book">
+                        <span class="price">3300руб.</span>
+                        <button class="book">Записаться</button>    
+                    </div>
+                </div>
+            </section>
+            <section class="next-course">
+                <h3><a href="" class="course-link">UI / UX</a></h3>
+                <a href="" class="course-link"><img src="img/course-2.jpg" alt=""></a>
+                <div class="info">
+                    <div class="dates">
+                        Даты: 
+                        <time datetime="2023-2-16">16 февраля</time> 
+                        - 
+                        <time datetime="2023-4-30">30 апреля</time>
+                    </div>
+                    <div class="desc">
+                        Научись делать завлекающие интерфейсы с нашей художницей по интефейсам Юлией Бойко!
+                    </div>
+                    <a href="#" class="details">Узнать подробности</a>
+                    <div class="price-book">
+                        <span class="price">2800руб.</span>
+                        <button class="book">Записаться</button>    
+                    </div>
+                </div>
+            </section>        
+        </article>
+       <article class="cooming-soon">
+            <h2 class="">Готовящиеся курсы (ожидается старт)</h2>
+            <div class="new-courses-container">
+                <section class="new-course">
+                    2D Иллюстрация
+                    <button class="let-me-know">
+                        <span class="material-icons  not-checked">
+                                alarm
+                        </span>
+                        <span class="material-icons checked hidden">
+                            alarm_on
+                        </span>        
+                    </button>
+                </section>
+                <section class="new-course">
+                    2D анимация
+                    <button class="let-me-know">
+                        <span class="material-icons not-checked">
+                                alarm
+                        </span>
+                        <span class="material-icons checked hidden">
+                            alarm_on
+                        </span>        
+                    </button>
+                </section> 
+                <section class="new-course">
+                    Шейдинг персонажей
+                    <button class="let-me-know">
+                        <span class="material-icons not-checked">
+                                alarm
+                        </span>
+                        <span class="material-icons checked hidden">
+                            alarm_on
+                        </span>        
+                    </button>
+                </section>     
+            </div>
+       </article>
+       <!-- <article class="promo">
+            <h2 class="">Акции</h2>
+       </article> -->
+    </main>
+    <footer>
+        <div class="footer-container">
+          <section class="copyright">
+            <img src="img/copyright.png" alt="копирайт">
+            </section> 
+            <h2 class="visually-hidden">Контактная информация</h2>
+            <ul class="contacts">
+                <!-- <li class="contact-item">
+                    <a href="https://www.grafitart.com/">Сайт студии</a>
+                </li>-->
+                <li class="contact-item">
+                    <ul class="social-list">
+                        <li class="social-item">
+                            <a href="https://www.artstation.com/grafit"><img src="img/artstation.png" alt="Arstation"></a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://www.behance.net/grafitart"><img src="img/behance.png" alt="Behance"></a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://vk.com/studiyagrafit"><img src="img/vk.png" alt="VK"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="contact-item">
+                    <a href="mailto:work@grafitart.com" class="email"><img src="img/mail.png" alt="email: work@grafitart.com"></a>
+                </li>
+            </ul>  
+        </div>
+    </footer>
+    <script src="scripts/slider-main-page.js"></script>
+    <script src="scripts/favorites.js"></script>
+    <script src="scripts/let-me-know.js"></script>
+  </body>
+</html>
