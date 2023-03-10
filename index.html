@@ -13,68 +13,68 @@
     <title>Grafit Academy</title>
   </head>
   <body>
-    <header>
-        <nav class="main-nav">
-            <a href="#" class="logo"><img src="img/logo.png" alt="Логотип"></a>
-            <ul class="main-nav-list">
-                <li class="main-nav-item">
-                    <a href="#">Рефы</a>
+    <header class="header">
+        <nav class="main-nav header__main-nav">
+            <a href="#" class="main-nav__logo logo"><img src="img/logo.png" alt="Логотип"></a>
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Рефы</a>
                 </li>
-                <li class="main-nav-item dropdown">
-                    <a href="#">Курсы <!-- (разворачиваемый список) --></a>
+                <li class="main-nav__item dropdown">
+                    <a href="#" class="main-nav__link">Курсы <!-- (разворачиваемый список) --></a>
                 </li>
-                <li class="main-nav-item">
-                    <a href="#">Туториалы</a>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Туториалы</a>
                 </li>
-                <li class="main-nav-item">
-                    <a href="#">Статьи</a>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">Статьи</a>
                 </li>
             </ul>
-           <section class="buttons-header">
-                <button class="bucket"><img src="../img/shop-bucket.svg" width="34px" height="34px"></button>
+           <section class="main-nav__profile-btns">
+                <button class="main-nav__bucket main-nav__profile-btn"><img src="../img/shop-bucket.svg" width="34px" height="34px"></button>
                 <div class="sign-in-buttons">
-                    <button class="login"><img src="../img/user_icon.svg" width="30px" height="30px"></button> 
-                    <button class="registration"><img src="../img/sign-in.svg" width="30px" height="30px"></button> 
+                    <button class="main-nav__login main-nav__profile-btn"><img src="../img/user_icon.svg" width="30px" height="30px"></button> 
+                    <button class="main-nav__registration main-nav__profile-btn"><img src="../img/sign-in.svg" width="30px" height="30px"></button> 
                 </div>
            </section>
         </nav>
          <!-- переключение темы -->
         <!-- переключение языка -->
     </header>
-    <main>
-        <section class="hero">
-            <h1 >Учись в Графите!</h1>
-            <section class="lead">Смотри какие классные работы делают наши студенты:</section>
-            <div class="slider">
-                <input type="radio" id="btn-1" class="toggle" name="toggle" checked>
-                <input type="radio" id="btn-2" class="toggle" name="toggle">
-                <input type="radio" id="btn-3" class="toggle" name="toggle">
-                <div class="slider-controls">
-                    <label for="btn-1"></label>
-                    <label for="btn-2"></label>
-                    <label for="btn-3"></label>
+    <main class="main">
+        <section class="block-hero main__block">
+            <h1 class="block-hero__header">Учись в Графите!</h1>
+            <section class="lead main__lead">Смотри какие классные работы делают наши студенты:</section>
+            <div class="slider block-hero__slider ">
+                <input type="radio" id="btn-1" class="slider__toggle" name="toggle" checked>
+                <input type="radio" id="btn-2" class="slider__toggle" name="toggle">
+                <input type="radio" id="btn-3" class="slider__toggle" name="toggle">
+                <div class="slider__controls">
+                    <label class="slider__label" for="btn-1"></label>
+                    <label class="slider__label" for="btn-2"></label>
+                    <label class="slider__label" for="btn-3"></label>
                 </div>
-                <button class="arrow left"></button>
-                <div class="slider-inner">
-                    <div class="slider-slides">
-                        <figure class="main-photo">
-                            <img src="img/main-photo-1.jpg" alt="работы наших учеников">
-                            <figcaption>Работа нашего ученика Михаила Пищулина </figcaption>
+                <button class="arrow arrow-left slider__arrow-left"></button>
+                <div class="slider__img-container">
+                    <div class="slider__slides">
+                        <figure class="slider__picture">
+                            <img class="slider__img" src="img/main-photo-1.jpg" alt="работы наших учеников">
+                            <figcaption class="slider__desc">Работа нашего ученика Михаила Пищулина </figcaption>
                         </figure>
-                        <figure class="main-photo">
-                            <img src="img/main-photo-2.jpg" alt="работы наших учеников">
-                            <figcaption>Работа нашей ученицы Александры Беловой </figcaption>
+                        <figure class="slider__picture">
+                            <img class="slider__img" src="img/main-photo-2.jpg" alt="работы наших учеников">
+                            <figcaption  class="slider__desc">Работа нашей ученицы Александры Беловой </figcaption>
                         </figure>
-                        <figure class="main-photo">
-                            <img src="img/main-photo-3.jpg" alt="работы наших учеников">
-                            <figcaption>Работа нашей ученицы Екатерины Грачевой </figcaption>
+                        <figure class="slider__picture" class="slider__picture">
+                            <img  class="slider__img" src="img/main-photo-3.jpg" alt="работы наших учеников">
+                            <figcaption class="slider__desc">Работа нашей ученицы Екатерины Грачевой </figcaption>
                         </figure>  
                     </div>
                 </div>
-                <button class="arrow right"></button>
+                <button class="arrow arrow-right slider__arrow-right"></button>
             </div>
         </section>
-        <article class="popular-packs">
+        <article class="popular-packs main__block">
              <h2 class="">Популярные паки</h2>
              <p class="lead">Эти паки бьют все рекорды по популярности! </p>
              <ul class="popular-packs-list">
@@ -164,7 +164,7 @@
                 </li>
              </ul>
         </article>
-        <article class="next-courses">
+        <article class="next-courses main__block">
             <h2>Ближайшие открытые потоки курсов</h2>
             <p class="lead">Ты еще успеваешь записаться на эти потоки:</p>
             <section class="next-course">
@@ -208,7 +208,7 @@
                 </div>
             </section>        
         </article>
-       <article class="new-courses">
+       <article class="new-courses main__block">
             <h2 class="">Готовящиеся курсы (ожидается старт)</h2>
             <p class="lead">Мы готовим к выпуску новые курсы, жми на колокольчик, чтобы быть в курсе старта и первым записаться по самой низкой цене!</p>
             <div class="new-courses-container">
@@ -247,7 +247,7 @@
                 </section>     
             </div>
        </article>
-       <!-- <article class="promo">
+       <!-- <article class="promo main__block">
             <h2 class="">Акции</h2>
        </article> -->
     </main>
@@ -280,7 +280,7 @@
             </ul>  
         </div>
     </footer>
-    <script src="scripts/slider-main-page.js"></script>
+    <script src="scripts/arrow.js"></script>
     <script src="scripts/favorites.js"></script>
     <script src="scripts/let-me-know.js"></script>
   </body>

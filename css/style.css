@@ -10,7 +10,7 @@ ul {
     padding: 0;
 }
 
-a {
+/* a {
     text-decoration: none;
     color: #b31a00;
 }
@@ -19,7 +19,7 @@ a:hover {
 }
 a:visited {
     color:#982007;
-}
+} */
 
 h1, h2, h3, h4, h5, h6 {
     margin:  0;
@@ -46,12 +46,10 @@ main > article > h2 {
 
 /* шапка */
 
-header {
+.header {
     background-image: url("../img/stroke-header.png");
     background-repeat: no-repeat;
     height: 108px;
-    margin: 0;
-    padding: 0;
     /* position: fixed;
     z-index: 1;
     top: 0;
@@ -59,26 +57,31 @@ header {
     right: 0; */
 }
 
+.header__main-nav {
+   margin: 0 auto; 
+}
+
 .main-nav {
     display: flex;
     width: 1280px;
-    margin: 0 auto;
     padding-top: 10px;
     padding-bottom: 17px;
     justify-content: space-between;
     align-items: center;
-    
 }
 
-.main-nav-list {
+.main-nav__list {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px 40px;
     margin: 0 100px;
+    list-style: none;
+    padding: 0;
 }
 
-.main-nav-list a {
+.main-nav__link {
+    text-decoration: none;
     color: white;
     text-transform: uppercase;
     font-size: 20px;
@@ -86,7 +89,7 @@ header {
     position: relative;
     /* outline: white 1px solid; */
 }
-.main-nav-list a::after {
+.main-nav__link::after {
     width: 100%;
     height: 1px;
     content: "";
@@ -97,19 +100,19 @@ header {
     position: absolute;
     transition: top 0.3s linear, background-color 0.3s linear;
 }
-.main-nav-list a:hover::after{
+.main-nav__link:hover::after{
     top: 40px;
     height: 2px;
     background-color: rgba(255, 255, 255, 1);
 }
 
 
-.buttons-header{
+.main-nav__profile-btns {
     display: flex;
     gap: 10px;
 }
 
-.bucket, .login, .registration {
+.main-nav__profile-btn {
     margin-right: 10px;
     background-color: transparent;
     border: none;
@@ -120,32 +123,38 @@ header {
     transition: transform 0.3s;
     cursor: pointer;
 }
-.bucket:hover, .login:hover, .registration:hover {
+.main-nav__profile-btn:hover {
     transform: scale(1.2);
 }
-.bucket:active, .login:active, .registration:active {
+.main-nav__profile-btn:active {
     transform: scale(0.8);
 }
 
-main > article, main > section {
-    margin-bottom: 60px;
-}
 
-.lead {
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 20px;
-}
+
+
 /*  тело  */
 
-main {
+.main {
     width: 1280px;
     margin: 0 auto;
 }
 
+.main__block {
+    margin-bottom: 60px;
+}
+
+.main__lead {
+    margin-bottom: 10px;
+}
+.lead {
+    text-align: center;
+    font-size: 20px;
+}
+
 /*  слайлер с работами  */
 
-h1 {
+.block-hero__header {
     font-size: 30px;
     text-align: center;
     margin-top: 30px;
@@ -155,66 +164,68 @@ h1 {
 
 
 
-.slider {
+.block-hero__slider {
     position: relative;
     margin-bottom: 20px;
 }
 
-input{
+.slider__toggle {
     display: none;
 }
 
-.slider-controls {
+.slider__controls {
     position: absolute;
     top: 598px;
     left: 598px;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.slider-controls label {
+.slider__label {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    margin: 0 3px;
     display: inline-block;
     cursor: pointer;
     border: rgba(255, 255, 255, 0.8) 3px solid;
     background-color: rgba(151, 151, 151, 0.5);
 }
-.slider-controls label:hover{
+.slider__label:hover{
     border: rgba(255, 255, 255, 1) 3px solid;
 }
-#btn-1:checked ~ .slider-controls label[for=btn-1] {
+#btn-1:checked ~ .slider__controls .slider__label[for=btn-1] {
     background-color: #bd1f00;
     border: rgba(255, 255, 255, 1) 3px solid;
 }
-#btn-2:checked ~ .slider-controls label[for=btn-2] {
+#btn-2:checked ~ .slider__controls .slider__label[for=btn-2] {
     background-color: #bd1f00;
     border: rgba(255, 255, 255, 1) 3px solid;
 }
-#btn-3:checked ~ .slider-controls label[for=btn-3] {
+#btn-3:checked ~ .slider__controls .slider__label[for=btn-3] {
     background-color: #bd1f00;
     border: rgba(255, 255, 255, 1) 3px solid;
 }
 
-.slider-inner {
+.slider__img-container {
     width: 650px;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.slider-slides {
+.slider__slides {
     width: 300%;
     transition: transform  1.5s;
 }
-#btn-1:checked ~ .slider-inner .slider-slides {
+#btn-1:checked ~ .slider__img-container .slider__slides {
     transform: translateX(0);
 }
-#btn-2:checked ~ .slider-inner .slider-slides {
+#btn-2:checked ~ .slider__img-container .slider__slides {
     transform: translateX(-650px);
 }
-#btn-3:checked ~ .slider-inner .slider-slides {
+#btn-3:checked ~ .slider__img-container .slider__slides {
     transform: translateX(-1300px);
 }
 
@@ -223,47 +234,56 @@ input{
     height: 50px;
     box-shadow: 2px 3px 0 0 #982007;
     border: 0;
-    background-color: rgba(255, 255, 255, 0);
     border-radius: 3px;
-    z-index: 1;
-    position: absolute;
-    top: 300px;
+    background-color: rgba(255, 255, 255, 0);
     transition: transform 0.5s;
     cursor: pointer;
 }
-.arrow.right {
-    left: 960px; 
-    transform: rotate(-45deg);
-}
-.arrow.left{
+.slider__arrow-left {
+    position: absolute;
+    z-index: 1;
+    top: 300px;
     left: 270px;
+}
+.arrow-left{
     transform: scale(-1, 1) rotate(-45deg);
 }
-.arrow.right:hover {
-    box-shadow: 2px 3px 0 0 #db583e;
-    transform: rotate(-45deg) scale(1.1);
-}
-.arrow.left:hover{
+.arrow-left:hover{
     box-shadow: 2px 3px 0 0 #db583e;    
     transform: scale(-1.1, 1.1) rotate(-45deg);
 }
+.slider__arrow-right {
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    left: 960px; 
+}
+.arrow-right {
+    transform: rotate(-45deg);
+}
+.arrow-right:hover {
+    box-shadow: 2px 3px 0 0 #db583e;
+    transform: rotate(-45deg) scale(1.1);
+}
 
-.main-photo {
+.slider__picture {
     margin: 0;
     float: left;
     width: 650px;
     height: 700px;
 }
 
-.main-photo img {
+.slider__img {
     max-height: 650px;
     margin-bottom: 5px;
 }
 
-.main-photo figcaption {
+.slider__desc {
     font-style: italic;
     text-align: center;
 }
+
+
 
 /*  новые паки  */
 .popular-packs h2 {
