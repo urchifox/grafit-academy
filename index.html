@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/packs-list.css">
     <!-- ниже стили для просмотра границ основных блоков -->
     <!-- <link href="css/outline.css" rel="stylesheet">  <link href="css/outline-settings.css" rel="stylesheet">  -->
     <title>Grafit Academy</title>
@@ -42,10 +45,10 @@
         <!-- переключение языка -->
     </header>
     <main class="main">
-        <section class="block-hero main__block">
-            <h1 class="block-hero__header">Учись в Графите!</h1>
+        <section class="hero main__block">
+            <h1 class="header-hero hero__header main__header">Учись в Графите!</h1>
             <section class="lead main__lead">Смотри какие классные работы делают наши студенты:</section>
-            <div class="slider block-hero__slider ">
+            <div class="slider hero__slider ">
                 <input type="radio" id="btn-1" class="slider__toggle" name="toggle" checked>
                 <input type="radio" id="btn-2" class="slider__toggle" name="toggle">
                 <input type="radio" id="btn-3" class="slider__toggle" name="toggle">
@@ -75,22 +78,20 @@
             </div>
         </section>
         <article class="popular-packs main__block">
-             <h2 class="">Популярные паки</h2>
-             <p class="lead">Эти паки бьют все рекорды по популярности! </p>
-             <ul class="popular-packs-list">
-                <li class="popular-pack-card">
-                    <h3><a href="#" class="pack-link">530+ Male Couple</a></h3>
-                    <a href="#" class="pack-link">
-                        <!-- надо сделать тут слайдер -->
-                        <img src="img/refpack-1-1.jpg" alt="" class="pack-cover">  
+             <h2 class="article-header main__header">Популярные паки</h2>
+             <p class="lead main__lead">Эти паки бьют все рекорды по популярности! </p>
+             <ul class="packs-list">
+                <li class="pack-card">
+                    <h3 class="pack-card__header"><a href="#" class="pack-card__link">530+ Male Couple</a></h3>
+                    <a href="#" class="pack-card__link">
+                        <img src="img/refpack-1-1.jpg" alt="" class="pack-card__cover">  
                      </a>
-                    <div class="price-buy">
-                        <span class="price">900руб.</span>
-                        <button class="btn-buy">
+                    <div class="pack-card__price-n-btns">
+                        <span class="pack-card__price">900руб.</span>
+                        <button class="pack-card__buy">
                             <img src="../img/buy.svg" width="30px" height="30px">
                         </button>
-                        <button class="add-favorites">
-                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                        <button class="pack-card__add-favorites">
                             <span class="material-icons favorite_border">
                                 favorite_border
                             </span>
@@ -100,18 +101,15 @@
                         </button>  
                     </div>
                 </li>
-                <li class="popular-pack-card">
-                    <h3><a href="#" class="pack-link">440+ Epic Rainforest</a></h3>
-                    <a href="#" class="pack-link">
-                        <!-- надо сделать тут слайдер -->
-                        <img src="img/refpack-2-1.jpg" alt="" class="pack-cover">
+                <li class="pack-card">
+                    <h3 class="pack-card__header"><a href="#" class="pack-card__link">440+ Epic Rainforest</a></h3>
+                    <a href="#" class="pack-card__link">
+                        <img src="img/refpack-2-1.jpg" alt="" class="pack-card__cover">
                     </a>
-                    <div class="price-buy">
-                        <span class="price">900руб.</span>
-                       <button class="btn-buy"><img src="../img/buy.svg" width="30px" height="30px">
-                        <!-- <button class="add-favorites"><img src="../img/favorites.svg" width="30px" height="30px"> -->
-                        <button class="add-favorites">
-                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                    <div class="pack-card__price-n-btns">
+                        <span class="pack-card__price">900руб.</span>
+                       <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
+                        <button class="pack-card__add-favorites">
                             <span class="material-icons favorite_border">
                                 favorite_border
                             </span>
@@ -120,18 +118,15 @@
                             </span>
                         </button>
                 </li>
-                <li class="popular-pack-card">
-                    <h3><a href="#" class="pack-link">510+ Space Cowboy</a></h3>
-                    <a href="#" class="pack-link">
-                        <!-- надо сделать тут слайдер -->
-                        <img src="img/refpack-3-1.jpg" alt=""  class="pack-cover">
+                <li class="pack-card">
+                    <h3 class="pack-card__header"><a href="#" class="pack-card__link">510+ Space Cowboy</a></h3>
+                    <a href="#" class="pack-card__link">
+                        <img src="img/refpack-3-1.jpg" alt=""  class="pack-card__cover">
                     </a>
-                    <div class="price-buy">
-                        <span class="price">900руб.</span>
-                        <button class="btn-buy"><img src="../img/buy.svg" width="30px" height="30px"> 
-                        <!-- <button class="add-favorites"><img src="../img/favorites.svg" width="30px" height="30px">    -->
-                        <button class="add-favorites">
-                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                    <div class="pack-card__price-n-btns">
+                        <span class="pack-card__price">900руб.</span>
+                        <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px"> 
+                        <button class="pack-card__add-favorites">
                             <span class="material-icons favorite_border">
                                 favorite_border
                             </span>
@@ -141,18 +136,15 @@
                         </button>
                     </div>
                 </li>
-                <li class="popular-pack-card">
-                    <h3><a href="#" class="pack-link">770+ Castle</a></h3>
-                    <a href="#" class="pack-link">
-                      <!-- надо сделать тут слайдер -->
-                        <img src="img/refpack-4-1.jpg" alt="" class="pack-cover">  
+                <li class="pack-card">
+                    <h3 class="pack-card__header"><a href="#" class="pack-card__link">770+ Castle</a></h3>
+                    <a href="#" class="pack-card__link">
+                        <img src="img/refpack-4-1.jpg" alt="" class="pack-card__cover">  
                     </a>
-                    <div class="price-buy">
-                        <span class="price">900руб.</span>
-                        <button class="btn-buy"><img src="../img/buy.svg" width="30px" height="30px">
-                        <!-- <button class="add-favorites"><img src="../img/favorites.svg" width="30px" height="30px">     -->
-                        <button class="add-favorites">
-                            <!-- <img src="../img/bookmark.svg" width="30px" height="30px"> -->
+                    <div class="pack-card__price-n-btns">
+                        <span class="pack-card__price">900руб.</span>
+                        <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
+                        <button class="pack-card__add-favorites">
                             <span class="material-icons favorite_border">
                                 favorite_border
                             </span>
@@ -165,7 +157,7 @@
              </ul>
         </article>
         <article class="next-courses main__block">
-            <h2>Ближайшие открытые потоки курсов</h2>
+            <h2 class="article-header main__header">Ближайшие открытые потоки курсов</h2>
             <p class="lead">Ты еще успеваешь записаться на эти потоки:</p>
             <section class="next-course">
                 <h3><a href="" class="course-link">Курс по стилизации</a></h3>
@@ -209,7 +201,7 @@
             </section>        
         </article>
        <article class="new-courses main__block">
-            <h2 class="">Готовящиеся курсы (ожидается старт)</h2>
+            <h2 class="article-header main__header">Готовящиеся курсы (ожидается старт)</h2>
             <p class="lead">Мы готовим к выпуску новые курсы, жми на колокольчик, чтобы быть в курсе старта и первым записаться по самой низкой цене!</p>
             <div class="new-courses-container">
                 <section class="new-course">
@@ -248,7 +240,7 @@
             </div>
        </article>
        <!-- <article class="promo main__block">
-            <h2 class="">Акции</h2>
+            <h2 class="article-header main__header">Акции</h2>
        </article> -->
     </main>
     <footer>
@@ -281,7 +273,7 @@
         </div>
     </footer>
     <script src="scripts/arrow.js"></script>
-    <script src="scripts/favorites.js"></script>
+    <script src="scripts/pack-card__add-favorites.js"></script>
     <script src="scripts/let-me-know.js"></script>
   </body>
 </html>

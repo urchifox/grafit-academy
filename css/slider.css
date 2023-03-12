@@ -1,0 +1,117 @@
+.slider {
+    position: relative;
+}
+
+.slider__toggle {
+display: none;
+}
+
+.slider__controls {
+position: absolute;
+top: 598px;
+left: 598px;
+z-index: 10;
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+.slider__label {
+box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
+border-radius: 50%;
+width: 10px;
+height: 10px;
+display: inline-block;
+cursor: pointer;
+border: rgba(255, 255, 255, 0.8) 3px solid;
+background-color: rgba(151, 151, 151, 0.5);
+}
+.slider__label:hover{
+border: rgba(255, 255, 255, 1) 3px solid;
+}
+#btn-1:checked ~ .slider__controls .slider__label[for=btn-1] {
+background-color: #bd1f00;
+border: rgba(255, 255, 255, 1) 3px solid;
+}
+#btn-2:checked ~ .slider__controls .slider__label[for=btn-2] {
+background-color: #bd1f00;
+border: rgba(255, 255, 255, 1) 3px solid;
+}
+#btn-3:checked ~ .slider__controls .slider__label[for=btn-3] {
+background-color: #bd1f00;
+border: rgba(255, 255, 255, 1) 3px solid;
+}
+
+.slider__img-container {
+width: 650px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.slider__slides {
+width: 300%;
+transition: transform  1.5s;
+}
+#btn-1:checked ~ .slider__img-container .slider__slides {
+transform: translateX(0);
+}
+#btn-2:checked ~ .slider__img-container .slider__slides {
+transform: translateX(-650px);
+}
+#btn-3:checked ~ .slider__img-container .slider__slides {
+transform: translateX(-1300px);
+}
+
+.arrow {
+width: 50px;
+height: 50px;
+box-shadow: 2px 3px 0 0 #982007;
+border: 0;
+border-radius: 3px;
+background-color: rgba(255, 255, 255, 0);
+transition: transform 0.5s;
+cursor: pointer;
+}
+.slider__arrow-left {
+position: absolute;
+z-index: 1;
+top: 300px;
+left: 270px;
+}
+.arrow-left{
+transform: scale(-1, 1) rotate(-45deg);
+}
+.arrow-left:hover{
+box-shadow: 2px 3px 0 0 #db583e;    
+transform: scale(-1.1, 1.1) rotate(-45deg);
+}
+.slider__arrow-right {
+position: absolute;
+z-index: 1;
+top: 300px;
+left: 960px; 
+}
+.arrow-right {
+transform: rotate(-45deg);
+}
+.arrow-right:hover {
+box-shadow: 2px 3px 0 0 #db583e;
+transform: rotate(-45deg) scale(1.1);
+}
+
+.slider__picture {
+margin: 0;
+float: left;
+width: 650px;
+height: 700px;
+}
+
+.slider__img {
+max-height: 650px;
+margin-bottom: 5px;
+}
+
+.slider__desc {
+font-style: italic;
+text-align: center;
+}
