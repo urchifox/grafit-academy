@@ -1,6 +1,8 @@
 body {
     margin: 0 auto;
     width: 1900px;
+    position: relative;
+    min-height: 100vh;
 }
 
 .visually-hidden { 
@@ -18,6 +20,7 @@ body {
 .main {
     width: 1280px;
     margin: 0 auto;
+    padding-bottom: 150px;
 }
 
 .main__block {
@@ -57,7 +60,12 @@ body {
     margin-bottom: 10px;
 }
 
-.main__footer {
-    margin: 0;
-    margin-top: 50px;
+
+.body__footer {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    /* margin: 0;
+    margin-top: 100px; */
 }

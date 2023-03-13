@@ -9,9 +9,6 @@
     right: 0; */
 }
 
-.header__main-nav {
-   margin: 0 auto; 
-}
 
 .main-nav {
     display: flex;
@@ -20,6 +17,9 @@
     padding-bottom: 17px;
     justify-content: space-between;
     align-items: center;
+}
+.header__main-nav {
+   margin: 0 auto; 
 }
 
 .main-nav__list {
