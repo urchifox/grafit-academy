@@ -1,0 +1,54 @@
+footer {
+    background-image: url("../img/stroke-footer.png");
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    border-top: 1px solid #982007;
+    padding: 0;
+}
+
+
+.footer__container {
+    width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 17px;
+    padding-bottom: 36px;
+    align-items: center;
+}
+
+.contacts {
+    display: grid;
+    align-items: center;
+    width: 1090px;
+    grid-template-areas: "socials mail";
+    list-style: none;
+    padding: 0;
+}
+.footer__contacts {
+    margin: 0;
+}
+
+.contacts__socials {
+    grid-area: socials;
+    justify-self: end;
+    
+}
+
+.contacts__mail {
+    grid-area: mail;
+    justify-self: end;
+}
+
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+.contacts__social-list{
+    margin: 0;
+}

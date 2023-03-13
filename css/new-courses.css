@@ -1,0 +1,48 @@
+.new-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.new-course {
+   padding: 15px 40px;
+   border: #982007 1px solid;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    /* flex-grow: 1; */
+}
+
+.let-me-know {
+    background-color: transparent;
+    border: none;
+    width: 25px;
+    height: 25px;
+    padding: 2px 2px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.new-course__let-me-know {
+   position: relative;
+    margin-left: 60px;
+    margin-right: 10px; 
+}
+.let-me-know .material-icons {
+    transform: scale(1.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.let-me-know .material-icons.checked {
+    color: green;
+}
+.let-me-know .material-icons.hidden {
+    opacity: 0;
+}
+.let-me-know:hover {
+    transform: scale(1.2);
+}
