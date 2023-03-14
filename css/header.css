@@ -1,35 +1,32 @@
 .header {
     background-image: url("../img/stroke-header.png");
     background-repeat: no-repeat;
+    background-position: center bottom;
     height: 108px;
-    /* position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0; */
 }
 
 
 .main-nav {
     display: flex;
-    width: 1280px;
-    padding-top: 10px;
-    padding-bottom: 17px;
+    max-width: 1280px;
+    min-width: 650px;
+    padding: 10px 20px 17px 20px;
     justify-content: space-between;
     align-items: center;
+
 }
 .header__main-nav {
    margin: 0 auto; 
 }
 
 .main-nav__list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px 40px;
-    margin: 0 100px;
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px 40px;
+    margin: 0 40px;
 }
 
 .main-nav__link {
@@ -37,7 +34,7 @@
     color: white;
     text-transform: uppercase;
     font-size: 20px;
-    padding: 10px 10px;
+    padding: 5px 10px;
     position: relative;
     /* outline: white 1px solid; */
 }
@@ -46,14 +43,14 @@
     height: 1px;
     content: "";
     background-color: rgba(255, 255, 255, 0);
-    top: 30px;
+    top: 25px;
     left: 0;
     z-index: 1;
     position: absolute;
     transition: top 0.3s linear, background-color 0.3s linear;
 }
 .main-nav__link:hover::after{
-    top: 40px;
+    top: 30px;
     height: 2px;
     background-color: rgba(255, 255, 255, 1);
 }
@@ -61,19 +58,22 @@
 
 .main-nav__profile-btns {
     display: flex;
+    flex-wrap: nowrap;
     gap: 10px;
+    min-width: 140px;
+    /* outline: auto; */
 }
 
 .main-nav__profile-btn {
-    margin-right: 10px;
+    /* margin-right: 10px; */
     background-color: transparent;
     border: none;
     width: 40px;
     height: 40px;
-    /* outline: white 1px solid; */
     padding: 2px 2px;
     transition: transform 0.3s;
     cursor: pointer;
+    /* outline: white 1px solid; */
 }
 .main-nav__profile-btn:hover {
     transform: scale(1.2);

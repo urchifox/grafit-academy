@@ -1,25 +1,26 @@
 footer {
     background-image: url("../img/stroke-footer.png");
     background-repeat: no-repeat;
-    background-position: 0% 100%;
+    background-position: center bottom;
     border-top: 1px solid #982007;
     padding: 0;
 }
 
 .footer__container {
-    width: 1280px;
     display: flex;
     margin: 0 auto;
-    padding-top: 17px;
-    padding-bottom: 36px;
+    padding: 17px 20px 36px 20px;
     align-items: center;
+    max-width: 1280px;
+    min-width: 650px;
+    justify-content: space-between;
 }
 
 .contacts {
     display: grid;
+    grid-template-areas: "socials mail";
     align-items: center;
     width: 1090px;
-    grid-template-areas: "socials mail";
     list-style: none;
     padding: 0;
 }
@@ -30,7 +31,6 @@ footer {
 .contacts__socials {
     grid-area: socials;
     justify-self: end;
-    
 }
 
 .contacts__mail {
@@ -43,7 +43,7 @@ footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 200px;
     gap: 10px;
     list-style: none;
     padding: 0;
