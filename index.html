@@ -10,6 +10,8 @@
             <!-- подключение гугл-иконок для кнопок -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+        rel="stylesheet">
             <!-- стили страницы -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/header.css">
@@ -24,25 +26,31 @@
     <body>
         <header class="header">
             <nav class="main-nav header__main-nav">
-                <a href="#" class="main-nav__logo logo"><img src="img/logo.png" alt="Логотип"></a>
+                <a href="#" class="main-nav__logo logo" tabindex="0"><img src="img/logo.png" alt="Логотип"></a>
                 <ul class="main-nav__list">
                     <li class="main-nav__item">
-                        <a href="packs.html" class="main-nav__link">Рефы</a>
+                        <a href="packs.html" class="main-nav__link" tabindex="0">Рефы</a>
                     </li>
                     <li class="main-nav__item dropdown">
-                        <a href="#" class="main-nav__link">Курсы <!-- (разворачиваемый список) --></a>
+                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Курсы <!-- (разворачиваемый список) --></a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Туториалы</a>
+                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Туториалы</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Статьи</a>
+                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Статьи</a>
                     </li>
                 </ul>
             <section class="main-nav__profile-btns">
-                <button class="main-nav__bucket main-nav__profile-btn"><img src="../img/shop-bucket.svg" width="34px" height="34px"></button>
-                <button class="main-nav__login main-nav__profile-btn"><img src="../img/user_icon.svg" width="30px" height="30px"></button> 
-                <button class="main-nav__registration main-nav__profile-btn"><img src="../img/sign-in.svg" width="30px" height="30px"></button> 
+                <button  aria-label="Корзина" class="main-nav__bucket main-nav__profile-btn" tabindex="0">
+                    <img src="../img/shop-bucket.svg" width="34px" height="34px">
+                </button>
+                <button aria-label="Авторизация" class="main-nav__login main-nav__profile-btn" tabindex="0">
+                    <img src="../img/user_icon.svg" width="30px" height="30px">
+                </button> 
+                <button aria-label="Регистрация" class="main-nav__registration main-nav__profile-btn" tabindex="0">
+                    <img src="../img/sign-in.svg" width="30px" height="30px">
+                </button> 
             </section>
             </nav>
             <!-- переключение темы -->
@@ -55,62 +63,66 @@
                 <div class="slider hero__slider ">
                     <figcaption class="slider__main-pic">
                         <img class="slider__main-img" src="img/main-photo-1.jpg" alt="">
-                        <figcaption class="slider__desc">Работа нашего ученика Михаила Пищулина</figcaption>
+                        <figcaption class="slider__desc">Работа нашего ученика Михаила Пищулинас курса "UI для новичков"</figcaption>
                     </figcaption>
+                    <button aria-label="Предыдущее изображение" class="arrow arrow-left slider__arrow-left  material-icons-round" tabindex="0" >
+                        chevron_left
+                    </button>
+                    <button aria-label="Следующее изображение" class="arrow arrow-right slider__arrow-right material-icons-round" tabindex="0" >
+                        navigate_next
+                    </button>
                     <ul class="slider__previews">
-                        <li class="slider__prewiew-item ">
-                            <a class="slider__prewiew-link slider__prewiew-link_active" href="img/main-photo-1.jpg" data-desc="Работа нашего ученика Михаила Пищулина">
-                                <img class="slider__prewiew-img" width="100px" height="100px" src="img/main-photo-1.jpg" alt="Работа нашего ученика Михаила Пищулина" >
-                            </a>
+                        <li class="slider__prewiew-item">
+                            <button class="slider__prewiew-btn slider__prewiew-btn_active" data-link="img/main-photo-1.jpg" data-desc="Работа нашего ученика Михаила Пищулинас курса 'UI для новичков'"  tabindex="0">
+                                <img class="slider__prewiew-img" width="100px" height="100px" src="img/main-photo-1.jpg" alt="Работа нашего ученика Михаила Пищулина" tabindex="-1">
+                            </button>
                         </li>
                         <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/main-photo-2.jpg" data-desc="Работа нашей ученицы Александры Беловой">
-                                <img class="slider__prewiew-img" width="100px" height="100px"  src="img/main-photo-2.jpg" alt="Работа нашей ученицы Александры Беловой">
-                            </a>
+                            <button class="slider__prewiew-btn" data-link="img/main-photo-2.jpg" data-desc="Работа нашей ученицы Александры Беловой"  tabindex="0">
+                                <img class="slider__prewiew-img" width="100px" height="100px"  src="img/main-photo-2.jpg" alt="Работа нашей ученицы Александры Беловой"  tabindex="-1">
+                            </button>
                         </li>
                         <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/main-photo-3.jpg" data-desc="Работа нашей ученицы Екатерины Грачевой">
-                                <img class="slider__prewiew-img" width="100px" height="100px"  src="img/main-photo-3.jpg" alt="Работа нашей ученицы Екатерины Грачевой">
-                            </a>
+                            <button class="slider__prewiew-btn" data-link="img/main-photo-3.jpg" data-desc="Работа нашей ученицы Екатерины Грачевой" tabindex="0" >
+                                <img class="slider__prewiew-img" width="100px" height="100px"  src="img/main-photo-3.jpg" alt="Работа нашей ученицы Екатерины Грачевой"  tabindex="-1">
+                            </button>
                         </li>
                         <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/course-1.jpg" data-desc="рандомная картинка">
+                            <button class="slider__prewiew-btn" data-link="img/course-1.jpg" data-desc="рандомная картинка" tabindex="0" >
                                 <img class="slider__prewiew-img" width="100px" height="100px" src="img/course-1.jpg" alt="заглушка" >
-                            </a>
+                            </button>
                         </li>
                         <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/course-2.jpg" data-desc="рандомная картинка">
+                            <button class="slider__prewiew-btn" data-link="img/course-2.jpg" data-desc="рандомная картинка" tabindex="0" >
                                 <img class="slider__prewiew-img" width="100px" height="100px" src="img/course-2.jpg" alt="заглушка" >
-                            </a>
+                            </button>
                         </li>
                         <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/asset 11.jpeg" data-desc="рандомная картинка">
+                            <button class="slider__prewiew-btn" data-link="img/asset 11.jpeg" data-desc="рандомная картинка" tabindex="0" >
                                 <img class="slider__prewiew-img" width="100px" height="100px" src="img/asset 11.jpeg" alt="заглушка" >
-                            </a>
-                        </li>
-                        <li class="slider__prewiew-item ">
-                            <a class="slider__prewiew-link slider__prewiew-link" href="img/main-photo-1.jpg" data-desc="Работа нашего ученика Михаила Пищулина">
-                                <img class="slider__prewiew-img" width="100px" height="100px" src="img/main-photo-1.jpg" alt="Работа нашего ученика Михаила Пищулина" >
-                            </a>
+                            </button>
                         </li>
                         <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/main-photo-2.jpg" data-desc="Работа нашей ученицы Александры Беловой">
-                                <img class="slider__prewiew-img" width="100px" height="100px"  src="img/main-photo-2.jpg" alt="Работа нашей ученицы Александры Беловой">
-                            </a>
+                            <button class="slider__prewiew-btn" data-link="img/main-photo-3.jpg" data-desc="Работа нашей ученицы Екатерины Грачевой" tabindex="0" >
+                                <img class="slider__prewiew-img" width="100px" height="100px"  src="img/main-photo-3.jpg" alt="Работа нашей ученицы Екатерины Грачевой"  tabindex="-1">
+                            </button>
                         </li>
                         <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/main-photo-3.jpg" data-desc="Работа нашей ученицы Екатерины Грачевой">
-                                <img class="slider__prewiew-img" width="100px" height="100px"  src="img/main-photo-3.jpg" alt="Работа нашей ученицы Екатерины Грачевой">
-                            </a>
-                        </li>
-                        <li class="slider__prewiew-item">
-                            <a class="slider__prewiew-link" href="img/course-1.jpg" data-desc="рандомная картинка">
+                            <button class="slider__prewiew-btn" data-link="img/course-1.jpg" data-desc="рандомная картинка" tabindex="0" >
                                 <img class="slider__prewiew-img" width="100px" height="100px" src="img/course-1.jpg" alt="заглушка" >
-                            </a>
+                            </button>
+                        </li>
+                        <li class="slider__prewiew-item">
+                            <button class="slider__prewiew-btn" data-link="img/course-2.jpg" data-desc="рандомная картинка" tabindex="0" >
+                                <img class="slider__prewiew-img" width="100px" height="100px" src="img/course-2.jpg" alt="заглушка" >
+                            </button>
+                        </li>
+                        <li class="slider__prewiew-item">
+                            <button class="slider__prewiew-btn" data-link="img/asset 11.jpeg" data-desc="рандомная картинка" tabindex="0" >
+                                <img class="slider__prewiew-img" width="100px" height="100px" src="img/asset 11.jpeg" alt="заглушка" >
+                            </button>
                         </li>
                     </ul>
-                    <button class="arrow arrow-left slider__arrow-left"></button>
-                    <button class="arrow arrow-right slider__arrow-right"></button>
                     <!-- <input type="radio" id="btn-1" class="slider__toggle" name="toggle" checked>
                     <input type="radio" id="btn-2" class="slider__toggle" name="toggle">
                     <input type="radio" id="btn-3" class="slider__toggle" name="toggle">
@@ -144,16 +156,16 @@
                 <p class="lead main__lead">Эти паки бьют все рекорды по популярности! </p>
                 <ul class="packs-list">
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">530+ Male Couple</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >530+ Male Couple</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-1-1.jpg" alt="" class="pack-card__cover">  
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
                                 <img src="../img/buy.svg" width="30px" height="30px">
                             </button>
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0"   >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -164,14 +176,16 @@
                         </div>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">440+ Epic Rainforest</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0">440+ Epic Rainforest</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-2-1.jpg" alt="" class="pack-card__cover">
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                        <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -181,14 +195,16 @@
                             </button>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">510+ Space Cowboy</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >510+ Space Cowboy</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-3-1.jpg" alt=""  class="pack-card__cover">
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px"> 
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button> 
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -199,14 +215,16 @@
                         </div>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">770+ Castle</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >770+ Castle</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-4-1.jpg" alt="" class="pack-card__cover">  
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -223,10 +241,10 @@
                 <p class="lead  main__lead">Ты еще успеваешь записаться на эти потоки:</p>
                 <section class="next-course main__next-course">
                         <h3 class="next-course__course-name">
-                            <a href="" class="next-course__course-name-link">Курс по стилизации</a>
+                            <a href="" class="next-course__course-name-link" tabindex="0">Курс по стилизации</a>
                         </h3>
-                        <a href="" class="next-course__link-img">
-                            <img class="next-course__img" src="img/course-1.jpg" alt="">
+                        <a href="" class="next-course__link-img" tabindex="-1">
+                            <img class="next-course__img" src="img/course-1.jpg" alt="" >
                         </a>
                         <div class="next-course__info">
                             <div class="next-course__dates">
@@ -238,18 +256,18 @@
                             <div class="next-course__desc">
                                 Освой приемы стилизации вместе с нашим лид-артистом по иллюстрации Михаилом Бабкиным! 
                             </div>
-                            <a href="#" class="next-course__details">Узнать подробности</a>
+                            <a href="#" class="next-course__details" tabindex="0">Узнать подробности</a>
                             <div class="next-course__price-book">
-                                <span class="next-course__price">3300руб.</span>
-                                <button class="next-course__book">Записаться</button>    
+                                <div class="next-course__price">3300руб.</div>
+                                <button class="next-course__book" tabindex="0">Записаться</button>    
                             </div>
                         </div>
                 </section>
                 <section class="next-course main__next-course">
                         <h3 class="next-course__course-name">
-                            <a href="" class="next-course__course-name-link">UI / UX</a>
+                            <a href="" class="next-course__course-name-link" tabindex="0">UI / UX</a>
                         </h3>
-                        <a href="" class="next-course__link-img">
+                        <a href="" class="next-course__link-img" tabindex="-1">
                             <img class="next-course__img" src="img/course-2.jpg" alt="">
                         </a>
                         <div class="next-course__info">
@@ -262,10 +280,10 @@
                             <div class="next-course__desc">
                                 Научись делать завлекающие интерфейсы с нашей художницей по интефейсам Юлией Бойко!
                             </div>
-                            <a href="#" class="next-course__details">Узнать подробности</a>
+                            <a href="#" class="next-course__details" tabindex="0">Узнать подробности</a>
                             <div class="next-course__price-book">
-                                <span class="next-course__price">2800руб.</span>
-                                <button class="next-course__book">Записаться</button>    
+                                <div class="next-course__price">2800руб.</div>
+                                <button class="next-course__book" tabindex="0">Записаться</button>    
                             </div>
                         </div>
                 </section>     
@@ -276,7 +294,7 @@
                 <div class="new-courses main__new-courses">
                     <section class="new-course">
                         2D Иллюстрация
-                        <button class="let-me-know new-course__let-me-know">
+                        <button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know" tabindex="0">
                             <span class="material-icons  not-checked">
                                     alarm
                             </span>
@@ -287,7 +305,7 @@
                     </section>
                     <section class="new-course">
                         2D анимация
-                        <button class="let-me-know new-course__let-me-know">
+                        <button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know" tabindex="0">
                             <span class="material-icons not-checked">
                                     alarm
                             </span>
@@ -298,7 +316,7 @@
                     </section> 
                     <section class="new-course">
                         Шейдинг персонажей
-                        <button class="let-me-know new-course__let-me-know">
+                        <button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know" tabindex="0">
                             <span class="material-icons not-checked">
                                     alarm
                             </span>
@@ -326,18 +344,26 @@
                     <li class="contacts__socials">
                         <ul class="social-list contacts__social-list">
                             <li class="social-list__item">
-                                <a href="https://www.artstation.com/grafit"><img src="img/artstation.png" alt="Arstation"></a>
+                                <a href="https://www.artstation.com/grafit" class="social-list__link" tabindex="0">
+                                    <img src="img/artstation.png" alt="Arstation">
+                                </a>
                             </li>
                             <li class="social-list__item">
-                                <a href="https://www.behance.net/grafitart"><img src="img/behance.png" alt="Behance"></a>
+                                <a href="https://www.behance.net/grafitart" tabindex="0">
+                                    <img src="img/behance.png" alt="Behance">
+                                </a>
                             </li>
                             <li class="social-list__item">
-                                <a href="https://vk.com/studiyagrafit"><img src="img/vk.png" alt="VK"></a>
+                                <a href="https://vk.com/studiyagrafit" tabindex="0">
+                                    <img src="img/vk.png" alt="VK">
+                                </a>
                             </li>
                         </ul>
                     </li>
                     <li class="contacts__mail">
-                        <a href="mailto:work@grafitart.com" class="contacts__mail-link"><img src="img/mail.png" alt="email: work@grafitart.com"></a>
+                        <a href="mailto:work@grafitart.com" class="contacts__mail-link" tabindex="0">
+                            <img src="img/mail.png" alt="email: work@grafitart.com">
+                        </a>
                     </li>
                 </ul>  
             </div>

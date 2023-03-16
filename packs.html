@@ -19,28 +19,34 @@
         <!-- <link href="css/outline.css" rel="stylesheet">  <link href="css/outline-settings.css" rel="stylesheet">  -->
     </head>
     <body>
-         <header class="header">
+        <header class="header">
             <nav class="main-nav header__main-nav">
-                <a href="index.html" class="main-nav__logo logo"><img src="img/logo.png" alt="Логотип"></a>
+                <a href="index.html" class="main-nav__logo logo" tabindex="0"><img src="img/logo.png" alt="Логотип"></a>
                 <ul class="main-nav__list">
                     <li class="main-nav__item">
-                        <a href="packs.html" class="main-nav__link">Рефы</a>
+                        <a href="" class="main-nav__link main-nav__link_active" tabindex="0">Рефы</a>
                     </li>
                     <li class="main-nav__item dropdown">
-                        <a href="#" class="main-nav__link">Курсы <!-- (разворачиваемый список) --></a>
+                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Курсы <!-- (разворачиваемый список) --></a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Туториалы</a>
+                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Туториалы</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="#" class="main-nav__link">Статьи</a>
+                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Статьи</a>
                     </li>
                 </ul>
-                <section class="main-nav__profile-btns">
-                    <button class="main-nav__bucket main-nav__profile-btn"><img src="../img/shop-bucket.svg" width="34px" height="34px"></button>
-                    <button class="main-nav__login main-nav__profile-btn"><img src="../img/user_icon.svg" width="30px" height="30px"></button> 
-                    <button class="main-nav__registration main-nav__profile-btn"><img src="../img/sign-in.svg" width="30px" height="30px"></button> 
-                </section>
+            <section class="main-nav__profile-btns">
+                <button  aria-label="Корзина" class="main-nav__bucket main-nav__profile-btn" tabindex="0">
+                    <img src="../img/shop-bucket.svg" width="34px" height="34px">
+                </button>
+                <button aria-label="Авторизация" class="main-nav__login main-nav__profile-btn" tabindex="0">
+                    <img src="../img/user_icon.svg" width="30px" height="30px">
+                </button> 
+                <button aria-label="Регистрация" class="main-nav__registration main-nav__profile-btn" tabindex="0">
+                    <img src="../img/sign-in.svg" width="30px" height="30px">
+                </button> 
+            </section>
             </nav>
             <!-- переключение темы -->
             <!-- переключение языка -->
@@ -49,16 +55,16 @@
             <section class="main__block">
                 <ul class="packs-list">
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">530+ Male Couple</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >530+ Male Couple</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-1-1.jpg" alt="" class="pack-card__cover">  
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
                                 <img src="../img/buy.svg" width="30px" height="30px">
                             </button>
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0"   >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -69,14 +75,16 @@
                         </div>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">440+ Epic Rainforest</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0">440+ Epic Rainforest</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-2-1.jpg" alt="" class="pack-card__cover">
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                        <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -86,14 +94,16 @@
                             </button>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">510+ Space Cowboy</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >510+ Space Cowboy</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-3-1.jpg" alt=""  class="pack-card__cover">
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px"> 
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button> 
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -104,14 +114,16 @@
                         </div>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">770+ Castle</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >770+ Castle</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-4-1.jpg" alt="" class="pack-card__cover">  
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -122,16 +134,16 @@
                         </div>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">530+ Male Couple</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >530+ Male Couple</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-1-1.jpg" alt="" class="pack-card__cover">  
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
                                 <img src="../img/buy.svg" width="30px" height="30px">
                             </button>
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0"   >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -142,14 +154,16 @@
                         </div>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">440+ Epic Rainforest</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0">440+ Epic Rainforest</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-2-1.jpg" alt="" class="pack-card__cover">
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                        <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -159,14 +173,16 @@
                             </button>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">510+ Space Cowboy</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >510+ Space Cowboy</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-3-1.jpg" alt=""  class="pack-card__cover">
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px"> 
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button> 
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -177,14 +193,16 @@
                         </div>
                     </li>
                     <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link">770+ Castle</a></h3>
-                        <a href="#" class="pack-card__img-link">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >770+ Castle</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
                             <img src="img/refpack-4-1.jpg" alt="" class="pack-card__cover">  
                         </a>
                         <div class="pack-card__price-n-btns">
                             <span class="pack-card__price">900руб.</span>
-                            <button class="pack-card__buy"><img src="../img/buy.svg" width="30px" height="30px">
-                            <button class="pack-card__add-favorites">
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
                                 <span class="material-icons favorite_border">
                                     favorite_border
                                 </span>
@@ -194,14 +212,13 @@
                             </button>
                         </div>
                     </li>
-                    
                 </ul>
             </section>
         </main>
         <footer class="footer body__footer">
             <div class="footer__container">
                 <section class="copyright">
-                    <img src="img/copyright.png" alt="копирайт">
+                <img src="img/copyright.png" alt="копирайт">
                 </section> 
                 <h2 class="visually-hidden">Контактная информация</h2>
                 <ul class="contacts footer__contacts">
@@ -211,18 +228,26 @@
                     <li class="contacts__socials">
                         <ul class="social-list contacts__social-list">
                             <li class="social-list__item">
-                                <a href="https://www.artstation.com/grafit"><img src="img/artstation.png" alt="Arstation"></a>
+                                <a href="https://www.artstation.com/grafit" class="social-list__link" tabindex="0">
+                                    <img src="img/artstation.png" alt="Arstation">
+                                </a>
                             </li>
                             <li class="social-list__item">
-                                <a href="https://www.behance.net/grafitart"><img src="img/behance.png" alt="Behance"></a>
+                                <a href="https://www.behance.net/grafitart" tabindex="0">
+                                    <img src="img/behance.png" alt="Behance">
+                                </a>
                             </li>
                             <li class="social-list__item">
-                                <a href="https://vk.com/studiyagrafit"><img src="img/vk.png" alt="VK"></a>
+                                <a href="https://vk.com/studiyagrafit" tabindex="0">
+                                    <img src="img/vk.png" alt="VK">
+                                </a>
                             </li>
                         </ul>
                     </li>
                     <li class="contacts__mail">
-                        <a href="mailto:work@grafitart.com" class="contacts__mail-link"><img src="img/mail.png" alt="email: work@grafitart.com"></a>
+                        <a href="mailto:work@grafitart.com" class="contacts__mail-link" tabindex="0">
+                            <img src="img/mail.png" alt="email: work@grafitart.com">
+                        </a>
                     </li>
                 </ul>  
             </div>

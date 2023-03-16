@@ -1,3 +1,17 @@
+.header *[tabindex="0"]:focus {
+    /* outline: none; */
+    outline: 1px white;
+    /* box-shadow: white 0 0 3px 3px; */
+    border-radius: 5px;
+    outline-offset: 5px;
+}
+.header *[tabindex="0"]:focus-visible {
+    outline: 1px white;
+    box-shadow: white 0 0 3px 3px;
+    border-radius: 5px;
+    outline-offset: 5px;
+  }
+
 .header {
     background-image: url("../img/stroke-header.png");
     background-repeat: no-repeat;
@@ -33,7 +47,7 @@
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 22px;
     padding: 5px 10px;
     position: relative;
     /* outline: white 1px solid; */
@@ -50,6 +64,11 @@
     transition: top 0.3s linear, background-color 0.3s linear;
 }
 .main-nav__link:hover::after{
+    top: 30px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.main-nav__link_active::after{
     top: 30px;
     height: 2px;
     background-color: rgba(255, 255, 255, 1);

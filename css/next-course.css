@@ -21,6 +21,7 @@
 
 
 .next-course__course-name {
+    text-transform: uppercase;
     grid-area: header;
     align-self: end;
     min-width: 300px;
@@ -29,22 +30,17 @@
     text-decoration: none;
     color: #b31a00;
 }
-.next-course__course-name-link:visited {
-    color:#982007;
-}
 .next-course__course-name-link:hover {
     color:#db583e;
 }
 
 .next-course__link-img {
     grid-area: image;
-    /* width: 60%; */
 }
 .next-course__img {
     display: block; 
     object-fit: cover;
-    /* width: 800px;
-    height: 400px;  */
+
     width: 100%;
     height: 100%; 
 }
@@ -77,13 +73,26 @@
     text-decoration: underline;
 }
 
+.next-course__price-book {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.next-course__price {
+    text-align: center;
+}
+
 .next-course__book {
+    font-size: 15px;
     background-color: #b31a00;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px 15px;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
+
+    margin-top: 10px;
 }
 .next-course__book:hover {
     background-color: #db583e;
