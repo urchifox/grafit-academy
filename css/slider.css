@@ -45,6 +45,7 @@
     gap: 10px;
 
     position: relative;
+
 }
 
 .slider__previews::-webkit-scrollbar {
@@ -94,13 +95,6 @@
     border: none;
     cursor: pointer;
 }
-.slider__prewiew-btn:not(.slider__prewiew-btn_active) .slider__prewiew-img{
-    opacity: 0.5;
-}
-.slider__prewiew-btn:not(.slider__prewiew-btn_active):hover .slider__prewiew-img{
-    opacity: 1;
-}
-
 
 .slider__prewiew-img {
     transition: all 0.5s;
@@ -109,6 +103,13 @@
     object-fit: cover;
     border-radius: 5px;
 }
+.slider__prewiew-btn:not(.slider__prewiew-btn_active) .slider__prewiew-img{
+   filter: opacity(50%) blur(1px);
+}
+.slider__prewiew-btn:not(.slider__prewiew-btn_active):hover .slider__prewiew-img{
+    filter: none;
+}
+
 
 .arrow {
     transition: color 0.5s;
