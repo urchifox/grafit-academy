@@ -14,11 +14,15 @@
         <link rel="icon" type="image/svg" href="" sizes="">
         <link rel="icon" type="image/x-icon" href="" sizes="">
             <!-- подключение гугл-иконок для кнопок -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+            rel="stylesheet">
             <!-- стили страницы -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/filters.css">
+        <link rel="stylesheet" href="css/sorting.css">
         <link rel="stylesheet" href="css/packs-list.css">
         <link rel="stylesheet" href="css/footer.css">
             <!-- ниже стили для просмотра границ основных блоков -->
@@ -58,8 +62,58 @@
             <!-- переключение языка -->
         </header>
         <main class="main">
-            <section class="main__block">
-                <header class="sorting main__sorting">
+            <section class="main__block pack-market">
+                <section class="filters pack-market-header__filters">
+                    <h1 class="filters__h">Фильтры</h1>
+                    <label class="filters__close-btn">
+                        <input class="filters_close-checkbox visually-hidden" type="checkbox">
+                        <span class="filters-close-btn__icon">
+                            <span class="material-icons-round material-icons-round-right">
+                                keyboard_double_arrow_right
+                            </span>
+                            <span class="material-icons-round material-icons-round-left">
+                                keyboard_double_arrow_left
+                            </span>
+                        </span>
+                    </label>
+                    <fieldset class="filters__group">
+                        <legend class="filters__group-name">Содержание пака</legend>
+                        <label class="filter-btn">
+                            <input type="checkbox" class="filter-btn__checkbox">
+                            <span class="filter-btn__desc">Обнаженная натура</span>
+                        </label>
+                        <label class="filter-btn">
+                            <input type="checkbox" class="filter-btn__checkbox">
+                            <span class="filter-btn__desc">Натура в белье</span>
+                        </label> 
+                        <label class="filter-btn">
+                            <input type="checkbox" class="filter-btn__checkbox">
+                            <span class="filter-btn__desc">Натура в костюме</span>
+                        </label>
+                        <label class="filter-btn">
+                            <input type="checkbox" class="filter-btn__checkbox">
+                            <span class="filter-btn__desc">Окружение</span>
+                        </label>     
+                    </fieldset>
+                    <fieldset class="filters__group">
+                        <legend class="filters__group-name">Стоимость</legend>
+                        <input type="range" min="0" max="100" step="1" class="filter-btn__checkbox">
+                        <label class="filter-btn filter-btn__prices">
+                            <label>
+                                <input class="filter-btn__price-input" type="number" name="min-interval" value="0">
+                            </label> 
+                            <span> - </span>                           
+                            <label>
+                                <input class="filter-btn__price-input" type="number" name="max-interval" value="900">
+                            </label>
+                        </label>
+                        <label class="filter-btn">
+                            <input type="checkbox" class="filter-btn__checkbox">
+                            <span class="filter-btn__desc">По акции</span>
+                        </label>    
+                    </fieldset>
+                </section>
+                <section class="sorting pack-market-header__sorting">
                     <span>Сортировать по: </span>
                     <select class="sort-options" tabindex="0">
                         <option>
@@ -76,9 +130,176 @@
                         <input type="checkbox" checked class="sort-order-btn__checkbox visually-hidden">
                         <span class="sort-order-btn__icon"></span>
                     </label>
-                </header>
+                    <label class="view-btn sorting__view-btn">
+                        <input type="checkbox" class="view-btn__checkbox visually-hidden" >
+                            <span class="material-icons-round red view-btn__icon_view-module">
+                                view_module
+                            </span>
+                            <span class="material-icons-round red view-btn__icon_view-list">
+                                view_list
+                            </span>
+                    </label>
+                </section>
 
                 <ul class="packs-list">
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >530+ Male Couple</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-1-1.jpg" alt="" class="pack-card__cover">  
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0"   >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>  
+                        </div>
+                    </li>
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0">440+ Epic Rainforest</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-2-1.jpg" alt="" class="pack-card__cover">
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>
+                    </li>
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >510+ Space Cowboy</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-3-1.jpg" alt=""  class="pack-card__cover">
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button> 
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >770+ Castle</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-4-1.jpg" alt="" class="pack-card__cover">  
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >530+ Male Couple</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-1-1.jpg" alt="" class="pack-card__cover">  
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0"   >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>  
+                        </div>
+                    </li>
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0">440+ Epic Rainforest</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-2-1.jpg" alt="" class="pack-card__cover">
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>
+                    </li>
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >510+ Space Cowboy</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-3-1.jpg" alt=""  class="pack-card__cover">
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button> 
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="pack-card">
+                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >770+ Castle</a></h3>
+                        <a href="#" class="pack-card__img-link" tabindex="-1">
+                            <img src="img/refpack-4-1.jpg" alt="" class="pack-card__cover">  
+                        </a>
+                        <div class="pack-card__price-n-btns">
+                            <span class="pack-card__price">900руб.</span>
+                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
+                                <img src="../img/buy.svg" width="30px" height="30px">
+                            </button>
+                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
+                                <span class="material-icons favorite_border">
+                                    favorite_border
+                                </span>
+                                <span class="material-icons  favorite_checked hidden">
+                                    favorite
+                                </span>
+                            </button>
+                        </div>
+                    </li>
                     <li class="pack-card">
                         <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >530+ Male Couple</a></h3>
                         <a href="#" class="pack-card__img-link" tabindex="-1">
@@ -277,7 +498,7 @@
                 </ul>  
             </div>
         </footer>
-                <!-- js скрипты -->
+            <!-- js скрипты -->
         <script src="scripts/pack-card__add-favorites.js"></script>
     </body>
 </html>

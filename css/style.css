@@ -20,6 +20,11 @@
     outline-offset: 2px;
   }
 
+.material-icons-round.red {
+    color: #b31a00;
+}
+
+
 body {
     margin: 0 auto;
     position: relative;

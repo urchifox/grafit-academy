@@ -1,0 +1,127 @@
+.filters {
+    width: 200px;
+    float: left;
+    padding: 5px;
+    
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
+        
+    /* outline: auto; */
+}
+
+.filters__h {
+    font-size: 18px;
+    padding: 0;
+    margin: 5px auto;
+    text-align: center;
+
+    /* outline: auto; */
+}
+
+
+.filters__close-btn {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    padding-left: 2px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    color: rgba(179, 26, 0, 1);
+    cursor: pointer;
+    user-select: none;
+    
+    /* outline: auto; */
+}
+.filters__close-btn:hover {
+    color: rgba(179, 26, 0, 0.8);
+}
+.filters__close-btn:active {
+    color: rgba(179, 26, 0, 0.5);
+}
+.filters__close-btn:has(.filters_close-checkbox:focus-visible) {
+    outline:  #ff5f3f solid 2px;
+    /* box-shadow: #bd1f00 0 0 3px 3px; */
+    border-radius: 4px;
+    /* outline-offset: 2px; */
+}
+
+.filters__group {
+    display: grid;
+    border: rgba(179, 26, 0, 0.5) 2px solid;
+    border-radius: 5px;
+}
+.filters__group:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.filters__group-name {
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+.filter-btn__prices {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    /* outline: auto; */
+}
+.filter-btn__price-input {
+
+    width: 65px;
+
+}
+.filter-btn__prices span {
+    flex-shrink: 0;
+}
+
+
+.filters:has(.filters_close-checkbox:checked) .filters__h {
+    text-align: left;
+    padding-left: 30px;
+}
+.filters:has(.filters_close-checkbox:checked) .filters__close-btn {
+    left: 5px;
+    right: auto;
+}
+.filters:has(.filters_close-checkbox:checked) .material-icons-round-left {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(0 0 0 0);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+    margin: -1px;
+}
+.filters:has(.filters_close-checkbox:not(:checked)) .material-icons-round-right {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(0 0 0 0);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+    margin: -1px;
+}
+
+
+.filters:has(.filters_close-checkbox:checked) .filters__group {
+    /* position: absolute !important;
+    clip: rect(1px 1px 1px 1px); 
+    clip: rect(0 0 0 0);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+    margin: -1px; */
+    display: none;
+}
