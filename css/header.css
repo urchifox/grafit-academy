@@ -4,6 +4,7 @@
     /* box-shadow: white 0 0 3px 3px; */
     border-radius: 5px;
     outline-offset: 5px;
+    
 }
 .header *[tabindex="0"]:focus-visible {
     outline: 1px white;

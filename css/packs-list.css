@@ -6,11 +6,7 @@
     gap: 20px 20px;
     list-style: none;
     padding: 0;
-    margin: 0 auto;
-
     background-clip: content-box;
-
-    grid-area: packs;
 }
 
 .pack-card {
@@ -28,20 +24,24 @@
 .pack-card__img-link {
     order: -1;
     display: block;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 .pack-card__cover {
+    border-radius: 5px;
     object-fit: cover;
     height: 160px; 
     width: 280px;
-    border-radius: 5px;
+    width: 100%;
+
 }
 
 .pack-card__name {
     margin:  0;
     margin-bottom: 10px;
     padding: 0;
-    
  }
  .pack-card__name-link {
     text-decoration: none;
@@ -101,3 +101,75 @@
 .favorite_checked.hidden {
     opacity: 0;
 }
+
+/* УВЕЛИЧЕННЫЙ ЗУМ */
+
+.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card {
+    width: 390px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "cover cover"
+                         "name price-n-btns";
+    gap: 10px 20px;
+    /* align-items:center; */
+}
+
+.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__img-link {
+    height: 390px;
+    grid-area: cover;
+    align-self: start;
+}
+
+.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__cover {
+    height: 390px; 
+}
+
+.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__name {
+    grid-area: name;
+    margin: auto 0;
+    align-self: stretch;
+}
+
+.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__price-n-btns {
+    grid-area: price-n-btns;
+    justify-self: end;
+    align-self: stretch;
+    margin: auto 0;
+}
+
+/* ВИД ФОРМАТА СПИСОК */
+
+.pack-market:has(.view-btn__checkbox:checked) .pack-card {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "cover cover"
+                         "name price-n-btns";
+    gap: 10px 20px;
+}
+
+.pack-market:has(.view-btn__checkbox:checked)  .pack-card__name {
+    grid-area: name;
+    margin: auto 0;
+}
+
+.pack-market:has(.view-btn__checkbox:checked)  .pack-card__img-link {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    grid-area: cover;
+}
+/* размер колонок в случае увеличенного зума */
+.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__img-link {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.pack-market:has(.view-btn__checkbox:checked)  .pack-card__cover {
+    width: 100%;
+}
+
+.pack-market:has(.view-btn__checkbox:checked)  .pack-card__price-n-btns {
+    grid-area: price-n-btns;
+    justify-self: end;
+    margin: auto 0;
+}
+
