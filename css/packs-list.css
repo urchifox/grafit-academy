@@ -1,12 +1,10 @@
 .packs-list {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
-    gap: 20px 20px;
+    gap: 20px;
     list-style: none;
     padding: 0;
-    background-clip: content-box;
 }
 
 .pack-card {
@@ -14,8 +12,11 @@
     box-shadow: 0 0 2px 1px rgba(152, 32, 7, 0.5);
     border-radius: 10px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: "cover"
+                         "name" 
+                         "price-n-btns";
+    gap: 10px 20px;
 }
 .pack-card:hover{
     box-shadow: 0 0 3px 1px rgba(179, 26, 0, 0.8);
@@ -23,25 +24,25 @@
 
 .pack-card__img-link {
     order: -1;
-    display: block;
     height: 160px;
     overflow: hidden;
     border-radius: 5px;
+    grid-area: cover;
+    display: grid;
+    gap: 10px;
 }
 
 .pack-card__cover {
     border-radius: 5px;
     object-fit: cover;
     height: 160px; 
-    width: 280px;
     width: 100%;
-
 }
 
 .pack-card__name {
-    margin:  0;
-    margin-bottom: 10px;
     padding: 0;
+    margin: auto 0;
+    grid-area: name;
  }
  .pack-card__name-link {
     text-decoration: none;
@@ -54,8 +55,9 @@
 
 .pack-card__price-n-btns {
     display: flex;
-    align-self: flex-end;
-    margin-top: auto;
+    grid-area: price-n-btns;
+    justify-self: end;
+    margin: auto 0;
 }
 
 .pack-card__price {
@@ -102,74 +104,36 @@
     opacity: 0;
 }
 
+
 /* УВЕЛИЧЕННЫЙ ЗУМ */
 
 .pack-market:has(.zoom-btn__checkbox:checked)  .pack-card {
     width: 390px;
-    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 390px 1fr;
     grid-template-areas: "cover cover"
                          "name price-n-btns";
-    gap: 10px 20px;
-    /* align-items:center; */
 }
 
-.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__img-link {
-    height: 390px;
-    grid-area: cover;
-    align-self: start;
-}
-
+.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__img-link,
 .pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__cover {
-    height: 390px; 
+    height: 390px;
 }
 
-.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__name {
-    grid-area: name;
-    margin: auto 0;
-    align-self: stretch;
-}
-
-.pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__price-n-btns {
-    grid-area: price-n-btns;
-    justify-self: end;
-    align-self: stretch;
-    margin: auto 0;
-}
 
 /* ВИД ФОРМАТА СПИСОК */
 
 .pack-market:has(.view-btn__checkbox:checked) .pack-card {
     width: 100%;
-    display: grid;
+    grid-template-columns: auto;
     grid-template-areas: "cover cover"
                          "name price-n-btns";
-    gap: 10px 20px;
-}
-
-.pack-market:has(.view-btn__checkbox:checked)  .pack-card__name {
-    grid-area: name;
-    margin: auto 0;
 }
 
 .pack-market:has(.view-btn__checkbox:checked)  .pack-card__img-link {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    grid-area: cover;
 }
 /* размер колонок в случае увеличенного зума */
 .pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__img-link {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-
-.pack-market:has(.view-btn__checkbox:checked)  .pack-card__cover {
-    width: 100%;
-}
-
-.pack-market:has(.view-btn__checkbox:checked)  .pack-card__price-n-btns {
-    grid-area: price-n-btns;
-    justify-self: end;
-    margin: auto 0;
-}
-
