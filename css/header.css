@@ -15,6 +15,7 @@
 
 .header {
     background-image: url("../img/stroke-header.png");
+    background-size: 1920px 108px;
     background-repeat: no-repeat;
     background-position: center bottom;
     height: 108px;
