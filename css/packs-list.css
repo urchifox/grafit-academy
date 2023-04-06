@@ -1,7 +1,6 @@
 .packs-list {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
     gap: 20px;
     list-style: none;
@@ -106,6 +105,7 @@
     opacity: 0;
 }
 
+
 /* УВЕЛИЧЕННЫЙ ЗУМ */
 
 .pack-market:has(.zoom-btn__checkbox:checked)  .pack-card {
@@ -118,7 +118,7 @@
 
 .pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__img-link,
 .pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__cover {
-    height: 390px; 
+    height: 390px;
 }
 
 /* ВИД ФОРМАТА СПИСОК */
