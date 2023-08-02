@@ -8,21 +8,16 @@ const template = document.querySelector('#preview')
 const previewFragment = document.createDocumentFragment();
 
 const renderPreviews = (data) => {
-	let id = 0;
-
-	data.forEach((datum) => {
+	data.forEach((datum, index) => {
 		const preview = template.cloneNode(true);
 		const button = preview.querySelector('.slider__preview-btn');
-		button.dataset.id = id;
-		button.dataset.link = datum.src;
-		button.dataset.desc = datum.description;
+		button.dataset.id = index;
 
 		const image = preview.querySelector('.slider__preview-img');
 		image.src = datum.src;
 		image.alt = datum.description;
 
-		datum.id = id;
-		id++;
+		datum.id = index;
 
 		previewFragment.append(preview);
 	});

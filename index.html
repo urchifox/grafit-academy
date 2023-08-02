@@ -1,311 +1,265 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <meta name="description" content="Сайт онлайн-школы цифрого рисунка Grafit Academy">
-        <meta property="og:title" content="Grafit Academy">
-        <meta property="og:description" content="Учись у профессионалов своего дела в международной арт-аутсорс студии Grafit!">
-        <meta property="og:image" content="img/black-owl.jpg">
-        <meta property="og:url" content="https://grafitacademy.com/">
-        <title>Grafit Academy</title>
-            <!-- шаблон для вставки фавиконки -->
-        <link rel="icon" type="image/png" href="" sizes="">
-        <link rel="icon" type="image/svg" href="" sizes="">
-        <link rel="icon" type="image/x-icon" href="" sizes="">
-            <!-- подключение гугл-иконок для кнопок -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-        rel="stylesheet">
-            <!-- стили страницы -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/slider.css">
-        <link rel="stylesheet" href="css/packs-list.css">
-        <link rel="stylesheet" href="css/next-course.css">
-        <link rel="stylesheet" href="css/new-courses.css">
-        <link rel="stylesheet" href="css/footer.css">
-            <!-- ниже стили для просмотра границ основных блоков -->
-        <!-- <link href="css/outline.css" rel="stylesheet">  <link href="css/outline-settings.css" rel="stylesheet">  -->
-    </head>
-    <body>
-        <header class="header">
-            <nav class="main-nav header__main-nav">
-                <a href="#" class="main-nav__logo logo" tabindex="0">
-                    <img src="img/logo.png" alt="Логотип">
-                </a>
-                <ul class="main-nav__list">
-                    <li class="main-nav__item">
-                        <a href="packs.html" class="main-nav__link" tabindex="0">Рефы</a>
-                    </li>
-                    <li class="main-nav__item dropdown">
-                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Курсы <!-- (разворачиваемый список) --></a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Туториалы</a>
-                    </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Статьи</a>
-                    </li>
-                </ul>
-            <section class="main-nav__profile-btns">
-                <button  aria-label="Корзина" class="main-nav__bucket main-nav__profile-btn" tabindex="0">
-                    <img src="img/shop-bucket.svg" width="34px" height="34px">
-                </button>
-                <button aria-label="Авторизация" class="main-nav__login main-nav__profile-btn" tabindex="0">
-                    <img src="img/user_icon.svg" width="30px" height="30px">
-                </button> 
-                <button aria-label="Регистрация" class="main-nav__registration main-nav__profile-btn" tabindex="0">
-                    <img src="img/sign-in.svg" width="30px" height="30px">
-                </button> 
-            </section>
-            </nav>
-            <!-- переключение темы -->
-            <!-- переключение языка -->
-        </header>
-        <main class="main">
-            <section class="main__block">
-                <h1 class="header-hero main__header">Учись в Графите!</h1>
-                <section class="lead main__lead">Смотри какие классные работы делают наши студенты:</section>
-                <div class="slider hero__slider ">
-                    <figcaption class="slider__main-pic">
-                        <img class="slider__main-img" src="" alt="">
-                        <figcaption class="slider__desc"></figcaption>
-                    </figcaption>
-                    <button name="previous" aria-label="Предыдущее изображение" class="arrow arrow-left slider__arrow-left  material-icons-round" tabindex="0" >
-                        chevron_left
-                    </button>
-                    <button name="next" aria-label="Следующее изображение" class="arrow arrow-right slider__arrow-right material-icons-round" tabindex="0" >
-                        navigate_next
-                    </button>
-                    <ul class="slider__previews">
-                    </ul> 
-                </div>
-            </section>
-            <article class="main__block">
-                <h2 class="header-article main__header">Популярные паки</h2>
-                <p class="lead main__lead">Эти паки бьют все рекорды по популярности! </p>
-                <ul class="packs-list">
-                    <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >530+ Male Couple</a></h3>
-                        <a href="#" class="pack-card__img-link" tabindex="-1">
-                            <img src="img/refpack-1-1.jpg" alt="" class="pack-card__cover">  
-                        </a>
-                        <div class="pack-card__price-n-btns">
-                            <span class="pack-card__price">900руб.</span>
-                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
-                                <img src="img/buy.svg" width="30px" height="30px">
-                            </button>
-                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0"   >
-                                <span class="material-icons favorite_border">
-                                    favorite_border
-                                </span>
-                                <span class="material-icons  favorite_checked hidden">
-                                    favorite
-                                </span>
-                            </button>  
-                        </div>
-                    </li>
-                    <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0">440+ Epic Rainforest</a></h3>
-                        <a href="#" class="pack-card__img-link" tabindex="-1">
-                            <img src="img/refpack-2-1.jpg" alt="" class="pack-card__cover">
-                        </a>
-                        <div class="pack-card__price-n-btns">
-                            <span class="pack-card__price">900руб.</span>
-                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
-                                <img src="img/buy.svg" width="30px" height="30px">
-                            </button>
-                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
-                                <span class="material-icons favorite_border">
-                                    favorite_border
-                                </span>
-                                <span class="material-icons  favorite_checked hidden">
-                                    favorite
-                                </span>
-                            </button>
-                    </li>
-                    <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >510+ Space Cowboy</a></h3>
-                        <a href="#" class="pack-card__img-link" tabindex="-1">
-                            <img src="img/refpack-3-1.jpg" alt=""  class="pack-card__cover">
-                        </a>
-                        <div class="pack-card__price-n-btns">
-                            <span class="pack-card__price">900руб.</span>
-                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
-                                <img src="img/buy.svg" width="30px" height="30px">
-                            </button> 
-                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
-                                <span class="material-icons favorite_border">
-                                    favorite_border
-                                </span>
-                                <span class="material-icons  favorite_checked hidden">
-                                    favorite
-                                </span>
-                            </button>
-                        </div>
-                    </li>
-                    <li class="pack-card">
-                        <h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0" >770+ Castle</a></h3>
-                        <a href="#" class="pack-card__img-link" tabindex="-1">
-                            <img src="img/refpack-4-1.jpg" alt="" class="pack-card__cover">  
-                        </a>
-                        <div class="pack-card__price-n-btns">
-                            <span class="pack-card__price">900руб.</span>
-                            <button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0" >
-                                <img src="img/buy.svg" width="30px" height="30px">
-                            </button>
-                            <button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0" >
-                                <span class="material-icons favorite_border">
-                                    favorite_border
-                                </span>
-                                <span class="material-icons  favorite_checked hidden">
-                                    favorite
-                                </span>
-                            </button>
-                        </div>
-                    </li>
-                </ul>
-            </article>
-            <article class="main__block">
-                <h2 class="header-article main__header">Ближайшие открытые потоки курсов</h2>
-                <p class="lead  main__lead">Ты еще успеваешь записаться на эти потоки:</p>
-                <section class="next-course main__next-course">
-                        <h3 class="next-course__course-name">
-                            <a href="" class="next-course__course-name-link" tabindex="0">Курс по стилизации</a>
-                        </h3>
-                        <a href="" class="next-course__link-img" tabindex="-1">
-                            <img class="next-course__img" src="img/course-1.jpg" alt="" >
-                        </a>
-                        <div class="next-course__info">
-                            <div class="next-course__dates">
-                                Даты: 
-                                <time datetime="2023-2-10">10 февраля</time> 
-                                - 
-                                <time datetime="2023-4-20">20 апреля</time>
-                            </div>
-                            <div class="next-course__desc">
-                                Освой приемы стилизации вместе с нашим лид-артистом по иллюстрации Михаилом Бабкиным! 
-                            </div>
-                            <a href="#" class="next-course__details" tabindex="0">Узнать подробности</a>
-                            <div class="next-course__price-book">
-                                <div class="next-course__price">3300руб.</div>
-                                <button class="next-course__book" tabindex="0">Записаться</button>    
-                            </div>
-                        </div>
-                </section>
-                <section class="next-course main__next-course">
-                        <h3 class="next-course__course-name">
-                            <a href="" class="next-course__course-name-link" tabindex="0">UI / UX</a>
-                        </h3>
-                        <a href="" class="next-course__link-img" tabindex="-1">
-                            <img class="next-course__img" src="img/course-2.jpg" alt="">
-                        </a>
-                        <div class="next-course__info">
-                            <div class="next-course__dates">
-                                Даты: 
-                                <time datetime="2023-2-16">16 февраля</time> 
-                                - 
-                                <time datetime="2023-4-30">30 апреля</time>
-                            </div>
-                            <div class="next-course__desc">
-                                Научись делать завлекающие интерфейсы с нашей художницей по интефейсам Юлией Бойко!
-                            </div>
-                            <a href="#" class="next-course__details" tabindex="0">Узнать подробности</a>
-                            <div class="next-course__price-book">
-                                <div class="next-course__price">2800руб.</div>
-                                <button class="next-course__book" tabindex="0">Записаться</button>    
-                            </div>
-                        </div>
-                </section>     
-            </article>
-            <article class="main__block">
-                <h2 class="header-article main__header">Готовящиеся курсы (ожидается старт)</h2>
-                <p class="lead main__lead">Мы готовим к выпуску новые курсы, жми на колокольчик, чтобы быть в курсе старта и первым записаться по самой низкой цене!</p>
-                <div class="new-courses main__new-courses">
-                    <section class="new-course">
-                        2D Иллюстрация
-                        <button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know" tabindex="0">
-                            <span class="material-icons  not-checked">
-                                    alarm
-                            </span>
-                            <span class="material-icons checked hidden">
-                                alarm_on
-                            </span>        
-                        </button>
-                    </section>
-                    <section class="new-course">
-                        2D анимация
-                        <button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know" tabindex="0">
-                            <span class="material-icons not-checked">
-                                    alarm
-                            </span>
-                            <span class="material-icons checked hidden">
-                                alarm_on
-                            </span>        
-                        </button>
-                    </section> 
-                    <section class="new-course">
-                        Шейдинг персонажей
-                        <button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know" tabindex="0">
-                            <span class="material-icons not-checked">
-                                    alarm
-                            </span>
-                            <span class="material-icons checked hidden">
-                                alarm_on
-                            </span>        
-                        </button>
-                    </section>     
-                </div>
-            </article>
-            
-            <template id="preview">
-                <li class="slider__preview-item">
-                    <button class="slider__preview-btn" data-link="" data-desc=""  tabindex="0">
-                        <img class="slider__preview-img" width="100px" height="100px" src="" alt="" tabindex="-1">
-                    </button>
-                </li>
-            </template>
-        </main>
-        <footer class="footer body__footer">
-            <div class="footer__container">
-                <section class="copyright">
-                <img src="img/copyright.png" alt="копирайт">
-                </section> 
-                <h2 class="visually-hidden">Контактная информация</h2>
-                <ul class="contacts footer__contacts">
-                    <!-- <li class="contact-item">
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta name="description" content="Сайт онлайн-школы цифрого рисунка Grafit Academy">
+	<meta property="og:title" content="Grafit Academy">
+	<meta property="og:description"
+		content="Учись у профессионалов своего дела в международной арт-аутсорс студии Grafit!">
+	<meta property="og:image" content="img/black-owl.jpg">
+	<meta property="og:url" content="https://grafitacademy.com/">
+	<title>Grafit Academy</title>
+	<!-- шаблон для вставки фавиконки -->
+	<link rel="icon" type="image/png" href="" sizes="">
+	<link rel="icon" type="image/svg" href="" sizes="">
+	<link rel="icon" type="image/x-icon" href="" sizes="">
+	<!-- подключение гугл-иконок для кнопок -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+	<!-- стили страницы -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/slider.css">
+	<link rel="stylesheet" href="css/packs-list.css">
+	<link rel="stylesheet" href="css/next-course.css">
+	<link rel="stylesheet" href="css/new-courses.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<!-- ниже стили для просмотра границ основных блоков -->
+	<!-- <link href="css/outline.css" rel="stylesheet">  <link href="css/outline-settings.css" rel="stylesheet">  -->
+</head>
+
+<body>
+	<header class="header">
+		<nav class="main-nav header__main-nav">
+			<a href="#" class="main-nav__logo logo" tabindex="0">
+				<img src="img/logo.png" alt="Логотип">
+			</a>
+			<ul class="main-nav__list">
+				<li class="main-nav__item">
+					<a href="packs.html" class="main-nav__link" tabindex="0">Рефы</a>
+				</li>
+				<li class="main-nav__item dropdown">
+					<a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Курсы
+						<!-- (разворачиваемый список) --></a>
+				</li>
+				<li class="main-nav__item">
+					<a href="#" class="main-nav__link" tabindex="0"
+						title="А эту страницу я еще не написала">Туториалы</a>
+				</li>
+				<li class="main-nav__item">
+					<a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Статьи</a>
+				</li>
+			</ul>
+			<section class="main-nav__profile-btns">
+				<button aria-label="Корзина" class="main-nav__bucket main-nav__profile-btn" tabindex="0">
+					<img src="img/shop-bucket.svg" width="34px" height="34px">
+				</button>
+				<button aria-label="Авторизация" class="main-nav__login main-nav__profile-btn" tabindex="0">
+					<img src="img/user_icon.svg" width="30px" height="30px">
+				</button>
+				<button aria-label="Регистрация" class="main-nav__registration main-nav__profile-btn" tabindex="0">
+					<img src="img/sign-in.svg" width="30px" height="30px">
+				</button>
+			</section>
+		</nav>
+		<!-- переключение темы -->
+		<!-- переключение языка -->
+	</header>
+	<main class="main">
+		<section class="main__block">
+			<h1 class="header-hero main__header">Учись в Графите!</h1>
+			<section class="lead main__lead">Смотри какие классные работы делают наши студенты:</section>
+			<div class="slider hero__slider ">
+				<figcaption class="slider__main-pic">
+					<img class="slider__main-img" src="" alt="">
+					<figcaption class="slider__desc"></figcaption>
+				</figcaption>
+				<button name="previous" aria-label="Предыдущее изображение"
+					class="arrow arrow-left slider__arrow-left  material-icons-round" tabindex="0">
+					chevron_left
+				</button>
+				<button name="next" aria-label="Следующее изображение"
+					class="arrow arrow-right slider__arrow-right material-icons-round" tabindex="0">
+					navigate_next
+				</button>
+				<ul class="slider__previews">
+				</ul>
+			</div>
+		</section>
+		<article class="main__block">
+			<h2 class="header-article main__header">Популярные паки</h2>
+			<p class="lead main__lead">Эти паки бьют все рекорды по популярности! </p>
+			<ul class="packs-list">
+			</ul>
+		</article>
+		<article class="main__block">
+			<h2 class="header-article main__header">Ближайшие открытые потоки курсов</h2>
+			<p class="lead  main__lead">Ты еще успеваешь записаться на эти потоки:</p>
+			<section class="next-course main__next-course">
+				<h3 class="next-course__course-name">
+					<a href="" class="next-course__course-name-link" tabindex="0">Курс по стилизации</a>
+				</h3>
+				<a href="" class="next-course__link-img" tabindex="-1">
+					<img class="next-course__img" src="img/course-1.jpg" alt="">
+				</a>
+				<div class="next-course__info">
+					<div class="next-course__dates">
+						Даты:
+						<time datetime="2023-2-10">10 февраля</time>
+						-
+						<time datetime="2023-4-20">20 апреля</time>
+					</div>
+					<div class="next-course__desc">
+						Освой приемы стилизации вместе с нашим лид-артистом по иллюстрации Михаилом Бабкиным!
+					</div>
+					<a href="#" class="next-course__details" tabindex="0">Узнать подробности</a>
+					<div class="next-course__price-book">
+						<div class="next-course__price">3300руб.</div>
+						<button class="next-course__book" tabindex="0">Записаться</button>
+					</div>
+				</div>
+			</section>
+			<section class="next-course main__next-course">
+				<h3 class="next-course__course-name">
+					<a href="" class="next-course__course-name-link" tabindex="0">UI / UX</a>
+				</h3>
+				<a href="" class="next-course__link-img" tabindex="-1">
+					<img class="next-course__img" src="img/course-2.jpg" alt="">
+				</a>
+				<div class="next-course__info">
+					<div class="next-course__dates">
+						Даты:
+						<time datetime="2023-2-16">16 февраля</time>
+						-
+						<time datetime="2023-4-30">30 апреля</time>
+					</div>
+					<div class="next-course__desc">
+						Научись делать завлекающие интерфейсы с нашей художницей по интефейсам Юлией Бойко!
+					</div>
+					<a href="#" class="next-course__details" tabindex="0">Узнать подробности</a>
+					<div class="next-course__price-book">
+						<div class="next-course__price">2800руб.</div>
+						<button class="next-course__book" tabindex="0">Записаться</button>
+					</div>
+				</div>
+			</section>
+		</article>
+		<article class="main__block">
+			<h2 class="header-article main__header">Готовящиеся курсы (ожидается старт)</h2>
+			<p class="lead main__lead">Мы готовим к выпуску новые курсы, жми на колокольчик, чтобы быть в курсе старта и
+				первым записаться по самой низкой цене!</p>
+			<div class="new-courses main__new-courses">
+				<section class="new-course">
+					2D Иллюстрация
+					<button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know"
+						tabindex="0">
+						<span class="material-icons  not-checked">
+							alarm
+						</span>
+						<span class="material-icons checked hidden">
+							alarm_on
+						</span>
+					</button>
+				</section>
+				<section class="new-course">
+					2D анимация
+					<button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know"
+						tabindex="0">
+						<span class="material-icons not-checked">
+							alarm
+						</span>
+						<span class="material-icons checked hidden">
+							alarm_on
+						</span>
+					</button>
+				</section>
+				<section class="new-course">
+					Шейдинг персонажей
+					<button aria-label="Уведомить о начале набора" class="let-me-know new-course__let-me-know"
+						tabindex="0">
+						<span class="material-icons not-checked">
+							alarm
+						</span>
+						<span class="material-icons checked hidden">
+							alarm_on
+						</span>
+					</button>
+				</section>
+			</div>
+		</article>
+
+		<template id="preview">
+			<li class="slider__preview-item">
+				<button class="slider__preview-btn" data-link="" data-desc="" tabindex="0">
+					<img class="slider__preview-img" width="100px" height="100px" src="" alt="" tabindex="-1">
+				</button>
+			</li>
+		</template>
+
+		<template id="popular-pack">
+			<li class="pack-card">
+				<h3 class="pack-card__name"><a href="#" class="pack-card__name-link" tabindex="0">packName</a></h3>
+				<a href="#" class="pack-card__img-link" tabindex="-1">
+					<img src="coverSrc" alt="" class="pack-card__cover">
+				</a>
+				<div class="pack-card__price-n-btns">
+					<span class="pack-card__price">price</span>
+					<button aria-label="Положить в корзину" class="pack-card__buy" tabindex="0">
+						<img src="img/buy.svg" width="30px" height="30px">
+					</button>
+					<button aria-label="Добавить в избранное" class="pack-card__add-favorites" tabindex="0">
+						<span class="material-icons favorite_border">
+							favorite_border
+						</span>
+						<span class="material-icons  favorite_checked hidden">
+							favorite
+						</span>
+					</button>
+				</div>
+			</li>
+		</template>
+	</main>
+	<footer class="footer body__footer">
+		<div class="footer__container">
+			<section class="copyright">
+				<img src="img/copyright.png" alt="копирайт">
+			</section>
+			<h2 class="visually-hidden">Контактная информация</h2>
+			<ul class="contacts footer__contacts">
+				<!-- <li class="contact-item">
                         <a href="https://www.grafitart.com/">Сайт студии</a>
                     </li>-->
-                    <li class="contacts__socials">
-                        <ul class="social-list contacts__social-list">
-                            <li class="social-list__item">
-                                <a href="https://www.artstation.com/grafit" class="social-list__link" tabindex="0">
-                                    <img src="img/artstation.png" alt="Arstation">
-                                </a>
-                            </li>
-                            <li class="social-list__item">
-                                <a href="https://www.behance.net/grafitart" tabindex="0">
-                                    <img src="img/behance.png" alt="Behance">
-                                </a>
-                            </li>
-                            <li class="social-list__item">
-                                <a href="https://vk.com/studiyagrafit" tabindex="0">
-                                    <img src="img/vk.png" alt="VK">
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="contacts__mail">
-                        <a href="mailto:work@grafitart.com" class="contacts__mail-link" tabindex="0">
-                            <img src="img/mail.png" alt="email: work@grafitart.com">
-                        </a>
-                    </li>
-                </ul>  
-            </div>
-        </footer>
+				<li class="contacts__socials">
+					<ul class="social-list contacts__social-list">
+						<li class="social-list__item">
+							<a href="https://www.artstation.com/grafit" class="social-list__link" tabindex="0">
+								<img src="img/artstation.png" alt="Arstation">
+							</a>
+						</li>
+						<li class="social-list__item">
+							<a href="https://www.behance.net/grafitart" tabindex="0">
+								<img src="img/behance.png" alt="Behance">
+							</a>
+						</li>
+						<li class="social-list__item">
+							<a href="https://vk.com/studiyagrafit" tabindex="0">
+								<img src="img/vk.png" alt="VK">
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="contacts__mail">
+					<a href="mailto:work@grafitart.com" class="contacts__mail-link" tabindex="0">
+						<img src="img/mail.png" alt="email: work@grafitart.com">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
 
-        <script src="js/main.js" type="module"></script>
-    </body>
+	<script src="js/main.js" type="module"></script>
+</body>
+
 </html>
