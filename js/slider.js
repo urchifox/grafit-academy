@@ -1,83 +1,56 @@
-const mainImage = document.querySelector('.slider__main-img');
-const desc = document.querySelector('.slider__desc');
+import {studentsWorksInfo} from './students-pictures-data.js';
+import {renderMainPicture, renderPreviews} from './slider-previews-rendering.js';
 
-const prewiews = document.querySelectorAll('.slider__prewiew-btn');
-let currentPrewiew = document.querySelector('.slider__prewiew-btn_active');
-const lastIndex = prewiews.length - 1;
-const lastPrewiew = prewiews[lastIndex];
+const previousBtn = document.querySelector('.arrow-left');
+const nextBtn = document.querySelector('.arrow-right');
+const previewContainer = document.querySelector('.slider__previews');
+let currentPreviewIndex = 0;
 
-const leftArrow = document.querySelector('.arrow-left');
-const rightArrow = document.querySelector('.arrow-right');
 
-// cкрипт для переключения картинок через превью
-for (const prewiew of prewiews) {
-	prewiew.onclick = function (evt) {
-		evt.preventDefault();
+const changeMainPicture = (info) => {
+	const requestedPreviewIndex = info.id;
+	const requestedPreview = previewContainer.children[requestedPreviewIndex];
+	const currentPreview = previewContainer.children[currentPreviewIndex];
+	requestedPreview.classList.add('slider__preview-item_active');
+	currentPreview.classList.remove('slider__preview-item_active');
+	currentPreviewIndex = requestedPreviewIndex;
 
-		mainImage.src = prewiew.getAttribute('data-link');
-
-		currentPrewiew.classList.remove('slider__prewiew-btn_active');
-		prewiew.classList.add('slider__prewiew-btn_active');
-
-		desc.textContent = prewiew.getAttribute('data-desc');
-
-		currentPrewiew = prewiew;
-		return(currentPrewiew);
-	};
-}
-
-// скрипты для переключения картинок стрелочками
-leftArrow.onclick = function () {
-	for (let i = 0; i < prewiews.length; i++) {
-		if (prewiews[i] === currentPrewiew) {
-			if (i !== 0) {
-				mainImage.src = prewiews[i - 1].getAttribute('data-link');
-
-				currentPrewiew.classList.remove('slider__prewiew-btn_active');
-				prewiews[i - 1].classList.add('slider__prewiew-btn_active');
-
-				desc.textContent = prewiews[i - 1].getAttribute('data-desc');
-
-				currentPrewiew = prewiews[i - 1];
-				return(currentPrewiew);
-			} else {
-				mainImage.src = lastPrewiew.getAttribute('data-link');
-
-				currentPrewiew.classList.remove('slider__prewiew-btn_active');
-				lastPrewiew.classList.add('slider__prewiew-btn_active');
-
-				desc.textContent = lastPrewiew.getAttribute('data-desc');
-
-				currentPrewiew = lastPrewiew;
-				return(currentPrewiew);
-			}
-		}
-	}
+	renderMainPicture(info);
 };
-rightArrow.onclick = function () {
-	for (let i = 0; i < prewiews.length; i++) {
-		if (prewiews[i] === currentPrewiew) {
-			if (i < lastIndex) {
-				mainImage.src = prewiews[i + 1].getAttribute('data-link');
 
-				currentPrewiew.classList.remove('slider__prewiew-btn_active');
-				prewiews[i + 1].classList.add('slider__prewiew-btn_active');
+const onSliderBtnClick = (evt) => {
+	let requestedPictureIndex = (evt.target.name === 'next') ?
+		currentPreviewIndex + 1 :
+		currentPreviewIndex - 1;
 
-				desc.textContent = prewiews[i + 1].getAttribute('data-desc');
-
-				currentPrewiew = prewiews[i + 1];
-				return(currentPrewiew);
-			} else {
-				mainImage.src = prewiews[0].getAttribute('data-link');
-
-				currentPrewiew.classList.remove('slider__prewiew-btn_active');
-				prewiews[0].classList.add('slider__prewiew-btn_active');
-
-				desc.textContent = prewiews[0].getAttribute('data-desc');
-
-				currentPrewiew = prewiews[0];
-				return(currentPrewiew);
-			}
-		}
+	if (requestedPictureIndex < 0) {
+		requestedPictureIndex = studentsWorksInfo.length - 1;
 	}
+
+	if (requestedPictureIndex > studentsWorksInfo.length - 1) {
+		requestedPictureIndex = 0;
+	}
+
+	const requestedPictureInfo = studentsWorksInfo[requestedPictureIndex];
+	changeMainPicture(requestedPictureInfo);
 };
+
+const onPreviewClick = (evt) => {
+	const preview = evt.target.closest('.slider__preview-btn');
+	if(!preview) {
+		return;
+	}
+	const pictureInfo = studentsWorksInfo[preview.dataset.id];
+	changeMainPicture(pictureInfo);
+};
+
+const init = () => {
+	renderPreviews(studentsWorksInfo);
+	renderMainPicture(studentsWorksInfo[0]);
+
+	previewContainer.addEventListener('click', onPreviewClick);
+	previousBtn.addEventListener('click', onSliderBtnClick);
+	nextBtn.addEventListener('click', onSliderBtnClick);
+};
+
+export {init};

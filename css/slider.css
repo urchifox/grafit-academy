@@ -65,14 +65,14 @@
     background-color: rgba(189, 31, 0, 1);
 }
 
-.slider__prewiew-item {
+.slider__preview-item {
     position: relative;
     padding: 5px;
     
 }
 
 /* вариант наложения оверлея на превью, криво работает из-за появления скроллбара */
-/* .slider__prewiew-btn:not(.slider__prewiew-btn_active)::after {
+/* .slider__preview-btn:not(.slider__preview-item_active)::after {
     content: "";
     position: absolute;
     top: 0;
@@ -84,7 +84,7 @@
     opacity: 0.5;
     outline: auto;
 } */
-.slider__prewiew-btn {
+.slider__preview-btn {
     transition: opacity 0.5s;
     width: 100px;
     height: 100px;
@@ -96,17 +96,18 @@
     cursor: pointer;
 }
 
-.slider__prewiew-img {
+.slider__preview-img {
     transition: all 0.5s;
     display: block;
     margin: 0;
     object-fit: cover;
     border-radius: 5px;
 }
-.slider__prewiew-btn:not(.slider__prewiew-btn_active) .slider__prewiew-img{
+
+.slider__preview-item:not(.slider__preview-item_active) .slider__preview-img{
    filter: opacity(50%) blur(1px);
 }
-.slider__prewiew-btn:not(.slider__prewiew-btn_active):hover .slider__prewiew-img{
+.slider__preview-item:not(.slider__preview-item_active):hover .slider__preview-img{
     filter: none;
 }
 
