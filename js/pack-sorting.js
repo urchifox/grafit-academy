@@ -8,6 +8,9 @@ const ascendingSelector = document.querySelector('.sort-order-btn__checkbox');
 const filtersRoot = document.querySelector('.filters');
 const filtersButtons = filtersRoot.querySelectorAll('.filter-btn__checkbox:not([name="specialOffer"])');
 const specialOfferButton = filtersRoot.querySelector('.filter-btn__checkbox[name="specialOffer"]');
+const minPriceInput = filtersRoot.querySelector('.filter-btn__price-input[name="min-interval"]');
+const maxPriceInput = filtersRoot.querySelector('.filter-btn__price-input[name="max-interval"]');
+
 let shownData = packsData;
 
 const sort = (value, ascending) => {
@@ -35,9 +38,8 @@ const sort = (value, ascending) => {
 const isAnyFilterChecked = () => [...filtersButtons].some((button) => button.checked);
 
 const getFilteredData = () => {
-	let filteredData = [];
-
 	const checkedFilters = [...filtersButtons].filter((button) => button.checked);
+	let filteredData = [];
 
 	checkedFilters.forEach((button) => {
 		if (button.name === 'type') {
@@ -50,7 +52,8 @@ const getFilteredData = () => {
 		}
 	});
 
-	return filteredData;
+	const uniqueFilteredData = new Set(filteredData);
+	return [...uniqueFilteredData];
 };
 
 const filter = () => {
@@ -58,6 +61,8 @@ const filter = () => {
 	if(specialOfferButton.checked) {
 		shownData = shownData.filter((datum) => datum.specialOffer === true);
 	}
+	shownData = shownData.filter((data) => data.price >= minPriceInput.value);
+	shownData = shownData.filter((data) => data.price <= maxPriceInput.value);
 	if (shownData) {
 		root.innerHTML = '';
 		sort(valueSelector.value, ascendingSelector.checked);
