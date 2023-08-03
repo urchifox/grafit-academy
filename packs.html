@@ -80,58 +80,72 @@
                             </span>
                         </span>
                     </label>
-                    <fieldset class="filters__group">
-                        <legend class="filters__group-name">Содержание пака</legend>
-                        <label class="filter-btn">
-                            <input type="checkbox" class="filter-btn__checkbox">
-                            <span class="filter-btn__desc">Обнаженная натура</span>
-                        </label>
-                        <label class="filter-btn">
-                            <input type="checkbox" class="filter-btn__checkbox">
-                            <span class="filter-btn__desc">Натура в белье</span>
-                        </label> 
-                        <label class="filter-btn">
-                            <input type="checkbox" class="filter-btn__checkbox">
-                            <span class="filter-btn__desc">Натура в костюме</span>
-                        </label>
-                        <label class="filter-btn">
-                            <input type="checkbox" class="filter-btn__checkbox">
-                            <span class="filter-btn__desc">Окружение</span>
-                        </label>     
-                    </fieldset>
-                    <fieldset class="filters__group">
-                        <legend class="filters__group-name">Стоимость</legend>
-                        <input type="range" min="0" max="100" step="1" class="filter-btn__checkbox">
-                        <label class="filter-btn filter-btn__prices">
-                            <label>
-                                <input class="filter-btn__price-input" type="number" name="min-interval" value="0">
-                            </label> 
-                            <span> - </span>                           
-                            <label>
-                                <input class="filter-btn__price-input" type="number" name="max-interval" value="900">
+                    <form action="" class="filters">
+                        <fieldset class="filters__group">
+                            <legend class="filters__group-name">Содержание пака</legend>
+                            <label class="filter-btn">
+                                <input type="checkbox" name="type" value="person" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">Натура</span>
+                            </label>     
+                            <label class="filter-btn">
+                                <input type="checkbox" name="tag" value="nudity" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">Обнаженная натура</span>
+                            </label>     
+                            <label class="filter-btn">
+                                <input type="checkbox" name="tag" value="inUnderwear" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">В белье</span>
+                            </label>     
+                            <label class="filter-btn">
+                                <input type="checkbox" name="tag" value="inOutfit" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">В костюме</span>
+                            </label>     
+                            <label class="filter-btn">
+                                <input type="checkbox" name="type" value="environment" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">Окружение</span>
+                            </label>     
+                            <label class="filter-btn">
+                                <input type="checkbox" name="tag" value="nature" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">Природа</span>
+                            </label>     
+                            <label class="filter-btn">
+                                <input type="checkbox" name="tag" value="city" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">Архитектура</span>
+                            </label>     
+                        </fieldset>
+                        <fieldset class="filters__group">
+                            <legend class="filters__group-name">Стоимость</legend>
+                            <input type="range" min="0" max="100" step="1" class="filter-btn__checkbox">
+                            <label class="filter-btn filter-btn__prices">
+                                <label>
+                                    <input class="filter-btn__price-input" type="number" name="min-interval" value="0">
+                                </label> 
+                                <span> - </span>                           
+                                <label>
+                                    <input class="filter-btn__price-input" type="number" name="max-interval" value="900">
+                                </label>
                             </label>
-                        </label>
-                        <label class="filter-btn">
-                            <input type="checkbox" class="filter-btn__checkbox">
-                            <span class="filter-btn__desc">По акции</span>
-                        </label>    
-                    </fieldset>
+                            <label class="filter-btn">
+                                <input type="checkbox"  name="specialOffer" class="filter-btn__checkbox">
+                                <span class="filter-btn__desc">По акции</span>
+                            </label>    
+                        </fieldset>
+                    </form>
                 </section>
                 <section class="sorting pack-market-header__sorting">
                     <span>Сортировать по: </span>
                     <select class="sort-options" tabindex="0">
-                        <option>
+                        <option value="popularityRate">
+                            Популярности
+                        </option>
+                        <option value="packName">
                             Названию
                         </option>
-                        <option>
+                        <option value="price">
                             Цене
-                        </option>
-                        <option>
-                            Популярности
                         </option>
                     </select>
                     <label class="sort-order-btn sorting__sort-order-btn">
-                        <input type="checkbox" checked class="sort-order-btn__checkbox visually-hidden">
+                        <input type="checkbox"  class="sort-order-btn__checkbox visually-hidden">
                         <span class="sort-order-btn__icon"></span>
                     </label>
                     <label class="view-btn sorting__view-btn">
