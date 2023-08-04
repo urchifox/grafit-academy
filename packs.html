@@ -19,11 +19,13 @@
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
             rel="stylesheet">
             <!-- стили страницы -->
+            <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/filters.css">
         <link rel="stylesheet" href="css/sorting.css">
         <link rel="stylesheet" href="css/packs-list.css">
+        <link rel="stylesheet" href="css/price-slider.css">
         <link rel="stylesheet" href="css/footer.css">
             <!-- ниже стили для просмотра границ основных блоков -->
         <!-- <link href="css/outline.css" rel="stylesheet">  <link href="css/outline-settings.css" rel="stylesheet">  -->
@@ -114,7 +116,8 @@
                         </fieldset>
                         <fieldset class="filters__group">
                             <legend class="filters__group-name">Стоимость</legend>
-                            <input type="range" min="0" max="100" step="1" class="filter-btn__checkbox">
+                            <!-- <input type="range" min="0" max="100" step="1" class="filter-btn__checkbox"> -->
+                            <div id="slider"></div>
                             <label class="filter-btn filter-btn__prices">
                                 <label>
                                     <input class="filter-btn__price-input" type="number" name="min-interval" value="0">
@@ -239,6 +242,7 @@
         </template>
 
             <!-- js скрипты -->
+        <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
         <script type="module" src="js/packs-main.js"></script>
     </body>
 </html>

@@ -8,6 +8,7 @@ const ascendingSelector = document.querySelector('.sort-order-btn__checkbox');
 const filtersRoot = document.querySelector('.filters');
 const filtersButtons = filtersRoot.querySelectorAll('.filter-btn__checkbox:not([name="specialOffer"])');
 const specialOfferButton = filtersRoot.querySelector('.filter-btn__checkbox[name="specialOffer"]');
+const slider = document.getElementById('slider');
 const minPriceInput = filtersRoot.querySelector('.filter-btn__price-input[name="min-interval"]');
 const maxPriceInput = filtersRoot.querySelector('.filter-btn__price-input[name="max-interval"]');
 
@@ -71,11 +72,14 @@ const filter = () => {
 
 const onFiltersChange = filter;
 const onSortingButtonChange = () => sort(valueSelector.value, ascendingSelector.checked);
+const onPriceInputChange = () => slider.noUiSlider.set([minPriceInput.value, maxPriceInput.value]);
 
 const init = () => {
+	minPriceInput.addEventListener('change', onPriceInputChange);
+	maxPriceInput.addEventListener('change', onPriceInputChange);
 	filtersRoot.addEventListener('change', onFiltersChange);
 	valueSelector.addEventListener('change', onSortingButtonChange);
 	ascendingSelector.addEventListener('change', onSortingButtonChange);
 };
 
-export {init};
+export {init, filter};

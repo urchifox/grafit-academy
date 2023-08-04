@@ -13,7 +13,7 @@ const render = (data) => {
 		const card = template.cloneNode(true);
 		card.dataset.id = index;
 		card.querySelector('.pack-card__name-link').textContent = packName;
-		card.querySelector('.pack-card__price').textContent = price;
+		card.querySelector('.pack-card__price').textContent = `${price} руб.`;
 		const preview = card.querySelector('.pack-card__cover');
 		preview.src = `${PREVIEWS_ADRESS}${coverName}`;
 		const previewsRoot = card.querySelector('.pack-card__img-link');

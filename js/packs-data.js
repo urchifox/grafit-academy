@@ -1,5 +1,6 @@
 const PREVIEWS_ADRESS = 'img/';
 
+
 const packDataExample = {
 	packName: 'string',
 	price: 'number',
