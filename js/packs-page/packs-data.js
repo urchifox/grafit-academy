@@ -1,4 +1,4 @@
-const PREVIEWS_ADRESS = 'img/';
+const PREVIEWS_ADRESS = 'img/refpacks/covers/';
 
 
 const packDataExample = {
