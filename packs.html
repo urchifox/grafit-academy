@@ -27,35 +27,48 @@
     <body>
         <header class="header">
             <nav class="main-nav header__main-nav">
-                <a href="index.html" class="main-nav__logo logo" tabindex="0"><img src="img/header/logo.png" alt="Логотип"></a>
-                <ul class="main-nav__list">
-                    <li class="main-nav__item">
-                        <a href="" class="main-nav__link main-nav__link_active" tabindex="0">Рефы</a>
+                <a href="index.html" class="main-nav__logo-link logo" tabindex="0">
+                    <img src="img/header/logo.png" alt="Логотип" width="81" height="70">
+                    <span class="visually-hidden">Перейти на главную</span>
+                </a>
+                <ul class="main-nav__site-navigation">
+                    <li class="main-nav__site-navigation-item">
+                        <a href="packs.html" class="main-nav__site-nav-link main-nav__site-nav-link_current" tabindex="0">Рефы</a>
                     </li>
-                    <li class="main-nav__item dropdown">
-                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Курсы <!-- (разворачиваемый список) --></a>
+                    <li class="main-nav__site-navigation-item dropdown">
+                        <a href="#" class="main-nav__site-nav-link" tabindex="0">Курсы</a>
+                        <span class="main-nav__site-nav-tooltip">Эта страница пока не готова :с</span>
+                        <!-- TODO разворачиваемый список -->
                     </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Туториалы</a>
+                    <li class="main-nav__site-navigation-item">
+                        <a href="#" class="main-nav__site-nav-link" tabindex="0">Туториалы</a>
+                        <span class="main-nav__site-nav-tooltip">Эта страница пока не готова :с</span>
                     </li>
-                    <li class="main-nav__item">
-                        <a href="#" class="main-nav__link" tabindex="0" title="А эту страницу я еще не написала">Статьи</a>
+                    <li class="main-nav__site-navigation-item">
+                        <a href="#" class="main-nav__site-nav-link" tabindex="0">Статьи</a>
+                        <span class="main-nav__site-nav-tooltip">Эта страница пока не готова :с</span>
                     </li>
                 </ul>
-            <section class="main-nav__profile-btns">
-                <button  aria-label="Корзина" class="main-nav__bucket main-nav__profile-btn" tabindex="0">
-                    <img src="img/header/shop-bucket.svg" width="34px" height="34px">
-                    <span class="visually-hidden">Открыть корзину</span>
-                </button>
-                <button aria-label="Авторизация" class="main-nav__login main-nav__profile-btn" tabindex="0">
-                    <img src="img/header/user_icon.svg" width="30px" height="30px">
-                    <span class="visually-hidden">Авторизация</span>
-                </button> 
-                <button aria-label="Регистрация" class="main-nav__registration main-nav__profile-btn" tabindex="0">
-                    <img src="img/header/sign-in.svg" width="30px" height="30px">
-                    <span class="visually-hidden">Открыть корзину</span>
-                </button> 
-            </section>
+                <ul class="main-nav__user-navigation">
+                    <li class="main-nav__user-navigation-item">
+                        <button class="main-nav__profile-btn" tabindex="0">
+                            <img class="main-nav__profile-icon" src="img/header/shop-bucket.svg" width="34px" height="34px">
+                            <span class="main-nav__profile-tooltip">Корзина</span>
+                        </button>
+                    </li>
+                    <li class="main-nav__user-navigation-item">
+                        <button class="main-nav__profile-btn" tabindex="0">
+                            <img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30px" height="30px">
+                            <span class="main-nav__profile-tooltip">Авторизация</span>
+                        </button>
+                    </li>
+                    <li class="main-nav__user-navigation-item">
+                        <button class="main-nav__profile-btn" tabindex="0">
+                            <img class="main-nav__profile-icon" src="img/header/sign-in.svg" width="30px" height="30px">
+                            <span class="main-nav__profile-tooltip">Регистрация</span>
+                        </button>
+                    </li>
+                </ul>
             </nav>
             <!-- переключение темы -->
             <!-- переключение языка -->
