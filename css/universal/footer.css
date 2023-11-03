@@ -1,54 +1,74 @@
-footer {
+.footer {
+    padding: 0;
+    border-top: 1px solid #982007;
+
     background-image: url("../../img/footer/stroke-footer.png");
     background-size: 1920px 36px;
     background-repeat: no-repeat;
     background-position: center bottom;
-    border-top: 1px solid #982007;
-    padding: 0;
 }
 
 .footer__container {
-    display: flex;
     margin: 0 auto;
+    
     padding: 17px 20px 36px 20px;
-    align-items: center;
     max-width: 1280px;
     min-width: 650px;
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 30px;
+    align-items: center;
     justify-content: space-between;
 }
 
-.contacts {
-    display: grid;
-    grid-template-areas: "socials mail";
-    align-items: center;
-    width: 1090px;
-    list-style: none;
-    padding: 0;
-}
-.footer__contacts {
+.contacts__list {
     margin: 0;
+
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 190px;
+    gap: 30px;
+    align-items: center;
+    
+    list-style: none;
 }
 
 .contacts__socials {
-    grid-area: socials;
-    justify-self: end;
+    justify-self: center;
 }
 
+
 .contacts__mail {
-    grid-area: mail;
     justify-self: end;
+    transition: transform 0.3s;
+}
+.contacts__mail:hover {
+    transform: scale(1.2);
+}
+.contacts__mail:active {
+    transform: scale(0.9);
 }
 
 .social-list {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 200px;
     gap: 10px;
+    
     list-style: none;
-    padding: 0;
 }
 .contacts__social-list{
     margin: 0;
+}
+
+.social-list__item {
+    transition: transform 0.3s;
+}
+.social-list__item:hover {
+    transform: scale(1.2);
+}
+.social-list__item:active {
+    transform: scale(0.9);
 }
