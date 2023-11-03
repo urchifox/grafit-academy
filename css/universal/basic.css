@@ -53,7 +53,11 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(189, 31, 0, 1);
 }
-  
+
+img {
+    max-width: 100%;
+    height: auto;
+}  
 
 .main {
     width: 90vw;
