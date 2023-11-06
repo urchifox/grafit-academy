@@ -1,17 +1,18 @@
 .packs-list {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+
     list-style: none;
-    padding: 0;
 }
 
 .pack-card {
-    width: 280px;
-    box-shadow: 0 0 2px 1px rgba(152, 32, 7, 0.5);
-    border-radius: 10px;
     padding: 10px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 1px rgba(152, 32, 7, 0.5);
     display: grid;
     grid-template-areas: "cover"
                          "name" 
@@ -23,27 +24,27 @@
 }
 
 .pack-card__img-link {
-    order: -1;
-    height: 160px;
-    overflow: hidden;
-    border-radius: 5px;
     grid-area: cover;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
     display: grid;
     gap: 10px;
 }
 
 .pack-card__cover {
-    border-radius: 5px;
-    object-fit: cover;
     height: 160px; 
     width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 .pack-card__name {
-    padding: 0;
-    font-size: 18px;
     margin: auto 0;
+
+    padding: 0;
     grid-area: name;
+    font-size: 18px;
  }
  .pack-card__name-link {
     text-decoration: none;
@@ -70,14 +71,16 @@
     margin-right: 5px;
 }
 .pack-card__buy, .pack-card__add-favorites {
-    background-color: transparent;
+    position: relative;
+
+    padding: 2px 2px;
     border: none;
     width: 35px;
     height: 35px;
-    padding: 2px 2px;
+    
+    background-color: transparent;
     transition: transform 0.3s;
     cursor: pointer;
-    position: relative;
 }
 
 .pack-card__buy:hover, .pack-card__add-favorites:hover {
@@ -93,6 +96,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
+    
     transform: scale(1.2);
 }
 .favorite_checked {
