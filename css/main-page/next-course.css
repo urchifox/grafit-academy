@@ -8,28 +8,12 @@
     text-align: center;
 }
 .next-course:nth-of-type(odd) {
-    grid-template-areas: "image name"
-                         "image info";
-     grid-template-columns: 2fr 1fr;
+    grid-template-areas: "image info";
+    grid-template-columns: 2fr 1fr;
 }
 .next-course:nth-of-type(even) {
-    grid-template-areas: "name image "
-                         "info image ";
+    grid-template-areas: "info image ";
     grid-template-columns: 1fr 2fr;
-}
-
-.next-course__course-name {
-    grid-area: name;
-    align-self: end;
-    min-width: 300px;
-    text-transform: uppercase;
-}
-.next-course__course-name-link {
-    text-decoration: none;
-    color: #b31a00;
-}
-.next-course__course-name-link:hover {
-    color:#db583e;
 }
 
 .next-course__link-img {
@@ -44,10 +28,26 @@
 }
 
 .next-course__info {
-    margin-bottom: 20px;
-
     grid-area: info;
+    padding: 20px;
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-course__course-name {
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.next-course__course-name-link {
+    text-decoration: none;
+    color: #b31a00;
+}
+.next-course__course-name-link:hover {
+    color:#db583e;
 }
 
 .next-course__dates {
@@ -62,7 +62,7 @@
 
 .next-course__details {
     margin-bottom: 25px;
-
+    
     display: block;
     color: #b31a00;
     text-decoration: none;
@@ -74,18 +74,13 @@
     text-decoration: underline;
 }
 
-.next-course__price-book {
-    width: max-content;
-    margin: 0 auto;
-}
-
 .next-course__price {
+    margin-bottom: 5px;
 }
 
 .next-course__book {
-    margin-top: 10px;
-
     padding: 10px 15px;
+    width: 200px;
     border: none;
     border-radius: 5px;
     
