@@ -66,6 +66,7 @@
 }
 
 .filters__group {
+    margin-top: 9px;
     padding-top: 7px;
     display: flex;
     flex-direction: column;
@@ -73,9 +74,7 @@
     border: rgba(179, 26, 0, 0.5) 2px solid;
     border-radius: 5px;
 }
-.filters__group:not(:last-of-type) {
-    margin-bottom: 10px;
-}
+
 .filters:has(.filters__toogle-checkbox:checked) .filters__group {
     display: none;
 }

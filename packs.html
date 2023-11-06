@@ -76,6 +76,7 @@
         <main class="main">
             <section class="main__block pack-market">
                 <h1 class="visually-hidden">Рефпаки от студии Графит</h1>
+                
                 <section class="filters pack-market__filters">
                     <div class="filters__header">
                         <h2 class="filters__title">Фильтры</h2>
@@ -134,25 +135,27 @@
                         </fieldset>
                     </form>
                 </section>
-                <section class="sorting pack-market-header__sorting">
-                    <span>Сортировать по: </span>
+
+                <section class="sorting pack-market__sorting">
+                    <h2 class="sorting__title">Сортировать по:</h2>
                     <select class="sort-options" tabindex="0">
                         <option value="popularityRate">
-                            Популярности
+                            популярности
                         </option>
                         <option value="packName">
-                            Названию
+                            названию
                         </option>
                         <option value="price">
-                            Цене
+                            цене
                         </option>
                     </select>
                     <label class="sort-order-btn sorting__sort-order-btn">
+                        <span class="visually-hidden">по возрастанию</span>
                         <input type="checkbox"  class="sort-order-btn__checkbox visually-hidden">
                         <span class="sort-order-btn__icon"></span>
                     </label>
-                    <label class="view-btn sorting__view-btn">
-                        <input type="checkbox" class="view-btn__checkbox visually-hidden" >
+                    <label aria-hidden="true" class="view-btn sorting__view-btn">
+                        <input type="checkbox" class="view-btn__checkbox visually-hidden">
                         <span class="material-icons-round red view-btn__icon_view-module">
                             view_module
                         </span>
@@ -160,8 +163,8 @@
                             view_list
                         </span>
                     </label>
-                    <label class="zoom-btn sorting__zoom-btn">
-                        <input type="checkbox" class="zoom-btn__checkbox visually-hidden" >
+                    <label aria-hidden="true" class="zoom-btn sorting__zoom-btn">
+                        <input type="checkbox" class="zoom-btn__checkbox visually-hidden">
                         <span class="material-icons-round red zoom-btn__icon_zoom-in">
                             zoom_in
                         </span>
