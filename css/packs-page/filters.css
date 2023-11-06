@@ -1,127 +1,130 @@
 .filters {
     width: 200px;
-    float: left;
-    padding: 5px;
-    
+}
+
+.pack-market__filters {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
     z-index: 2;
-    
     margin-right: 20px;
-    /* outline: auto; */
+    float: left;
 }
 
-.filters__h {
+.filters__header {
+    padding: 12px 0;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-areas: "button-open title button-close";
+    align-items: center;
+}
+
+.filters__title {
+    margin: 0;
+    grid-area: title;
     font-size: 18px;
-    padding: 0;
-    margin: 9px auto;
     text-align: center;
-
-    /* outline: auto; */
 }
-.filters:has(.filters_close-checkbox:checked) .filters__h {
+.filters:has(.filters__toogle-checkbox:checked) .filters__title {
     text-align: left;
-    padding-left: 30px;
 }
 
-
-.filters__close-btn {
-    position: absolute;
-    top: 13px;
-    right: 10px;
-    padding-left: 2px;
+.filters__toogle-btn {
+    grid-area: button-close;
     width: 25px;
     height: 25px;
     color: rgba(179, 26, 0, 1);
+    opacity: 1;
+
     cursor: pointer;
     user-select: none;
-    
-    /* outline: auto; */
 }
-.filters__close-btn:hover {
-    color: rgba(179, 26, 0, 0.8);
+.filters__toogle-btn:hover {
+    opacity: 0.8;
 }
-.filters__close-btn:active {
-    color: rgba(179, 26, 0, 0.5);
+.filters__toogle-btn:active {
+    opacity: 0.5;
 }
-.filters__close-btn:has(.filters_close-checkbox:focus-visible) {
+.filters__toogle-btn:has(.filters__toogle-checkbox:focus-visible) {
     outline:  #ff5f3f solid 2px;
-    /* box-shadow: #bd1f00 0 0 3px 3px; */
     border-radius: 4px;
-    /* outline-offset: 2px; */
 }
-.filters:has(.filters_close-checkbox:checked) .filters__close-btn {
-    left: 5px;
-    right: auto;
+.filters__toogle-btn:has(.filters__toogle-checkbox:checked) {
+    grid-area: button-open;
 }
 
-
-
-.filters-close-btn__icon-right, 
-.filters-close-btn__icon-left {
-    vertical-align: middle;
+.filters__toogle-icon {
+    transform: scale(1.2);   
+    display: flex;
+    justify-content: center;
+    align-items: center;
     user-select: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);    
-    
-    /* outline: auto; */
 }
 
-.filters_close-checkbox:checked ~ .filters-close-btn__icon .filters-close-btn__icon-left,
-.filters_close-checkbox:not(:checked) ~ .filters-close-btn__icon  .filters-close-btn__icon-right {
-    opacity: 0;
+.filters__toogle-checkbox:checked ~ .filters__toogle-icon {
+    transform: scale(1.2) rotate(180deg);
 }
-
-
 
 .filters__group {
-    display: grid;
+    padding-top: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     border: rgba(179, 26, 0, 0.5) 2px solid;
     border-radius: 5px;
 }
 .filters__group:not(:last-of-type) {
     margin-bottom: 10px;
 }
-.filters:has(.filters_close-checkbox:checked) .filters__group {
-    /* position: absolute !important;
-    clip: rect(1px 1px 1px 1px); 
-    clip: rect(0 0 0 0);
-    padding:0 !important;
-    border:0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden;
-    margin: -1px; */
+.filters:has(.filters__toogle-checkbox:checked) .filters__group {
     display: none;
 }
 
 .filters__group-name {
     font-weight: bold;
     text-align: center;
-
 }
-
 
 .filter-btn__prices {
-    width: 100%;
-    text-align: center;
     margin-bottom: 10px;
-    /* outline: auto; */
+    display: flex;
+    gap: 10px;
+    text-align: center;
 }
 .filter-btn__price-input {
-    width: 65px;
-}
-.filter-btn__prices span {
-    flex-shrink: 0;
+    width: 100%;
 }
 
+.filter-btn__desc {
+    position: relative;
+    padding-left: 23px;
+    display: block;
+}
 
+.filter-btn__desc:hover {
+    opacity: 0.7;
+}
+.filter-btn__desc:active {
+    opacity: 0.5;
+}
 
+.filter-btn__desc::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border: rgba(179, 26, 0, 0.5) 1px solid;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.filter-btn__checkbox:checked ~ .filter-btn__desc::before {
+    border: rgba(179, 26, 0, 1) 1px solid;
+    background-color: rgba(179, 26, 0, 0.7);
+}
 
-
-
-
-
+.filter-btn__desc_sub {
+    margin-left: 10px;
+}

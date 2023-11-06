@@ -76,67 +76,60 @@
         <main class="main">
             <section class="main__block pack-market">
                 <h1 class="visually-hidden">Рефпаки от студии Графит</h1>
-                <section class="filters pack-market-header__filters">
-                    <h2 class="filters__h">Фильтры</h2>
-                    <label class="filters__close-btn">
-                        <input class="filters_close-checkbox visually-hidden" type="checkbox">
-                        <span class="filters-close-btn__icon">
-                            <span class="material-icons-round filters-close-btn__icon-right">
-                                keyboard_double_arrow_right
-                            </span>
-                            <span class="material-icons-round filters-close-btn__icon-left">
+                <section class="filters pack-market__filters">
+                    <div class="filters__header">
+                        <h2 class="filters__title">Фильтры</h2>
+                        <label class="filters__toogle-btn">
+                            <span class="visually-hidden">Скрыть фильтры</span>
+                            <input class="filters__toogle-checkbox visually-hidden" type="checkbox">
+                            <span aria-hidden="true" class="material-icons-round filters__toogle-icon">
                                 keyboard_double_arrow_left
                             </span>
-                        </span>
-                    </label>
-                    <form action="" class="filters">
+                        </label>
+                    </div>
+                    <form action="">
                         <fieldset class="filters__group">
                             <legend class="filters__group-name">Содержание пака</legend>
                             <label class="filter-btn">
-                                <input type="checkbox" name="type" value="person" class="filter-btn__checkbox">
                                 <span class="filter-btn__desc">Натура</span>
+                                <input type="checkbox" name="type" value="person" class="filter-btn__checkbox visually-hidden">
                             </label>     
                             <label class="filter-btn">
-                                <input type="checkbox" name="tag" value="nudity" class="filter-btn__checkbox">
-                                <span class="filter-btn__desc">Обнаженная натура</span>
+                                <span class="filter-btn__desc filter-btn__desc_sub">Обнаженная натура</span>
+                                <input type="checkbox" name="tag" value="nudity" class="filter-btn__checkbox visually-hidden">
                             </label>     
                             <label class="filter-btn">
-                                <input type="checkbox" name="tag" value="inUnderwear" class="filter-btn__checkbox">
-                                <span class="filter-btn__desc">В белье</span>
+                                <span class="filter-btn__desc filter-btn__desc_sub">В белье</span>
+                                <input type="checkbox" name="tag" value="inUnderwear" class="filter-btn__checkbox visually-hidden">
                             </label>     
                             <label class="filter-btn">
-                                <input type="checkbox" name="tag" value="inOutfit" class="filter-btn__checkbox">
-                                <span class="filter-btn__desc">В костюме</span>
+                                <span class="filter-btn__desc filter-btn__desc_sub">В костюме</span>
+                                <input type="checkbox" name="tag" value="inOutfit" class="filter-btn__checkbox visually-hidden">
                             </label>     
                             <label class="filter-btn">
-                                <input type="checkbox" name="type" value="environment" class="filter-btn__checkbox">
                                 <span class="filter-btn__desc">Окружение</span>
+                                <input type="checkbox" name="type" value="environment" class="filter-btn__checkbox visually-hidden">
                             </label>     
                             <label class="filter-btn">
-                                <input type="checkbox" name="tag" value="nature" class="filter-btn__checkbox">
-                                <span class="filter-btn__desc">Природа</span>
+                                <span class="filter-btn__desc filter-btn__desc_sub">Природа</span>
+                                <input type="checkbox" name="tag" value="nature" class="filter-btn__checkbox visually-hidden">
                             </label>     
                             <label class="filter-btn">
-                                <input type="checkbox" name="tag" value="city" class="filter-btn__checkbox">
-                                <span class="filter-btn__desc">Архитектура</span>
+                                <span class="filter-btn__desc filter-btn__desc_sub">Архитектура</span>
+                                <input type="checkbox" name="tag" value="city" class="filter-btn__checkbox visually-hidden">
                             </label>     
                         </fieldset>
                         <fieldset class="filters__group">
                             <legend class="filters__group-name">Стоимость</legend>
-                            <!-- <input type="range" min="0" max="100" step="1" class="filter-btn__checkbox"> -->
                             <div id="slider"></div>
-                            <label class="filter-btn filter-btn__prices">
-                                <label>
-                                    <input class="filter-btn__price-input" type="number" name="min-interval" value="0">
-                                </label> 
-                                <span> - </span>                           
-                                <label>
-                                    <input class="filter-btn__price-input" type="number" name="max-interval" value="900">
-                                </label>
+                            <label class=" filter-btn__prices">
+                                <input class="filter-btn__price-input" type="number" name="min-interval" value="0">
+                                <span>&mdash;</span>                           
+                                <input class="filter-btn__price-input" type="number" name="max-interval" value="900">
                             </label>
                             <label class="filter-btn">
-                                <input type="checkbox"  name="specialOffer" class="filter-btn__checkbox">
                                 <span class="filter-btn__desc">По акции</span>
+                                <input type="checkbox"  name="specialOffer" class="filter-btn__checkbox visually-hidden">
                             </label>    
                         </fieldset>
                     </form>
@@ -220,7 +213,7 @@
                             <spav class="visually-hidden">Почта: work@grafitart.com</spav>
                         </a>
                     </li>
-                </ul>  
+                </ul>
             </div>
         </footer>
 
