@@ -24,7 +24,7 @@
 </head>
 
 <body>
-	<header class="header">
+	<header class="header body__header">
 		<nav class="main-nav header__main-nav">
 			<a href="#" class="main-nav__logo-link logo" tabindex="0">
 				<img src="img/header/logo.png" alt="Логотип" width="81" height="70">
@@ -71,36 +71,35 @@
 		</nav>
 		<!-- TODO переключение темы -->
 		<!-- TODO переключение языка -->
-	</header>
-	<main class="main">
-		<section class="main__block">
-			<h1 class="header-hero main__header">Учись в Графите!</h1>
-			<section class="lead main__lead">Смотри какие классные работы делают наши студенты:</section>
+	</header> 
+	
+	<main class="main body__main">
+		<article class="main__block">
+			<h1 class="heading heading_hero main__heading">Учись в Графите!</h1>
+			<p class="lead main__lead">Смотри какие классные работы делают наши студенты:</p>
 			<div class="slider hero__slider ">
 				<figcaption class="slider__main-pic">
 					<img class="slider__main-img" src="" alt="">
 					<figcaption class="slider__desc"></figcaption>
 				</figcaption>
-				<button name="previous" aria-label="Предыдущее изображение"
-					class="arrow arrow-left slider__arrow-left  material-icons-round" tabindex="0">
-					chevron_left
+				<button name="previous" aria-label="Предыдущее изображение" class="arrow arrow-left slider__arrow-left  material-icons-round" tabindex="0">
+					<span aria-hidden="true">chevron_left</span>
 				</button>
-				<button name="next" aria-label="Следующее изображение"
-					class="arrow arrow-right slider__arrow-right material-icons-round" tabindex="0">
-					navigate_next
+				<button name="next" aria-label="Следующее изображение" class="arrow arrow-right slider__arrow-right material-icons-round" tabindex="0">
+					<span aria-hidden="true">navigate_next</span>
 				</button>
 				<ul class="slider__previews">
 				</ul>
 			</div>
-		</section>
+		</article>
 		<article class="main__block">
-			<h2 class="header-article main__header">Популярные паки</h2>
+			<h2 class="heading heading_article main__heading">Популярные паки</h2>
 			<p class="lead main__lead">Эти паки бьют все рекорды по популярности! </p>
 			<ul class="packs-list">
 			</ul>
 		</article>
 		<article class="main__block">
-			<h2 class="header-article main__header">Ближайшие открытые потоки курсов</h2>
+			<h2 class="heading heading_article main__heading">Ближайшие открытые потоки курсов</h2>
 			<p class="lead  main__lead">Ты еще успеваешь записаться на эти потоки:</p>
 			<section class="next-course main__next-course">
 				<h3 class="next-course__course-name">
@@ -152,7 +151,7 @@
 			</section>
 		</article>
 		<article class="main__block">
-			<h2 class="header-article main__header">Готовящиеся курсы (ожидается старт)</h2>
+			<h2 class="heading heading_article main__heading">Готовящиеся курсы (ожидается старт)</h2>
 			<p class="lead main__lead">Мы готовим к выпуску новые курсы, жми на колокольчик, чтобы быть в курсе старта и
 				первым записаться по самой низкой цене!</p>
 			<div class="new-courses main__new-courses">
@@ -226,6 +225,7 @@
 			</li>
 		</template>
 	</main>
+
 	<footer class="footer body__footer">
 		<div class="footer__container">
 			<p class="copyright">

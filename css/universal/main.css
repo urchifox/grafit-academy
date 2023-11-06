@@ -1,0 +1,47 @@
+.main {
+    padding: 0 20px;
+    width: 90vw;
+    max-width: 1280px;
+    min-width: 650px;
+}
+
+.main__block {
+    margin-bottom: 60px;
+}
+
+.heading {
+    text-align: center;
+    padding: 0;
+}
+
+.main__heading {
+    margin:  0;
+    margin-bottom: 10px;
+}
+
+.heading_hero {
+    font-size: 30px;
+    color: #bd1f00;
+}
+
+.heading_article {
+    font-size: 25px;
+    color: #b31a00;
+}
+
+.lead {
+    font-size: 20px;
+    text-align: center;
+}
+
+.main__lead {
+    margin-bottom: 10px;
+}
+
+.main__next-course {
+    margin-bottom: 10px;
+}
+
+.main__new-courses {
+    margin-top: 20px;
+}
