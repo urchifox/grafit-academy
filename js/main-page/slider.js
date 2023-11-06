@@ -1,8 +1,8 @@
 import {studentsWorksInfo} from './students-pictures-data.js';
 import {renderMainPicture, renderPreviews} from './slider-previews-rendering.js';
 
-const previousBtn = document.querySelector('.arrow-left');
-const nextBtn = document.querySelector('.arrow-right');
+const previousBtn = document.querySelector('.slider__arrow_left');
+const nextBtn = document.querySelector('.slider__arrow_right');
 const previewContainer = document.querySelector('.slider__previews');
 let currentPreviewIndex = 0;
 
