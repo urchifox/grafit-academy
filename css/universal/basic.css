@@ -9,9 +9,10 @@
     --font-family-basic: 'Raleway', 'Verdana', 'Geneva', sans-serif;
     --font-family-accent: 'Cormorant Garamond', 'Times New Roman', 'Times', serif;
 
-    --font-size-small: 14px;
-    --font-size-basic: 20px;
-    --font-size-subheading: 30px;
+    --font-size-detail: 14px;
+    --font-size-basic: 18px;
+    --font-size-important: 22px;
+    --font-size-subheading: 35px;
     --font-size-heading: 40px;
 
 }

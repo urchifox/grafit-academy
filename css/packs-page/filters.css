@@ -22,7 +22,7 @@
 .filters__title {
     margin: 0;
     grid-area: title;
-    font-size: 18px;
+    font-size: var(--font-size-basic);
     text-align: center;
 }
 .filters:has(.filters__toogle-checkbox:checked) .filters__title {
@@ -33,7 +33,7 @@
     grid-area: button-close;
     width: 25px;
     height: 25px;
-    color: rgba(179, 26, 0, 1);
+    color: rgb(var(--color-accent));
     opacity: 1;
 
     cursor: pointer;
@@ -46,7 +46,7 @@
     opacity: 0.5;
 }
 .filters__toogle-btn:has(.filters__toogle-checkbox:focus-visible) {
-    outline:  #ff5f3f solid 2px;
+    outline:  rgb(var(--color-accent-bright)) solid 2px;
     border-radius: 4px;
 }
 .filters__toogle-btn:has(.filters__toogle-checkbox:checked) {
@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
-    border: rgba(179, 26, 0, 0.5) 2px solid;
+    border: rgb(var(--color-accent) / 0.5) 2px solid;
     border-radius: 5px;
 }
 
@@ -115,13 +115,13 @@
     transform: translateY(-50%);
     width: 14px;
     height: 14px;
-    border: rgba(179, 26, 0, 0.5) 1px solid;
+    border: rgb(var(--color-accent) / 0.5) 1px solid;
     border-radius: 5px;
     background-color: transparent;
 }
 .filter-btn:has(.filter-btn__checkbox:checked) .filter-btn__desc::before {
-    border: rgba(179, 26, 0, 1) 1px solid;
-    background-color: rgba(179, 26, 0, 0.7);
+    border: rgb(var(--color-accent) / 1) 1px solid;
+    background-color: rgb(var(--color-accent) / 0.7);
 }
 
 .filter-btn__desc_sub {

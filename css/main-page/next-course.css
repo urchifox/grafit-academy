@@ -1,5 +1,5 @@
 .next-course {
-    border: #b31a00 2px solid;
+    border: rgb(var(--color-accent)) 2px solid;
     border-left: none;
     border-right: none;
     max-width: 1280px;
@@ -44,10 +44,10 @@
 }
 .next-course__course-name-link {
     text-decoration: none;
-    color: #b31a00;
+    color: rgb(var(--color-accent));
 }
 .next-course__course-name-link:hover {
-    color:#db583e;
+    color:rgb(var(--color-accent-bright));
 }
 
 .next-course__dates {
@@ -64,11 +64,11 @@
     margin-bottom: 25px;
     
     display: block;
-    color: #b31a00;
+    color: rgb(var(--color-accent));
     text-decoration: none;
 }
 .next-course__details:visited {
-    color:#982007;
+    color:rgb(var(--color-accent));
 }
 .next-course__details:hover {
     text-decoration: underline;
@@ -84,16 +84,16 @@
     border: none;
     border-radius: 5px;
     
-    font-size: 15px;
-    background-color: #b31a00;
-    color: white;
+    font-size: var(--font-size-detail);
+    background-color: rgb(var(--color-accent));
+    color: rgb(var(--color-background));
     
     cursor: pointer;
     transition: background-color 0.3s;
 }
 .next-course__book:hover {
-    background-color: #db583e;
+    background-color: rgb(var(--color-accent-bright));
 }
 .next-course__book:active {
-    background-color: #982007;
+    background-color: rgb(var(--color-accent));
 }

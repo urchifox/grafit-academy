@@ -10,8 +10,10 @@
 }
 
 .heading {
-    text-align: center;
     padding: 0;
+    font-family: var(--font-family-accent);
+    text-align: center;
+    color: rgb(var(--color-accent));
 }
 
 .main__heading {
@@ -20,17 +22,15 @@
 }
 
 .heading_hero {
-    font-size: 30px;
-    color: #bd1f00;
+    font-size: var(--font-size-heading);
 }
 
 .heading_article {
-    font-size: 25px;
-    color: #b31a00;
+    font-size: var(--font-size-subheading);
 }
 
 .lead {
-    font-size: 20px;
+    font-size: var(--font-size-important);
     text-align: center;
 }
 

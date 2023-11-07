@@ -1,7 +1,7 @@
 .sorting {
     padding: 5px;
-    box-shadow: 0px 5px 5px 7px white;
-    background-color: white;
+    box-shadow: 0px 5px 5px 7px rgb(var(--color-background));
+    background-color: rgb(var(--color-background));
     text-align: right;
 }
 
@@ -39,7 +39,7 @@
     margin-left: 10px;
 }
 .sort-order-btn:has(.sort-order-btn__checkbox:focus-visible) {
-    outline:  #ff5f3f solid 2px;
+    outline: rgb(var(--color-accent-bright)) solid 2px;
     border-radius: 4px;
     outline-offset: 2px;
 }
@@ -63,7 +63,7 @@
 
     border: 7px solid transparent;
     border-top-width: 0;
-    border-bottom: 15px solid #b31a00;
+    border-bottom: 15px solid rgb(var(--color-accent));
     
     opacity: 0.5;
 }
@@ -78,7 +78,7 @@
 
     border: 7px solid transparent;
     border-bottom-width: 0;
-    border-top: 15px solid #b31a00;
+    border-top: 15px solid rgb(var(--color-accent));
     
     opacity: 1;
 }
@@ -99,7 +99,7 @@
     padding: 3px 12px;
 }
 .view-btn:has(.view-btn__checkbox:focus-visible) {
-    outline:  #ff5f3f solid 2px;
+    outline:  rgb(var(--color-accent-bright)) solid 2px;
     border-radius: 4px;
     outline-offset: 5px;
 }
@@ -121,11 +121,11 @@
 
 .view-btn__icon_view-list:hover, 
 .view-btn__icon_view-module:hover {
-    color: rgba(179, 26, 0, 0.8);
+    color: rgb(var(--color-accent) / 0.8);
 }
 .view-btn__icon_view-list:active, 
 .view-btn__icon_view-module:active {
-    color: rgba(179, 26, 0, 0.5);
+    color: rgb(var(--color-accent) / 0.5);
 }
 
 .zoom-btn {
@@ -136,7 +136,7 @@
     cursor: pointer;
 }
 .zoom-btn:has(.zoom-btn__checkbox:focus-visible) {
-    outline:  #ff5f3f solid 2px;
+    outline:  rgb(var(--color-accent-bright)) solid 2px;
     border-radius: 4px;
     outline-offset: 5px;
 }
@@ -158,9 +158,9 @@
 
 .zoom-btn__icon_zoom-in:hover, 
 .zoom-btn__icon_zoom-out:hover {
-    color: rgba(179, 26, 0, 0.8);
+    color: rgb(var(--color-accent) / 0.8);
 }
 .zoom-btn__icon_zoom-in:active, 
 .zoom-btn__icon_zoom-out:active {
-    color: rgba(179, 26, 0, 0.5);
+    color: rgb(var(--color-accent) / 0.5);
 }

@@ -7,12 +7,12 @@
 
 .upcoming-course {
     padding: 15px 40px;
-    border: #982007 1px solid;
+    border: rgb(var(--color-accent)) 1px solid;
     border-radius: 30px;
     display: flex;
     gap: 40px;
     align-items: center;
-    font-size: 25px;
+    font-size: var(--font-size-important);
     text-align: center;
 }
 
