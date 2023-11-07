@@ -11,7 +11,7 @@ const render = () => {
 		const card = template.cloneNode(true);
 		card.querySelector('.pack-card__name-link').textContent = packName;
 		card.querySelector('.pack-card__cover').src = coverSrc;
-		card.querySelector('.pack-card__price').textContent = `${price} руб`;
+		card.querySelector('.pack-card__price').textContent = `${price}`;
 		fragment.append(card);
 	});
 

@@ -83,6 +83,9 @@
 
     font-size: var(--font-size-important);
 }
+.next-course__price::after {
+    content: "	\20BD";
+}
 
 .next-course__book {
     padding: 10px 20px;

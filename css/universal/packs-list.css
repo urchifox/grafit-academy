@@ -66,6 +66,9 @@
     margin-right: 20px;
     align-self: center;
 }
+.pack-card__price::after {
+    content: "	\20BD";
+}
 
 .pack-card__buy {
     margin-right: 5px;
