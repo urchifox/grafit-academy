@@ -39,7 +39,11 @@
 
 .next-course__course-name {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-important);
+    font-weight: 700;
     text-transform: uppercase;
 }
 .next-course__course-name-link {
@@ -51,7 +55,7 @@
 }
 
 .next-course__dates {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 
     font-weight: bold;
 }
@@ -71,20 +75,21 @@
     color:rgb(var(--color-accent));
 }
 .next-course__details:hover {
-    text-decoration: underline;
+    color:rgb(var(--color-accent-bright));
 }
 
 .next-course__price {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+
+    font-size: var(--font-size-important);
 }
 
 .next-course__book {
-    padding: 10px 15px;
-    width: 200px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     
-    font-size: var(--font-size-detail);
+    font-size: var(--font-size-important);
     background-color: rgb(var(--color-accent));
     color: rgb(var(--color-background));
     
