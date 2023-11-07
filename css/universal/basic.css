@@ -3,8 +3,8 @@
 :root {
     --color-background: 255 255 255;
     --color-text-basic: 0 0 0;
-    --color-accent: 179 27 0;
-    --color-accent-bright: 255 94 61;
+    --color-accent: 200 35 0;
+    --color-accent-bright: 250 60 12;
 
     --font-family-basic: 'Raleway', 'Verdana', 'Geneva', sans-serif;
     --font-family-accent: 'Cormorant Garamond', 'Times New Roman', 'Times', serif;
