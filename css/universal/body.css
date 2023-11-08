@@ -45,6 +45,7 @@ html, body {
   /* «цвет ползунка» «цвет полосы скроллбара» */
     scrollbar-color: rgb(var(--color-accent)) rgb(var(--color-background)); 
     scrollbar-width:  thin; 
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
