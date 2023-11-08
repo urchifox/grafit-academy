@@ -134,6 +134,60 @@
     opacity: 0.8;
 }
 
+.main-nav__dropdown {
+    position: relative;
+    margin: 0;
+}
+
+.dropdown__list {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 2;
+    visibility: hidden;
+
+    list-style: none;
+    padding: 10px 0;
+    border: 2px dotted rgb(var(--color-background));
+    border-radius: 5px;
+    
+    
+    font-size: var(--font-size-basic);
+    background-color: rgb(var(--color-accent) / 0.5);
+    opacity: 0;
+
+
+    transition: top 0.3s linear, transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.dropdown:hover .dropdown__list,
+.dropdown__list:hover {
+    top: 100%;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown__sublist {
+    padding: 0;
+    list-style: none;
+}
+
+.dropdown__link {
+    margin-bottom: 3px;
+    padding: 2px 10px;
+    display: block;
+    text-decoration: none;
+    color: rgb(var(--color-background));
+}
+.dropdown__sublist .dropdown__link {
+    padding-left: 20px;
+}
+.dropdown__link:hover {
+    background-color: rgb(var(--color-accent));
+}
+
 
 .main-nav__user-navigation {
     margin: 0;
