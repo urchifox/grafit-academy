@@ -35,10 +35,46 @@
                     <li class="main-nav__site-navigation-item">
                         <a href="packs.html" class="main-nav__site-nav-link main-nav__site-nav-link_current" >Рефы</a>
                     </li>
-                    <li class="main-nav__site-navigation-item dropdown">
-                        <a href="#" class="main-nav__site-nav-link" >Курсы</a>
-                        <span class="main-nav__site-nav-tooltip">Эта страница пока не готова :с</span>
-                        <!-- TODO разворачиваемый список -->
+                    <li class="main-nav__site-navigation-item main-nav__dropdown dropdown">
+                        <a href="#" class="main-nav__site-nav-link dropdown__target" >Курсы</a>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link" >2D<span class="dropdown__link-comment">смотреть все</span></a>
+                                <ul class="dropdown__sublist">
+                                    <li class="dropdown__subitem">
+                                        <a href="#" class="dropdown__link" >Рендер иллюстрации</a>
+                                    </li>
+                                    <li class="dropdown__subitem">
+                                        <a href="#" class="dropdown__link" >UI-design</a>
+                                    </li>
+                                    <li class="dropdown__subitem">
+                                        <a href="#" class="dropdown__link" >Стилизация</a>
+                                    </li>
+                                    <li class="dropdown__subitem">
+                                        <a href="#" class="dropdown__link" >Реалистичный персонаж</a>
+                                    </li>
+                                </ul> 
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link" >3D<span class="dropdown__link-comment">смотреть все</span></a>
+                                <ul class="dropdown__sublist">
+                                    <li class="dropdown__subitem">
+                                        <a href="#" class="dropdown__link" >Скульптинг в Blender</a>
+                                    </li>
+                                </ul> 
+                            </li>
+                            <li class="dropdown__item">
+                                <a href="#" class="dropdown__link" >Анимация<span class="dropdown__link-comment">смотреть все</span></a>
+                                <ul class="dropdown__sublist">
+                                    <li class="dropdown__subitem">
+                                        <a href="#" class="dropdown__link" >Анимация иллюстрации в Blender</a>
+                                    </li>
+                                    <li class="dropdown__subitem">
+                                        <a href="#" class="dropdown__link" >Анимация в Spine</a>
+                                    </li>
+                                </ul> 
+                            </li>
+                        </ul>
                     </li>
                     <li class="main-nav__site-navigation-item">
                         <a href="#" class="main-nav__site-nav-link" >Туториалы</a>
