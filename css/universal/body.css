@@ -26,6 +26,15 @@ body:has(.disclaimer) {
     z-index: 3;
 }
 
+.body__authorization {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
 .body__header {
     margin-bottom: 30px;
 }

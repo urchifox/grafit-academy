@@ -233,39 +233,8 @@
 				</section>
 			</div>
 		</article>
-
-		<template id="preview">
-			<li class="slider__preview-item">
-				<button class="slider__preview-btn" data-link="" data-desc="" >
-					<img class="slider__preview-img" width="100px" height="100px" src="" alt="">
-				</button>
-			</li>
-		</template>
-
-		<template id="popular-pack">
-			<li class="pack-card">
-				<h3 class="pack-card__name"><a href="#" class="pack-card__name-link" >packName</a></h3>
-				<a href="#" class="pack-card__img-link" tabindex="-1">
-					<img src="coverSrc" alt="" class="pack-card__cover">
-				</a>
-				<div class="pack-card__price-n-btns">
-					<span class="pack-card__price">price</span><span class="visually-hidden">рублей</span>
-					<button aria-label="Положить в корзину" class="pack-card__buy" >
-						<img src="img//refpacks/icons/buy.svg" width="30px" height="30px">
-					</button>
-					<button aria-label="Добавить в избранное" class="pack-card__add-favorites" >
-						<span class="material-icons favorite_border">
-							favorite_border
-						</span>
-						<span class="material-icons  favorite_checked hidden">
-							favorite
-						</span>
-					</button>
-				</div>
-			</li>
-		</template>
 	</main>
-
+	
 	<footer class="footer body__footer">
 		<div class="footer__container">
 			<p class="copyright">
@@ -314,6 +283,60 @@
 			<span class="visually-hidden">Вернуться к началу</span>
 		</a>
 	</footer>
+
+	<template id="preview">
+		<li class="slider__preview-item">
+			<button class="slider__preview-btn" data-link="" data-desc="" >
+				<img class="slider__preview-img" width="100px" height="100px" src="" alt="">
+			</button>
+		</li>
+	</template>
+
+	<template id="popular-pack">
+		<li class="pack-card">
+			<h3 class="pack-card__name"><a href="#" class="pack-card__name-link" >packName</a></h3>
+			<a href="#" class="pack-card__img-link" tabindex="-1">
+				<img src="coverSrc" alt="" class="pack-card__cover">
+			</a>
+			<div class="pack-card__price-n-btns">
+				<span class="pack-card__price">price</span><span class="visually-hidden">рублей</span>
+				<button aria-label="Положить в корзину" class="pack-card__buy" >
+					<img src="img//refpacks/icons/buy.svg" width="30px" height="30px">
+				</button>
+				<button aria-label="Добавить в избранное" class="pack-card__add-favorites" >
+					<span class="material-icons favorite_border">
+						favorite_border
+					</span>
+					<span class="material-icons  favorite_checked hidden">
+						favorite
+					</span>
+				</button>
+			</div>
+		</li>
+	</template>
+
+	<section id="authorization" class="authorization body__authorization">
+		<div class="authorization__container">
+			<h2 class="authorization__title">Войти или создать профиль</h2>
+			<form class="authorization__form" id="authorization-step1" name="authorization-step1" action="" method="post">
+				<p class="authorization__instruction">Введите номер телефона</p>
+				<p class="authorization__detail">Мы отправим код или позвоним. Отвечать на звонок не нужно.</p>
+				<label for="tel-number" class="visually-hidden">Телефон</label>
+				<input id="tel-number" class="authorization__input" type="tel" autocomplete="on" required placeholder="Телефон">
+				<label for="send-code" class="visually-hidden">Отправить код</label>
+				<input id="send-code" class="authorization__submit" type="submit" value="Получить код">
+			</form>
+			<form class="authorization__form"  id="authorization-step2" name="authorization-step2" action="" method="post">
+				<p class="authorization__instruction">Смс с кодом было успешно отправлено на номер <span></span>.</p>
+				<p class="authorization__detail">Введите код из смс в поле ниже.</p>
+				<label for="code" class="visually-hidden">Код из СМС</label>
+				<input id="code" class="authorization__input" type="password" required>
+				<label for="continue" class="visually-hidden">Продолжить</label>
+				<input id="continue" class="authorization__submit" type="submit" value="Продолжить">
+			</form>
+			<button class="authorithation__close"><span class="visually-hidden">Закрыть окно авторизации</span></button>
+		</div>
+	</section>
 
 	<script src="js/main-page/main.js" type="module"></script>
 </body>

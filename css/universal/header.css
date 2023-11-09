@@ -265,3 +265,27 @@
     top: 110%;
     opacity: 1;
 }
+
+.authorization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgb(var(--color-text-basic) / 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.authorization__container {
+    padding: 45px;
+    max-width: 60vw;
+    max-height: 60vh;
+    border: 2px solid rgb(var(--color-accent));
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgb(var(--color-background));
+}
