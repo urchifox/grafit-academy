@@ -39,9 +39,9 @@
 
 .let-me-know__icon {
     position: absolute;
-    top: 47%;
+    top: 48%;
     left: 50%;
-
+    display: block;
     transform: translate(-50%, -50%);
     transition: opacity 0.3s, color 0.3s;
 }
@@ -58,5 +58,14 @@
 .let-me-know__button:checked ~ .let-me-know__icon_checked {
     opacity: 1;
     color: green;
+}
+
+.let-me-know__button:focus ~ .let-me-know__icon {
+    outline: none;
+}
+.let-me-know__button:focus-visible ~ .let-me-know__icon {
+    outline:  rgb(var(--color-accent-bright)) solid 2px;
+    border-radius: 30%;
+    outline-offset: 2px;
 }
 

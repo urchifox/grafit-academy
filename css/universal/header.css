@@ -1,9 +1,9 @@
-.header *[tabindex="0"]:focus {
+.header *:focus {
     border-radius: 5px;
     outline: 1px rgb(var(--color-background));
     outline-offset: 5px;
 }
-.header *[tabindex="0"]:focus-visible {
+.header *:focus-visible {
     border-radius: 5px;
     outline: 1px rgb(var(--color-background));
     outline-offset: 5px;
