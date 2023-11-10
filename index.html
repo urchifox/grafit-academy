@@ -31,6 +31,7 @@
 			<button class="disclaimer__close">Понятно</button>
 		</div>
 	</article>
+
 	<header id="header" class="header body__header">
 		<nav class="main-nav header__main-nav">
 			<a href="#" class="main-nav__logo-link logo" >
@@ -99,17 +100,11 @@
 					</button>
 				</li>
 				<li class="main-nav__user-navigation-item">
-					<button class="main-nav__profile-btn" >
+					<a href="#" id="login-btn" class="main-nav__profile-btn" >
 						<img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30px" height="30px">
 						<span class="main-nav__profile-tooltip">Авторизация</span>
-					</button>
+					</a>
 				</li>
-				<!-- <li class="main-nav__user-navigation-item">
-					<button class="main-nav__profile-btn" >
-						<img class="main-nav__profile-icon" src="img/header/sign-in.svg" width="30px" height="30px">
-						<span class="main-nav__profile-tooltip">Регистрация</span>
-					</button>
-				</li> -->
 			</ul>
 		</nav>
 		<!-- TODO переключение темы -->
@@ -315,28 +310,50 @@
 		</li>
 	</template>
 
-	<section id="authorization" class="authorization body__authorization">
-		<div class="authorization__container">
-			<h2 class="authorization__title">Войти или создать профиль</h2>
-			<form class="authorization__form" id="authorization-step1" name="authorization-step1" action="" method="post">
-				<p class="authorization__instruction">Введите номер телефона</p>
-				<p class="authorization__detail">Мы отправим код или позвоним. Отвечать на звонок не нужно.</p>
-				<label for="tel-number" class="visually-hidden">Телефон</label>
-				<input id="tel-number" class="authorization__input" type="tel" autocomplete="on" required placeholder="Телефон">
-				<label for="send-code" class="visually-hidden">Отправить код</label>
-				<input id="send-code" class="authorization__submit" type="submit" value="Получить код">
-			</form>
-			<form class="authorization__form"  id="authorization-step2" name="authorization-step2" action="" method="post">
-				<p class="authorization__instruction">Смс с кодом было успешно отправлено на номер <span></span>.</p>
-				<p class="authorization__detail">Введите код из смс в поле ниже.</p>
-				<label for="code" class="visually-hidden">Код из СМС</label>
-				<input id="code" class="authorization__input" type="password" required>
-				<label for="continue" class="visually-hidden">Продолжить</label>
-				<input id="continue" class="authorization__submit" type="submit" value="Продолжить">
-			</form>
-			<button class="authorithation__close"><span class="visually-hidden">Закрыть окно авторизации</span></button>
-		</div>
-	</section>
+	<template id="authorization">
+		<section class="authorization body__authorization">
+			<div class="authorization__container">
+				<h2 class="authorization__title">Войти или создать профиль</h2>
+				<div class="authorization__forms-container authorization__forms-container_start">
+					<form class="authorization__form" id="authorization-step1" name="authorization-step1" action="" method="post">
+						<p class="authorization__instruction">Введите номер телефона</p>
+						<p class="authorization__detail">Мы отправим код или позвоним. Отвечать на звонок не нужно.</p>
+						<label for="tel-number" class="visually-hidden">Телефон</label>
+						<input id="tel-number" class="authorization__input" type="tel" autocomplete="on" required placeholder="Телефон">
+						<label for="send-code" class="visually-hidden">Отправить код</label>
+						<input id="send-code" class="authorization__submit" type="submit" value="Получить код">
+					</form>
+					<form class="authorization__form"  id="authorization-step2" name="authorization-step2" action="" method="post">
+						<p class="authorization__instruction">Смс с кодом было успешно отправлено на номер <span id="phone-text"></span>.</p>
+						<p class="authorization__detail">Введите код из смс в поле ниже.</p>
+						<label for="code" class="visually-hidden">Код из СМС</label>
+						<input id="code" class="authorization__input" type="password" required>
+						<label for="continue" class="visually-hidden">Продолжить</label>
+						<input id="continue" class="authorization__submit" type="submit" value="Продолжить">
+						<label for="back" class="visually-hidden">Продолжить</label>
+						<input id="back" class="authorization__return" type="submit" value="Вернуться назад">
+					</form>
+				</div>
+				<button class="authorization__close">
+					<span class="visually-hidden">Закрыть окно авторизации</span>
+					<span aria-hidden="true" class="material-icons-round">
+						close
+					</span>
+				</button>
+			</div>
+		</section>
+	</template>
+
+	<template id="profile">
+		<li class="main-nav__user-navigation-item profile-menu">
+			<button class="main-nav__profile-btn profile-menu__button" >
+				<span class="visually-hidden">Личный кабинет</span>
+				<span aria-hidden class="material-icons-round">
+					account_circle
+				</span>
+			</button>
+		</li>
+	</template>
 
 	<script src="js/main-page/main.js" type="module"></script>
 </body>
