@@ -99,8 +99,8 @@
 						<span class="main-nav__profile-tooltip">Корзина</span>
 					</button>
 				</li>
-				<li class="main-nav__user-navigation-item">
-					<a href="#" id="login-btn" class="main-nav__profile-btn" >
+				<li id="login-temp" class="main-nav__user-navigation-item">
+					<a href="#"  class="main-nav__profile-btn" >
 						<img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30px" height="30px">
 						<span class="main-nav__profile-tooltip">Авторизация</span>
 					</a>
@@ -310,6 +310,15 @@
 		</li>
 	</template>
 
+	<template id="log-in">
+		<li class="main-nav__user-navigation-item">
+			<a href="#" id="login-btn" class="main-nav__profile-btn" >
+				<img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30px" height="30px">
+				<span class="main-nav__profile-tooltip">Авторизация</span>
+			</a>
+		</li>
+	</template>
+
 	<template id="authorization">
 		<section class="authorization body__authorization">
 			<div class="authorization__container">
@@ -352,6 +361,23 @@
 					account_circle
 				</span>
 			</button>
+			<div class="profile-menu__dropdown">
+				<p class="profile-menu__name">Неопознанный юзер</p>
+				<ul class="profile-menu__list">
+					<li class="profile-menu__item">
+						<a href="#" class="profile-menu__link">Настройки профиля</a>
+					</li>
+					<li class="profile-menu__item">
+						<a href="#" class="profile-menu__link">Учебный кабинет</a>
+					</li>
+					<li class="profile-menu__item">
+						<a href="#" class="profile-menu__link">Избранное</a>
+					</li>
+					<li class="profile-menu__item">
+						<a id="log-out" href="#" class="profile-menu__link">Выйти</a>
+					</li>
+				</ul>
+			</div>
 		</li>
 	</template>
 

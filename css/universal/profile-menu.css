@@ -1,0 +1,96 @@
+.profile-menu {
+    position: relative;
+}
+
+.profile-menu__button {
+    color: rgb(var(--color-background));
+    transform: scale(1.4);
+}
+.profile-menu__button:hover {
+    transform: scale(1.7);
+}
+.profile-menu__button:active {
+    transform: scale(1.2);
+}
+
+.profile-menu__dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 2;
+
+    padding: 15px 0 10px 0;
+    width: max-content;
+    max-width: 300px;
+    border: 2px solid rgb(var(--color-accent));
+    border-radius: 5px;
+    
+    font-size: var(--font-size-basic);
+    background-color: rgb(var(--color-background));
+    opacity: 0;
+
+    transition: top 0.3s linear, transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+}
+
+.profile-menu:hover .profile-menu__dropdown,
+.profile-menu__button:focus ~ .profile-menu__dropdown,
+.profile-menu__button:focus-visible ~ .profile-menu__dropdown,
+.profile-menu__dropdown:has(.profile-menu__link:focus) {
+    top: 100%;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.profile-menu__name {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0 15px;
+
+    font-weight: 700;
+    color: rgb(var(--color-accent));
+}
+
+.profile-menu__list {
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+    font-size: var(--font-size-basic);
+}
+
+.profile-menu__item {
+    margin-bottom: 5px;
+    padding: 2px 0;
+}
+.profile-menu__item:last-child {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.profile-menu__item:last-child::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(var(--color-accent));
+}
+.profile-menu__item:hover {
+    color: rgb(var(--color-background));
+    background-color: rgb(var(--color-accent) / 0.8);
+}
+.profile-menu__item:active {
+    color: rgb(var(--color-background));
+    background-color: rgb(var(--color-accent) / 0.5);
+
+}
+
+.profile-menu__link {
+    padding: 2px 15px;
+    display: block;
+    text-decoration: none;
+    color: rgb(var(--color-basic));
+}
+

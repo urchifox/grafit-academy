@@ -2,7 +2,7 @@ const START_CLASS = 'authorization__forms-container_start';
 const MOVED_CLASS = 'authorization__forms-container_moved';
 
 const root = document.querySelector('.main-nav__user-navigation');
-const loginButton = root.querySelector('#login-btn');
+const loginTemporary = root.querySelector('#login-temp');
 
 const modalTemplate = document.querySelector('#authorization')
 	.content
@@ -21,6 +21,14 @@ const profileButtonTemplate = document.querySelector('#profile')
 	.content
 	.querySelector('.main-nav__user-navigation-item');
 const profileButton = profileButtonTemplate.cloneNode(true);
+const logOutButton = profileButton.querySelector('#log-out');
+
+const loginTemplate = document.querySelector('#log-in')
+	.content
+	.querySelector('.main-nav__user-navigation-item');
+const loginContainer = loginTemplate.cloneNode(true);
+const loginButton = loginContainer.querySelector('#login-btn');
+
 
 const moveForward = () => {
 	container.classList.remove(START_CLASS);
@@ -42,6 +50,7 @@ const onNumberSubmit = (evt) => {
 const onCodeSubmit = (evt) => {
 	evt.preventDefault();
 	closeModal();
+	removeLoginButton();
 	renderProfileButton();
 };
 
@@ -71,6 +80,11 @@ const onLoginButtonClick = (evt) => {
 	renderModal();
 };
 
+const onLogOutClick = (evt) => {
+	evt.preventDefault();
+	logOut();
+};
+
 function renderModal () {
 	modal.addEventListener('click', onOverlayClick);
 	document.addEventListener('keydown', onEscPress);
@@ -97,12 +111,33 @@ function closeModal() {
 }
 
 function renderProfileButton() {
-	loginButton.remove();
+	logOutButton.addEventListener('click', onLogOutClick);
 	root.append(profileButton);
 }
 
-const init = () => {
+function removeProfileButton() {
+	logOutButton.removeEventListener('click', onLogOutClick);
+	profileButton.remove();
+}
+
+function renderLoginButton() {
 	loginButton.addEventListener('click', onLoginButtonClick);
-};
+	root.append(loginContainer);
+}
+
+function removeLoginButton() {
+	loginButton.removeEventListener('click', onLoginButtonClick);
+	loginContainer.remove();
+}
+
+function logOut() {
+	removeProfileButton();
+	renderLoginButton();
+}
+
+function init () {
+	loginTemporary.remove();
+	renderLoginButton();
+}
 
 export {init};
