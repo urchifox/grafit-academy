@@ -8,10 +8,11 @@ const template = document.querySelector('#pack-card')
 const fragment = document.createDocumentFragment();
 
 
-const render = (data) => {
-	data.forEach(({packName, price, coverName, previewsName}, index) => {
+const render = (data, onListClick) => {
+	data.forEach(([, packInfo]) => {
+		const {packName, price, coverName, previewsName} = packInfo;
 		const card = template.cloneNode(true);
-		card.dataset.id = index;
+		card.dataset.id = packName;
 		card.querySelector('.pack-card__name-link').textContent = packName;
 		card.querySelector('.pack-card__price').textContent = `${price}`;
 		const preview = card.querySelector('.pack-card__cover');
@@ -27,6 +28,7 @@ const render = (data) => {
 		fragment.append(card);
 	});
 
+	root.addEventListener('click', onListClick);
 	root.append(fragment);
 };
 

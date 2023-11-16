@@ -1,4 +1,4 @@
-import { filter } from './pack-sorting.js';
+import { getProcessedData } from './gallery-manager.js';
 import {packsData} from './packs-data.js';
 
 const slider = document.getElementById('slider');
@@ -6,9 +6,9 @@ const minPriceInput = document.querySelector('.filter-btn__price-input[name="min
 const maxPriceInput = document.querySelector('.filter-btn__price-input[name="max-interval"]');
 
 const allPrices = [];
-packsData.forEach((datum) => {
+for (const [, datum] of packsData) {
 	allPrices.push(datum.price);
-});
+}
 
 const minPrice = Math.min.apply(null, allPrices);
 const maxPrice = Math.max.apply(null, allPrices);
@@ -30,5 +30,5 @@ slider.noUiSlider.on('update', () => {
 	const [min, max] = slider.noUiSlider.get();
 	minPriceInput.value = min;
 	maxPriceInput.value = max;
-	filter();
+	getProcessedData();
 });
