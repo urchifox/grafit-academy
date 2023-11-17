@@ -1,102 +1,104 @@
 import { onListClick } from './pack-card-full.js';
 import {render as renderPacks} from './gallery-rendering.js';
-import {packsData, packDataExample} from './packs-data.js';
+import {packsData} from './packs-data.js';
+import { maxPrice, minPrice, packDataExample } from './pack-data-manager.js';
 
-const root = document.querySelector('.packs-list');
-const promoFilterCheckbox = document.querySelector('.filter-btn__checkbox[name="specialOffer"]');
-const sortingParametrSelector = document.querySelector('.sort-options');
+const galleryList = document.querySelector('.packs-list');
+const filtersRoot = document.querySelector('#filters');
+
+const sortingParameterSelector = document.querySelector('.sort-options');
 const sortingOrderSelector = document.querySelector('.sort-order-btn__checkbox');
 
-const filtersRoot = document.querySelector('#filters');
-const filtersButtons = filtersRoot.querySelectorAll('.filter-btn__checkbox:not([name="specialOffer"])');
-const specialOfferButton = filtersRoot.querySelector('.filter-btn__checkbox[name="specialOffer"]');
-const slider = document.getElementById('slider');
+const typeCheckboxes = filtersRoot.querySelectorAll('.filter-btn__checkbox[name="type"]');
+const tagsCheckboxes = filtersRoot.querySelectorAll('.filter-btn__checkbox[name="tag"]');
+const specialOfferCheckbox = filtersRoot.querySelector('.filter-btn__checkbox[name="specialOffer"]');
+const priceSlider = filtersRoot.querySelector('#slider');
 const minPriceInput = filtersRoot.querySelector('.filter-btn__price-input[name="min-interval"]');
 const maxPriceInput = filtersRoot.querySelector('.filter-btn__price-input[name="max-interval"]');
-const minPrice = 500;
-const maxPrice = 900;
 
 const originalData = Array.from(packsData);
 let processedData;
 
-const getProcessedData = () => processedData;
-
-const renderGallery = () => renderPacks(getProcessedData(), onListClick);
+const rerenderGallery = (callback, data) => {
+	processedData = callback(data);
+	galleryList.innerHTML = '';
+	renderPacks(processedData, onListClick);
+};
 
 const getSortedData = (data) => {
-	const value = sortingParametrSelector.value;
+	const value = sortingParameterSelector.value;
 	const ascending = sortingOrderSelector.checked;
 
-	let sortedData;
-
 	if (packDataExample[value] === 'string') {
-		sortedData = (ascending) ?
+		return (ascending) ?
 			data.slice().sort((a, b) => a[1][value].localeCompare(b[1][value])) :
 			data.slice().sort((a, b) => b[1][value].localeCompare(a[1][value]));
 	}
 
-	if (packDataExample[value] === 'number') {
-		sortedData = (ascending) ?
-			data.slice().sort((a, b) => a[1][value] - b[1][value]) :
-			data.slice().sort((a, b) => b[1][value] - a[1][value]);
-	}
-
-	return sortedData;
+	return (ascending) ?
+		data.slice().sort((a, b) => a[1][value] - b[1][value]) :
+		data.slice().sort((a, b) => b[1][value] - a[1][value]);
 };
 
 const getReversedData = (data) => data.reverse();
 
-const onSortingParametrChange = () => {
-	processedData = getSortedData(processedData);
-	root.innerHTML = '';
-	renderGallery();
+const onSortingParameterChange = () => {
+	rerenderGallery(getSortedData, processedData);
 };
 
 const onSortingOrderChange = () => {
-	processedData = getReversedData(processedData);
-	root.innerHTML = '';
-	renderGallery();
+	rerenderGallery(getReversedData, processedData);
 };
 
-
-const isAnyCategoryChecked = () => [...filtersButtons].some((button) => button.checked);
-
-const getDataFilteredByCategory = (data) => {
-	const checkedCategories = [...filtersButtons].filter((button) => button.checked);
-	const categories = checkedCategories.map((checkedCategorie) => checkedCategorie.value);
-
-	return data.filter(([, datum]) => categories.includes(datum.type) || categories.includes(datum.value));
-};
-
-
-const isPriceChanged = () => minPriceInput.value > minPrice || maxPriceInput.value < maxPrice;
-
-const isPromoChecked = () => promoFilterCheckbox.checked;
-
-const onPriceInputChange = () => slider.noUiSlider.set([minPriceInput.value, maxPriceInput.value]);
-
+const getFilteredData = (data, conditions) => data.filter(([,datum]) => conditions.every((condition) => condition(datum)));
 
 const onFiltersChange = () => {
-	let filteredData = isAnyCategoryChecked() ? getDataFilteredByCategory(originalData) : originalData;
-	filteredData = isPromoChecked() ? filteredData.filter(([,datum]) => datum.specialOffer === specialOfferButton.checked) : filteredData;
-	filteredData = isPriceChanged() ? filteredData.filter(([, datum]) => datum.price >= minPriceInput.value && datum.price <= maxPriceInput.value) : filteredData;
+	const filtrationConditions = [];
 
-	processedData = getSortedData(filteredData);
-	root.innerHTML = '';
-	renderGallery();
+	const checkedTypes = [...typeCheckboxes].reduce((accumulator, checkbox) =>
+		checkbox.checked ? [...accumulator, checkbox.value] : [...accumulator]
+	, []);
+	const checkedTags = [...tagsCheckboxes].reduce((accumulator, checkbox) =>
+		checkbox.checked ? [...accumulator, checkbox.value] : [...accumulator]
+	, []);
+
+	if (checkedTypes.length > 0 || checkedTags.length > 0) {
+		filtrationConditions.push((datum) =>
+			checkedTypes.includes(datum.type) ||
+			Object.keys(datum.tags).some((tag) => checkedTags.includes(tag) && datum.tags[tag] === true)
+		);
+	}
+
+	if (specialOfferCheckbox.checked) {
+		filtrationConditions.push((datum) => datum.specialOffer === true);
+	}
+
+	if (minPriceInput.value > minPrice) {
+		filtrationConditions.push((datum) => datum.price >= minPriceInput.value);
+	}
+
+	if (maxPriceInput.value < maxPrice) {
+		filtrationConditions.push((datum) => datum.price <= maxPriceInput.value);
+	}
+
+	const filteredData = filtrationConditions.length > 0 ?
+		getFilteredData(originalData, filtrationConditions) :
+		originalData;
+
+	rerenderGallery(getSortedData, filteredData);
 };
 
+const onPriceInputChange = () => priceSlider.noUiSlider.set([minPriceInput.value, maxPriceInput.value]);
 
 const init = () => {
 	processedData = getSortedData(originalData);
-	renderGallery();
+	renderPacks(processedData, onListClick);
 
 	minPriceInput.addEventListener('change', onPriceInputChange);
 	maxPriceInput.addEventListener('change', onPriceInputChange);
 	filtersRoot.addEventListener('change', onFiltersChange);
-	sortingParametrSelector.addEventListener('change', onSortingParametrChange);
+	sortingParameterSelector.addEventListener('change', onSortingParameterChange);
 	sortingOrderSelector.addEventListener('change', onSortingOrderChange);
 };
 
-
-export {init, renderGallery, getProcessedData};
+export {init, onFiltersChange};
