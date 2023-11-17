@@ -1,4 +1,4 @@
-import {PREVIEWS_ADRESS} from './packs-data.js';
+import { PREVIEWS_ADRESS } from './pack-data-manager.js';
 
 const root = document.querySelector('.packs-list');
 const template = document.querySelector('#pack-card')

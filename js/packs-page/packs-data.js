@@ -1,17 +1,4 @@
-import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
-
-const PREVIEWS_ADRESS = 'img/refpacks/covers/';
-
-const packDataExample = {
-	packName: 'string',
-	price: 'number',
-	coverName: 'string',
-	previewsName: 'array',
-	specialOffer: 'boolean',
-	popularityRate: 'number',
-	type: 'string',
-	tags: 'object',
-};
+import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js';
 
 const packsData = new Map();
 
@@ -234,4 +221,4 @@ packsData.set(nanoid(), {
 	},
 });
 
-export {packsData, PREVIEWS_ADRESS, packDataExample};
+export {packsData};

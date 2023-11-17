@@ -1,17 +1,9 @@
-import { getProcessedData } from './gallery-manager.js';
-import {packsData} from './packs-data.js';
+import { onFiltersChange } from './gallery-manager.js';
+import { minPrice, maxPrice } from './pack-data-manager.js';
 
 const slider = document.getElementById('slider');
 const minPriceInput = document.querySelector('.filter-btn__price-input[name="min-interval"]');
 const maxPriceInput = document.querySelector('.filter-btn__price-input[name="max-interval"]');
-
-const allPrices = [];
-for (const [, datum] of packsData) {
-	allPrices.push(datum.price);
-}
-
-const minPrice = Math.min.apply(null, allPrices);
-const maxPrice = Math.max.apply(null, allPrices);
 
 noUiSlider.create(slider, {
 	start: [minPrice, maxPrice],
@@ -30,5 +22,5 @@ slider.noUiSlider.on('update', () => {
 	const [min, max] = slider.noUiSlider.get();
 	minPriceInput.value = min;
 	maxPriceInput.value = max;
-	getProcessedData();
+	onFiltersChange();
 });
