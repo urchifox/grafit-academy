@@ -52,6 +52,7 @@ const onCodeSubmit = (evt) => {
 	closeModal();
 	removeLoginButton();
 	renderProfileButton();
+	localStorage.setItem('isAuthorized', 'true');
 };
 
 const onCloseButtonClick = () => {
@@ -82,6 +83,7 @@ const onLoginButtonClick = (evt) => {
 
 const onLogOutClick = (evt) => {
 	evt.preventDefault();
+	localStorage.setItem('isAuthorized', 'false');
 	logOut();
 };
 
@@ -137,6 +139,12 @@ function logOut() {
 
 function init () {
 	loginTemporary.remove();
+
+	if (localStorage.getItem('isAuthorized') === 'true') {
+		renderProfileButton();
+		return;
+	}
+
 	renderLoginButton();
 }
 
