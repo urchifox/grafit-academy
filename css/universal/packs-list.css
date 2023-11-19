@@ -144,3 +144,9 @@
 .pack-market:has(.zoom-btn__checkbox:checked)  .pack-card__img-link {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
+
+/* СООБЩЕНИЕ */
+
+.pack-list-message {
+    font-size: var(--font-size-important);
+}

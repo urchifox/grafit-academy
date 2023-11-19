@@ -5,6 +5,12 @@ const root = document.querySelector('.packs-list');
 
 const fragment = document.createDocumentFragment();
 
+const getEmptyListTemplate = () => /*html*/`
+	<li class="pack-list-message">
+		<p>К сожалению, по вашему запросу ничего не найдено :с</p>
+	</li>
+`;
+
 const getPreviewsTemplate = (previewsName) => previewsName.map((preview) => `<img src="${PREVIEWS_ADRESS}${preview}" alt="" class="pack-card__cover">  `).join('');;
 
 const getTemplate = ({packName, price, coverName, previewsName}) => /*html*/`
@@ -32,6 +38,12 @@ const getTemplate = ({packName, price, coverName, previewsName}) => /*html*/`
 	</li>`;
 
 const render = (data, onListClick) => {
+	if (data.length === 0) {
+		const message = createElement(getEmptyListTemplate());
+		root.append(message);
+		return;
+	}
+
 	data.forEach(([, packInfo]) => {
 		const card = createElement(getTemplate(packInfo));
 		fragment.append(card);
