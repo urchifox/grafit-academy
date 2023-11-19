@@ -1,30 +1,39 @@
 import { PREVIEWS_ADRESS } from './pack-data-manager.js';
+import { createElement } from '../utils.js';
 
 const root = document.querySelector('.packs-list');
-const template = document.querySelector('#pack-card')
-	.content
-	.querySelector('.pack-card');
 
 const fragment = document.createDocumentFragment();
 
+const getPreviewsTemplate = (previewsName) => previewsName.map((preview) => `<img src="${PREVIEWS_ADRESS}${preview}" alt="" class="pack-card__cover">  `).join('');;
+
+const getTemplate = ({packName, price, coverName, previewsName}) => /*html*/`
+	<li class="pack-card" data-id="${packName}">
+		<h2 class="pack-card__name"><a href="#" class="pack-card__name-link">${packName}</a></h2>
+		<a href="#" class="pack-card__img-link" tabindex="-1">
+			<img src="${PREVIEWS_ADRESS}${coverName}" alt="" class="pack-card__cover">  
+			${getPreviewsTemplate(previewsName)}
+		</a>
+		<div class="pack-card__price-n-btns">
+			<span class="pack-card__price">${price}</span>
+			<button aria-label="Положить в корзину" class="pack-card__buy"  >
+				<img src="img/refpacks/icons/buy.svg" width="30px" height="30px">
+			</button>
+			<button aria-label="Добавить в избранное" class="pack-card__add-favorites"  >
+				<span class="material-icons favorite_border">
+					favorite_border
+				</span>
+				<span class="material-icons  favorite_checked hidden">
+					favorite
+				</span>
+				<spav class="visually-hidden">Добавить в избранное</spav>
+			</button>
+		</div>
+	</li>`;
 
 const render = (data, onListClick) => {
 	data.forEach(([, packInfo]) => {
-		const {packName, price, coverName, previewsName} = packInfo;
-		const card = template.cloneNode(true);
-		card.dataset.id = packName;
-		card.querySelector('.pack-card__name-link').textContent = packName;
-		card.querySelector('.pack-card__price').textContent = `${price}`;
-		const preview = card.querySelector('.pack-card__cover');
-		preview.src = `${PREVIEWS_ADRESS}${coverName}`;
-		const previewsRoot = card.querySelector('.pack-card__img-link');
-
-		previewsName.forEach((name) => {
-			const newPreview = preview.cloneNode(true);
-			newPreview.src = `${PREVIEWS_ADRESS}${name}`;
-			previewsRoot.append(newPreview);
-		});
-
+		const card = createElement(getTemplate(packInfo));
 		fragment.append(card);
 	});
 
