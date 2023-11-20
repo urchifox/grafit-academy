@@ -1,4 +1,4 @@
-import { onListClick } from './pack-card-full.js';
+import { onListClick } from './pack-full.js';
 import {render as renderPacks} from './gallery-rendering.js';
 import {packsData} from './packs-data.js';
 import { maxPrice, minPrice, packDataExample } from './pack-data-manager.js';

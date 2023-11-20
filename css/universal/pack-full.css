@@ -1,0 +1,110 @@
+.pack-full {
+    background-color: rgb(var(--color-background) / 1);
+    box-shadow: 0px 5px 25px 25px rgb(var(--color-background) / 1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pack-full__name {
+    margin: 0;
+    order: 1;
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-subheading);
+    
+}
+
+.pack-full__actions-container {
+    margin: auto 0;
+    order: 2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.pack-full__price {
+    margin-right: 20px;
+    font-size: var(--font-size-important);
+    align-self: center;
+}
+.pack-full__price::after {
+    content: "	\20BD";
+}
+
+.pack-full__buy {
+    margin-right: 5px;
+}
+.pack-full__buy, .pack-full__add-favorites {
+    position: relative;
+
+    padding: 2px 2px;
+    border: none;
+    width: 35px;
+    height: 35px;
+    
+    background-color: transparent;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.pack-full__buy:hover, .pack-full__add-favorites:hover {
+    transform: scale(1.2);
+}
+.pack-full__buy:active, .pack-full__add-favorites:active {
+    transform: scale(0.8);
+}
+
+.favorite_border, .favorite_checked{
+    position: absolute;
+    top: 4px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    
+    transform: scale(1.2);
+}
+.favorite_checked {
+    z-index: -1;
+    color: rgb(var(--color-accent));
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.favorite_checked.hidden {
+    opacity: 0;
+}
+
+
+.pack-full__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+    border: none;
+	width: 24px;
+	height: 24px;
+    background-color: transparent;
+	opacity: 0.2;
+	cursor: pointer;
+    transition: opacity ease 0.5s;
+}
+.pack-full__close:hover {
+    opacity: 1;
+}
+
+.pack-full__close::before,
+.pack-full__close::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 3px;
+	background: rgb(var(--color-accent) / 1);
+}
+
+.pack-full__close::before {
+	transform: rotate(45deg);
+}
+
+.pack-full__close::after {
+	transform: rotate(-45deg);
+}
