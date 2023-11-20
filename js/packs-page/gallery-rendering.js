@@ -13,8 +13,8 @@ const getEmptyListTemplate = () => /*html*/`
 
 const getPreviewsTemplate = (previewsName) => previewsName.map((preview) => `<img src="${PREVIEWS_ADRESS}${preview}" alt="" class="pack-card__cover">  `).join('');;
 
-const getTemplate = ({packName, price, coverName, previewsName}) => /*html*/`
-	<li class="pack-card" data-id="${packName}">
+const getTemplate = (id, {packName, price, coverName, previewsName}) => /*html*/`
+	<li class="pack-card" data-id="${id}">
 		<h2 class="pack-card__name"><a href="#" class="pack-card__name-link">${packName}</a></h2>
 		<a href="#" class="pack-card__img-link" tabindex="-1">
 			<img src="${PREVIEWS_ADRESS}${coverName}" alt="" class="pack-card__cover">  
@@ -44,8 +44,8 @@ const render = (data, onListClick) => {
 		return;
 	}
 
-	data.forEach(([, packInfo]) => {
-		const card = createElement(getTemplate(packInfo));
+	data.forEach(([id, packInfo]) => {
+		const card = createElement(getTemplate(id, packInfo));
 		fragment.append(card);
 	});
 
