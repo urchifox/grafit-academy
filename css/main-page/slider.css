@@ -6,6 +6,7 @@
 
 .slider__main-illustration {
     position: relative;
+    margin: 0;
     width: 100%;
 }
 
