@@ -1,6 +1,6 @@
-import {studentsWorksInfo} from './students-pictures-data.js';
 import {renderMainPicture, renderSlider} from './slider-previews-rendering.js';
-
+let picturesAddress;
+let picturesData;
 let previousBtn;
 let nextBtn;
 let previewContainer;
@@ -10,8 +10,8 @@ const changePicture = (targetIndex) => {
 	const currentPreview = previewContainer.querySelector('.slider__preview-item_active');
 	currentPreview.classList.remove('slider__preview-item_active');
 
-	const pictureInfo = studentsWorksInfo[targetIndex];
-	renderMainPicture(pictureInfo);
+	const pictureInfo = picturesData[targetIndex];
+	renderMainPicture(pictureInfo, picturesAddress);
 
 	previewContainer.children[targetIndex].classList.add('slider__preview-item_active');
 	currentPreviewIndex = targetIndex;
@@ -29,10 +29,10 @@ const onSliderBtnClick = (evt) => {
 		currentPreviewIndex - 1;
 
 	if (targetIndex < 0) {
-		targetIndex = studentsWorksInfo.length - 1;
+		targetIndex = picturesData.length - 1;
 	}
 
-	if (targetIndex > studentsWorksInfo.length - 1) {
+	if (targetIndex > picturesData.length - 1) {
 		targetIndex = 0;
 	}
 
@@ -50,8 +50,11 @@ const onPreviewClick = (evt) => {
 	changePicture(targetIndex);
 };
 
-const init = () => {
-	renderSlider(studentsWorksInfo);
+const init = (data, address) => {
+	renderSlider(data, address);
+
+	picturesData = data;
+	picturesAddress = address;
 
 	previewContainer = document.querySelector('.slider__previews');
 	previousBtn = document.querySelector('.slider__arrow_left');

@@ -1,11 +1,12 @@
 import { createElement } from '../utils.js';
 import { packsData } from './packs-data.js';
 import {init as initSlider} from '../main-page/slider.js';
+import { PREVIEWS_ADDRESS } from './pack-data-manager.js';
 
 
 const root = document.querySelector('.pack-market');
 
-const getTemplate = ({packName, price, coverName, previewsName, specialOffer}) => /*html*/`
+const getTemplate = ({packName, price}) => /*html*/`
 	<article class="pack-full pack-market__pack-full">
 		<h2 class="pack-full__name">${packName}</h2>
 		
@@ -51,7 +52,7 @@ const render = (packData) => {
 	card.querySelector('.pack-full__close').addEventListener('click', onCloseClick);
 	document.addEventListener('keydown', onEscPress);
 	root.append(card);
-	initSlider();
+	initSlider(packData.previews, PREVIEWS_ADDRESS);
 };
 
 const close = () => {
@@ -70,6 +71,7 @@ function onEscPress (evt) {
 }
 
 function onListClick (evt) {
+	evt.preventDefault();
 	const id = evt.target.closest('.pack-card').dataset.id;
 	const packData = packsData.get(id);
 	render(packData);

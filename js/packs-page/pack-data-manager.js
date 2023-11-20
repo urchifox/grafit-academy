@@ -1,6 +1,6 @@
 import { packsData } from './packs-data.js';
 
-const PREVIEWS_ADRESS = 'img/refpacks/covers/';
+const PREVIEWS_ADDRESS = 'img/refpacks/covers/';
 
 const packDataExample = {
 	packName: 'string',
@@ -21,4 +21,4 @@ for (const [, datum] of packsData) {
 const minPrice = Math.min.apply(null, allPrices);
 const maxPrice = Math.max.apply(null, allPrices);
 
-export {packDataExample, minPrice, maxPrice, PREVIEWS_ADRESS};
+export {packDataExample, minPrice, maxPrice, PREVIEWS_ADDRESS};

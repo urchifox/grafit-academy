@@ -1,4 +1,4 @@
-import { PREVIEWS_ADRESS } from './pack-data-manager.js';
+import { PREVIEWS_ADDRESS } from './pack-data-manager.js';
 import { createElement } from '../utils.js';
 
 const root = document.querySelector('.packs-list');
@@ -11,7 +11,7 @@ const getEmptyListTemplate = () => /*html*/`
 	</li>
 `;
 
-const getPreviewsTemplate = (previews) => previews.map(({src}) => `<img src="${PREVIEWS_ADRESS}${src}" alt="" class="pack-card__cover">  `).join('');
+const getPreviewsTemplate = (previews) => previews.map(({src}) => `<img src="${PREVIEWS_ADDRESS}${src}" alt="" class="pack-card__cover">  `).join('');
 
 const getTemplate = (id, {packName, price, previews}) => /*html*/`
 	<li class="pack-card" data-id="${id}">
