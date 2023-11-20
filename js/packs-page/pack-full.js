@@ -11,20 +11,7 @@ const getTemplate = ({packName, price}) => /*html*/`
 		<div class="pack-full_container">
 			<h2 class="pack-full__name">${packName}</h2>
 			
-			<section class="slider">
-				<figcaption class="slider__main-illustration">
-					<img class="slider__main-img" src="" alt="">
-					<figcaption class="slider__desc"></figcaption>
-				</figcaption>
-				<button name="previous" aria-label="Предыдущее изображение" class="arrow slider__arrow slider__arrow_left  material-icons-round" >
-					<span aria-hidden="true">chevron_left</span>
-				</button>
-				<button name="next" aria-label="Следующее изображение" class="arrow slider__arrow slider__arrow_right material-icons-round" >
-					<span aria-hidden="true">navigate_next</span>
-				</button>
-				<ul class="slider__previews">
-				</ul>
-			</section>
+			<div class="slider-container"></div>
 
 			<div class="pack-full__actions-container">
 				<p class="pack-full__price">${price}<span class="visually-hidden">рублей</span></p>
