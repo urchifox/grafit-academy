@@ -1,11 +1,6 @@
-.pack-market {
-    position: relative;
-}
-
 .pack-market__pack-full {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 2;
+    z-index: 3;
 }
