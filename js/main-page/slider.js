@@ -1,52 +1,61 @@
 import {studentsWorksInfo} from './students-pictures-data.js';
-import {renderMainPicture, renderPreviews} from './slider-previews-rendering.js';
+import {renderMainPicture, renderSlider} from './slider-previews-rendering.js';
 
-const previousBtn = document.querySelector('.slider__arrow_left');
-const nextBtn = document.querySelector('.slider__arrow_right');
-const previewContainer = document.querySelector('.slider__previews');
+let previousBtn;
+let nextBtn;
+let previewContainer;
 let currentPreviewIndex = 0;
 
-
-const changeMainPicture = (info) => {
-	const requestedPreviewIndex = info.id;
-	const requestedPreview = previewContainer.children[requestedPreviewIndex];
-	const currentPreview = previewContainer.children[currentPreviewIndex];
-	requestedPreview.classList.add('slider__preview-item_active');
+const changePicture = (targetIndex) => {
+	const currentPreview = previewContainer.querySelector('.slider__preview-item_active');
 	currentPreview.classList.remove('slider__preview-item_active');
-	currentPreviewIndex = requestedPreviewIndex;
 
-	renderMainPicture(info);
+	const pictureInfo = studentsWorksInfo[targetIndex];
+	renderMainPicture(pictureInfo);
+
+	previewContainer.children[targetIndex].classList.add('slider__preview-item_active');
+	currentPreviewIndex = targetIndex;
 };
 
 const onSliderBtnClick = (evt) => {
-	let requestedPictureIndex = (evt.target.name === 'next') ?
+	const button = evt.target.closest('.slider__arrow');
+
+	if(!button) {
+		return;
+	}
+
+	let targetIndex = (button.name === 'next') ?
 		currentPreviewIndex + 1 :
 		currentPreviewIndex - 1;
 
-	if (requestedPictureIndex < 0) {
-		requestedPictureIndex = studentsWorksInfo.length - 1;
+	if (targetIndex < 0) {
+		targetIndex = studentsWorksInfo.length - 1;
 	}
 
-	if (requestedPictureIndex > studentsWorksInfo.length - 1) {
-		requestedPictureIndex = 0;
+	if (targetIndex > studentsWorksInfo.length - 1) {
+		targetIndex = 0;
 	}
 
-	const requestedPictureInfo = studentsWorksInfo[requestedPictureIndex];
-	changeMainPicture(requestedPictureInfo);
+	changePicture(targetIndex);
 };
 
 const onPreviewClick = (evt) => {
-	const preview = evt.target.closest('.slider__preview-btn');
-	if(!preview) {
+	const button = evt.target.closest('.slider__preview-btn');
+
+	if(!button) {
 		return;
 	}
-	const pictureInfo = studentsWorksInfo[preview.dataset.id];
-	changeMainPicture(pictureInfo);
+
+	const targetIndex = Number(button.dataset.id);
+	changePicture(targetIndex);
 };
 
 const init = () => {
-	renderPreviews(studentsWorksInfo);
-	renderMainPicture(studentsWorksInfo[0]);
+	renderSlider(studentsWorksInfo);
+
+	previewContainer = document.querySelector('.slider__previews');
+	previousBtn = document.querySelector('.slider__arrow_left');
+	nextBtn = document.querySelector('.slider__arrow_right');
 
 	previewContainer.addEventListener('click', onPreviewClick);
 	previousBtn.addEventListener('click', onSliderBtnClick);

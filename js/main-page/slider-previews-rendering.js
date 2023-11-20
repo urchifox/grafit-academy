@@ -1,24 +1,18 @@
-const mainPicture = document.querySelector('.slider__main-img');
-const mainPictureDescription = document.querySelector('.slider__desc');
-const previewContainer = document.querySelector('.slider__previews');
-const template = document.querySelector('#preview')
-	.content
-	.querySelector('.slider__preview-item');
+import { createElement } from '../utils.js';
 
-const previewFragment = document.createDocumentFragment();
+const getTemplate = (index, {src, description}) => /*html*/`
+	<li class="slider__preview-item">
+		<button class="slider__preview-btn" data-id="${index}" data-link="" data-desc="" >
+			<img class="slider__preview-img" width="100px" height="100px" src="${src}" alt="${description}">
+		</button>
+	</li>
+`;
 
 const renderPreviews = (data) => {
+	const previewContainer = document.querySelector('.slider__previews');
+	const previewFragment = document.createDocumentFragment();
 	data.forEach((datum, index) => {
-		const preview = template.cloneNode(true);
-		const button = preview.querySelector('.slider__preview-btn');
-		button.dataset.id = index;
-
-		const image = preview.querySelector('.slider__preview-img');
-		image.src = datum.src;
-		image.alt = datum.description;
-
-		datum.id = index;
-
+		const preview = createElement(getTemplate(index, datum));
 		previewFragment.append(preview);
 	});
 
@@ -26,11 +20,17 @@ const renderPreviews = (data) => {
 	previewContainer.append(previewFragment);
 };
 
-const renderMainPicture = (info) => {
-	mainPicture.src = info.src;
-	mainPicture.dataset.id = info.id;
-	mainPictureDescription.textContent = info.description;
+const renderMainPicture = (datum) => {
+	const mainPicture = document.querySelector('.slider__main-img');
+	const mainPictureDescription = document.querySelector('.slider__desc');
+
+	mainPicture.src = datum.src;
+	mainPictureDescription.textContent = datum.description;
 };
 
+const renderSlider = (data) => {
+	renderPreviews(data);
+	renderMainPicture(data[0]);
+};
 
-export {renderMainPicture, renderPreviews};
+export {renderSlider, renderMainPicture};
