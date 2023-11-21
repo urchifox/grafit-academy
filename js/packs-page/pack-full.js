@@ -8,7 +8,7 @@ import {getTemplate as getFavoriteButtonTemplate} from './favorite-button.js';
 
 const root = document.querySelector('.pack-market');
 
-const getTemplate = (id, {packName, price}) => /*html*/`
+const getTemplate = (id, {packName, price, isFavorite}) => /*html*/`
 	<article class="pack-full pack-market__pack-full">
 		<div class="pack-full_container">
 			<h2 class="pack-full__name">${packName}</h2>
@@ -18,7 +18,7 @@ const getTemplate = (id, {packName, price}) => /*html*/`
 			<div class="pack-full__actions-container">
 				<p class="pack-full__price">${price}<span class="visually-hidden">рублей</span></p>
 				${getCartButtonTemplate(id)}
-				${getFavoriteButtonTemplate(id)}
+				${getFavoriteButtonTemplate(id, isFavorite)}
 			</div>
 
 			<button class="pack-full__close">

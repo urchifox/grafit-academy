@@ -18,8 +18,8 @@
     transform: scale(0.8);
 }
 
-.favorite_border, 
-.favorite_checked {
+.favorite-button__icon_border, 
+.favorite-button__icon_checked {
     position: absolute;
     top: 4px;
 	bottom: 0;
@@ -31,10 +31,10 @@
     opacity: 1;
 }
 
-.favorite_checked {
+.favorite-button__icon_checked {
     color: rgb(var(--color-accent));
 }
 
-.favorite_checked.hidden {
+.favorite-button__icon_checked.hidden {
     opacity: 0;
 }

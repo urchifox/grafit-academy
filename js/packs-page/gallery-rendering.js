@@ -15,7 +15,7 @@ const getEmptyListTemplate = () => /*html*/`
 
 const getPreviewsTemplate = (previews) => previews.map(({src}) => `<img src="${PREVIEWS_ADDRESS}${src}" alt="" class="pack-card__cover">  `).join('');
 
-const getTemplate = (id, {packName, price, previews}) => /*html*/`
+const getTemplate = (id, {packName, price, previews, isFavorite}) => /*html*/`
 	<li class="pack-card" data-id="${id}">
 		<h2 class="pack-card__name"><a href="#" class="pack-card__name-link">${packName}</a></h2>
 		<a href="#" class="pack-card__img-link" tabindex="-1">
@@ -24,7 +24,7 @@ const getTemplate = (id, {packName, price, previews}) => /*html*/`
 		<div class="pack-card__price-n-btns">
 			<span class="pack-card__price">${price}</span>
 			${getCartButtonTemplate(id)}
-			${getFavoriteButtonTemplate(id)}
+			${getFavoriteButtonTemplate(id, isFavorite)}
 		</div>
 	</li>`;
 

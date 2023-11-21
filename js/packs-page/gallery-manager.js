@@ -23,16 +23,20 @@ let processedData;
 
 
 const onGalleryClick = (evt) => {
-	evt.preventDefault();
-
+	// debugger;
+	console.log(evt.target);
+	// console.log(evt.target.closest('.favorite-button'));
 	if (evt.target.classList.contains('pack-card__name-link') || evt.target.classList.contains('pack-card__cover')) {
+		evt.preventDefault();
 		const id = evt.target.closest('.pack-card').dataset.id;
 		const packData = packsData.get(id);
 		renderFullCard(id, packData);
+		return;
 	}
 
 	if(evt.target.closest('.favorite-button')) {
 		onFavoriteClick(evt);
+		return;
 	}
 
 	if(evt.target.closest('.buy-button')) {

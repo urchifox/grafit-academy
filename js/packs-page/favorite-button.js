@@ -1,14 +1,18 @@
 import { packsData } from './packs-data.js';
 
-const getTemplate = (id) => /*html*/`
-	<button aria-label="Добавить в избранное" class="favorite-button"  data-id="${id}">
-		<span class="material-icons favorite_border">
-			favorite_border
-		</span>
-		<span class="material-icons  favorite_checked hidden">
-			favorite
-		</span>
+const getTemplate = (id, isFavorite) => /*html*/`
+	<label class="favorite-button"  data-id="${id}">
+		<input type="checkbox" class="visually-hidden"/>
 		<span class="visually-hidden">Добавить в избранное</span>
+
+		<div class="favorite-button__icon" aria-hidden="true">
+			<span  class="material-icons favorite-button__icon_border">
+				favorite_border
+			</span>
+			<span class="material-icons  favorite-button__icon_checked ${isFavorite ? '' : 'hidden'}">
+				favorite
+			</span>
+		</div>
 	</button>
 `;
 
@@ -16,9 +20,10 @@ const onFavoriteClick = (evt) => {
 	const button = evt.target.closest('.favorite-button');
 	const id = button.dataset.id;
 	const packData = packsData.get(id);
-	console.log(id);
+	// console.log(evt.target.closest('input'));
+	packData.isFavorite = evt.target.closest('input').value;
 
-	const favIconFilled = button.querySelector('.material-icons.favorite_checked');
+	const favIconFilled = button.querySelector('.favorite-button__icon_checked');
 	favIconFilled.classList.toggle('hidden');
 };
 
