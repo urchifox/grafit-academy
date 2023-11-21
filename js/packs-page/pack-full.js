@@ -1,12 +1,14 @@
 import { createElement } from '../utils.js';
-import { packsData } from './packs-data.js';
 import {init as initSlider} from '../main-page/slider.js';
 import { PREVIEWS_ADDRESS } from './pack-data-manager.js';
-
+import {onBuyClick} from './buy-button.js';
+import {onFavoriteClick} from './favorite-button.js';
+import {getTemplate as getCartButtonTemplate} from './buy-button.js';
+import {getTemplate as getFavoriteButtonTemplate} from './favorite-button.js';
 
 const root = document.querySelector('.pack-market');
 
-const getTemplate = ({packName, price}) => /*html*/`
+const getTemplate = (id, {packName, price}) => /*html*/`
 	<article class="pack-full pack-market__pack-full">
 		<div class="pack-full_container">
 			<h2 class="pack-full__name">${packName}</h2>
@@ -15,18 +17,8 @@ const getTemplate = ({packName, price}) => /*html*/`
 
 			<div class="pack-full__actions-container">
 				<p class="pack-full__price">${price}<span class="visually-hidden">рублей</span></p>
-				<button aria-label="Положить в корзину" class="pack-full__buy"  >
-					<img src="img/refpacks/icons/buy.svg" width="30px" height="30px">
-				</button>
-				<button aria-label="Добавить в избранное" class="pack-full__add-favorites"  >
-					<span class="material-icons favorite_border">
-						favorite_border
-					</span>
-					<span class="material-icons  favorite_checked hidden">
-						favorite
-					</span>
-					<span class="visually-hidden">Добавить в избранное</span>
-				</button>
+				${getCartButtonTemplate(id)}
+				${getFavoriteButtonTemplate(id)}
 			</div>
 
 			<button class="pack-full__close">
@@ -39,10 +31,12 @@ const getTemplate = ({packName, price}) => /*html*/`
 	</article>
 `;
 
-const render = (packData) => {
-	const card = createElement(getTemplate(packData));
+const render = (id, packData) => {
+	const card = createElement(getTemplate(id, packData));
 	card.addEventListener('click', onOverlayClick);
 	card.querySelector('.pack-full__close').addEventListener('click', onCloseClick);
+	card.querySelector('.buy-button').addEventListener('click', onBuyClick);
+	card.querySelector('.favorite-button').addEventListener('click', onFavoriteClick);
 	document.addEventListener('keydown', onEscPress);
 	root.append(card);
 	initSlider(packData.previews, PREVIEWS_ADDRESS);
@@ -71,11 +65,4 @@ function onOverlayClick (evt) {
 	}
 }
 
-function onListClick (evt) {
-	evt.preventDefault();
-	const id = evt.target.closest('.pack-card').dataset.id;
-	const packData = packsData.get(id);
-	render(packData);
-}
-
-export {onListClick};
+export {render};

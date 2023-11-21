@@ -1,5 +1,7 @@
 import { PREVIEWS_ADDRESS } from './pack-data-manager.js';
 import { createElement } from '../utils.js';
+import {getTemplate as getCartButtonTemplate} from './buy-button.js';
+import {getTemplate as getFavoriteButtonTemplate} from './favorite-button.js';
 
 const root = document.querySelector('.packs-list');
 
@@ -21,18 +23,8 @@ const getTemplate = (id, {packName, price, previews}) => /*html*/`
 		</a>
 		<div class="pack-card__price-n-btns">
 			<span class="pack-card__price">${price}</span>
-			<button aria-label="Положить в корзину" class="pack-card__buy"  >
-				<img src="img/refpacks/icons/buy.svg" width="30px" height="30px">
-			</button>
-			<button aria-label="Добавить в избранное" class="pack-card__add-favorites"  >
-				<span class="material-icons favorite_border">
-					favorite_border
-				</span>
-				<span class="material-icons  favorite_checked hidden">
-					favorite
-				</span>
-				<spav class="visually-hidden">Добавить в избранное</spav>
-			</button>
+			${getCartButtonTemplate(id)}
+			${getFavoriteButtonTemplate(id)}
 		</div>
 	</li>`;
 

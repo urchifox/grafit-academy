@@ -75,49 +75,6 @@
     content: "	\20BD";
 }
 
-.pack-full__buy {
-    margin-right: 5px;
-}
-.pack-full__buy, .pack-full__add-favorites {
-    position: relative;
-
-    padding: 2px 2px;
-    border: none;
-    width: 35px;
-    height: 35px;
-    
-    background-color: transparent;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-
-.pack-full__buy:hover, .pack-full__add-favorites:hover {
-    transform: scale(1.2);
-}
-.pack-full__buy:active, .pack-full__add-favorites:active {
-    transform: scale(0.8);
-}
-
-.favorite_border, .favorite_checked{
-    position: absolute;
-    top: 4px;
-	bottom: 0;
-	left: 0;
-	right: 0;
-    
-    transform: scale(1.2);
-}
-.favorite_checked {
-    z-index: -1;
-    color: rgb(var(--color-accent));
-    opacity: 1;
-    transition: opacity 0.3s;
-}
-.favorite_checked.hidden {
-    opacity: 0;
-}
-
-
 .pack-full__close {
 	position: absolute;
 	top: 10px;

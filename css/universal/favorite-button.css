@@ -1,0 +1,40 @@
+.favorite-button {
+    position: relative;
+
+    padding: 2px 2px;
+    border: none;
+    width: 35px;
+    height: 35px;
+    
+    background-color: transparent;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.favorite-button:hover {
+    transform: scale(1.2);
+}
+.favorite-button:active {
+    transform: scale(0.8);
+}
+
+.favorite_border, 
+.favorite_checked {
+    position: absolute;
+    top: 4px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    transform: scale(1.2);
+    
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.favorite_checked {
+    color: rgb(var(--color-accent));
+}
+
+.favorite_checked.hidden {
+    opacity: 0;
+}

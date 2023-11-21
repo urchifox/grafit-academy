@@ -9,5 +9,7 @@
 @import url(../packs-page/sorting.css);
 @import url(../universal/packs-list.css);
 @import url(../universal/pack-full.css);
+@import url(../universal/buy-button.css);
+@import url(../universal/favorite-button.css);
 @import url(../packs-page/price-slider.css);
 @import url(../universal/footer.css);
