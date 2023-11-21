@@ -30,7 +30,10 @@ const getTemplate = ({packName, price}) => /*html*/`
 			</div>
 
 			<button class="pack-full__close">
-				<span class="visually-hidden">Закрыть</span>
+				<span class="visually-hidden">Закрыть окно авторизации</span>
+				<span aria-hidden="true" class="material-icons-round">
+					close
+				</span>
 			</button>
 		</div>
 	</article>
