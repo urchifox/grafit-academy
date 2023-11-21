@@ -1,9 +1,12 @@
 import { packsData } from './packs-data.js';
 
 const getTemplate = (id) => /*html*/`
-	<button aria-label="Положить в корзину" class="buy-button" data-id="${id}">
+	<label class="buy-button" data-id="${id}">
+		<input type="checkbox" class="visually-hidden"/>
+		<span class="visually-hidden">Добавить в корзину</span>
+
 		<img src="img/refpacks/icons/buy.svg" width="30px" height="30px">
-	</button>
+	</label>
 `;
 
 
