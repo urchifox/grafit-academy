@@ -2,6 +2,7 @@ import { PREVIEWS_ADDRESS } from './pack-data-manager.js';
 import { createElement } from '../utils.js';
 import {getTemplate as getCartButtonTemplate} from './buy-button.js';
 import {getTemplate as getFavoriteButtonTemplate} from './favorite-button.js';
+import { packsUserData } from './packs-user-data.js';
 
 const root = document.querySelector('.packs-list');
 
@@ -15,7 +16,7 @@ const getEmptyListTemplate = () => /*html*/`
 
 const getPreviewsTemplate = (previews) => previews.map(({src}) => `<img src="${PREVIEWS_ADDRESS}${src}" alt="" class="pack-card__cover">  `).join('');
 
-const getTemplate = (id, {packName, price, previews, isFavorite, isInCart}) => /*html*/`
+const getTemplate = (id, {packName, price, previews}, isFavorite, isInCart) => /*html*/`
 	<li class="pack-card" data-id="${id}">
 		<h2 class="pack-card__name"><a href="#" class="pack-card__name-link">${packName}</a></h2>
 		<a href="#" class="pack-card__img-link" tabindex="-1">
@@ -36,7 +37,9 @@ const render = (data, onListClick) => {
 	}
 
 	data.forEach(([id, packInfo]) => {
-		const card = createElement(getTemplate(id, packInfo));
+		const isFavorite = packsUserData.favorites.includes(id);
+		const isInCart = packsUserData.inCart.includes(id);
+		const card = createElement(getTemplate(id, packInfo, isFavorite, isInCart));
 		fragment.append(card);
 	});
 

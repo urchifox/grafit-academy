@@ -1,4 +1,4 @@
-import { packsData } from './packs-data.js';
+import { packsUserData } from './packs-user-data.js';
 
 const getTemplate = (id, isInCart) => /*html*/`
 	<label class="buy-button" data-id="${id}">
@@ -17,10 +17,14 @@ const getTemplate = (id, isInCart) => /*html*/`
 
 const onBuyClick = (evt) => {
 	const label = evt.target.closest('.buy-button');
-	const id = label.dataset.id;
-	const packData = packsData.get(id);
 	const input = label.querySelector('input');
-	packData.isInCart = input.checked;
+	const id = label.dataset.id;
+
+	if (input.checked) {
+		packsUserData.inCart.push(id);
+	} else {
+		packsUserData.inCart.splice(packsUserData.inCart.indexOf(id), 1);
+	}
 
 	const cartIconFilled = label.querySelector('.buy-button__icon_checked');
 	cartIconFilled.classList.toggle('hidden');

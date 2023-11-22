@@ -1,4 +1,4 @@
-import { packsData } from './packs-data.js';
+import { packsUserData } from './packs-user-data.js';
 
 const getTemplate = (id, isFavorite) => /*html*/`
 	<label class="favorite-button"  data-id="${id}">
@@ -18,10 +18,14 @@ const getTemplate = (id, isFavorite) => /*html*/`
 
 const onFavoriteClick = (evt) => {
 	const label = evt.target.closest('.favorite-button');
-	const id = label.dataset.id;
-	const packData = packsData.get(id);
 	const input = label.querySelector('input');
-	packData.isFavorite = input.checked;
+	const id = label.dataset.id;
+
+	if (input.checked) {
+		packsUserData.favorites.push(id);
+	} else {
+		packsUserData.favorites.splice(packsUserData.favorites.indexOf(id), 1);
+	}
 
 	const favIconFilled = label.querySelector('.favorite-button__icon_checked');
 	favIconFilled.classList.toggle('hidden');

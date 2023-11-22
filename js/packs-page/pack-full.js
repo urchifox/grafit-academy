@@ -5,10 +5,11 @@ import {onBuyClick} from './buy-button.js';
 import {onFavoriteClick} from './favorite-button.js';
 import {getTemplate as getCartButtonTemplate} from './buy-button.js';
 import {getTemplate as getFavoriteButtonTemplate} from './favorite-button.js';
+import { packsUserData } from './packs-user-data.js';
 
 const root = document.querySelector('.pack-market');
 
-const getTemplate = (id, {packName, price, isFavorite, isInCart}) => /*html*/`
+const getTemplate = (id, {packName, price}, isFavorite, isInCart) => /*html*/`
 	<article class="pack-full pack-market__pack-full">
 		<div class="pack-full_container">
 			<h2 class="pack-full__name">${packName}</h2>
@@ -32,7 +33,9 @@ const getTemplate = (id, {packName, price, isFavorite, isInCart}) => /*html*/`
 `;
 
 const render = (id, packData) => {
-	const card = createElement(getTemplate(id, packData));
+	const isFavorite = packsUserData.favorites.includes(id);
+	const isInCart = packsUserData.inCart.includes(id);
+	const card = createElement(getTemplate(id, packData, isFavorite, isInCart));
 	card.addEventListener('click', onOverlayClick);
 	card.querySelector('.pack-full__close').addEventListener('click', onCloseClick);
 	card.querySelector('[name="buy"]').addEventListener('click', onBuyClick);
