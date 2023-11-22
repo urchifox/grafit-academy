@@ -8,7 +8,7 @@ import {getTemplate as getFavoriteButtonTemplate} from './favorite-button.js';
 
 const root = document.querySelector('.pack-market');
 
-const getTemplate = (id, {packName, price, isFavorite}) => /*html*/`
+const getTemplate = (id, {packName, price, isFavorite, isInCart}) => /*html*/`
 	<article class="pack-full pack-market__pack-full">
 		<div class="pack-full_container">
 			<h2 class="pack-full__name">${packName}</h2>
@@ -17,7 +17,7 @@ const getTemplate = (id, {packName, price, isFavorite}) => /*html*/`
 
 			<div class="pack-full__actions-container">
 				<p class="pack-full__price">${price}<span class="visually-hidden">рублей</span></p>
-				${getCartButtonTemplate(id)}
+				${getCartButtonTemplate(id, isInCart)}
 				${getFavoriteButtonTemplate(id, isFavorite)}
 			</div>
 
@@ -35,8 +35,8 @@ const render = (id, packData) => {
 	const card = createElement(getTemplate(id, packData));
 	card.addEventListener('click', onOverlayClick);
 	card.querySelector('.pack-full__close').addEventListener('click', onCloseClick);
-	card.querySelector('.buy-button').addEventListener('click', onBuyClick);
-	card.querySelector('.favorite-button').addEventListener('click', onFavoriteClick);
+	card.querySelector('[name="buy"]').addEventListener('click', onBuyClick);
+	card.querySelector('[name="favorite"]').addEventListener('click', onFavoriteClick);
 	document.addEventListener('keydown', onEscPress);
 	root.append(card);
 	initSlider(packData.previews, PREVIEWS_ADDRESS);

@@ -18,3 +18,30 @@
 .buy-button:active {
     transform: scale(0.8);
 }
+
+
+.buy-button__icon_border, 
+.buy-button__icon_checked {
+    position: absolute;
+    top: 4px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    transform: scale(1.2);
+    
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.buy-button__icon_border {
+    font-variation-settings: 'FILL' 0;
+}
+
+.buy-button__icon_checked {
+    color: rgb(var(--color-accent));
+  font-variation-settings: 'FILL' 1;
+}
+
+.buy-button__icon_checked.hidden {
+    opacity: 0;
+}

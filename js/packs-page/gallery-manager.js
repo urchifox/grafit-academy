@@ -23,9 +23,6 @@ let processedData;
 
 
 const onGalleryClick = (evt) => {
-	// debugger;
-	console.log(evt.target);
-	// console.log(evt.target.closest('.favorite-button'));
 	if (evt.target.classList.contains('pack-card__name-link') || evt.target.classList.contains('pack-card__cover')) {
 		evt.preventDefault();
 		const id = evt.target.closest('.pack-card').dataset.id;
@@ -34,12 +31,12 @@ const onGalleryClick = (evt) => {
 		return;
 	}
 
-	if(evt.target.closest('.favorite-button')) {
+	if(evt.target.name === 'favorite') {
 		onFavoriteClick(evt);
 		return;
 	}
 
-	if(evt.target.closest('.buy-button')) {
+	if(evt.target.name === 'buy') {
 		onBuyClick(evt);
 	}
 };

@@ -6,6 +6,7 @@ packsData.set(nanoid(), {
 	packName: '590+ Swamp Forest Vegetation Reference Pictures',
 	price: 500,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-14-1.jpg',
@@ -33,6 +34,7 @@ packsData.set(nanoid(), {
 	packName: 'Epic Rainforest',
 	price: 500,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-2-1.jpg',
@@ -60,6 +62,7 @@ packsData.set(nanoid(), {
 	packName: '510+ Space Cowboy',
 	price: 800,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-3-1.jpg',
@@ -84,6 +87,7 @@ packsData.set(nanoid(), {
 	packName: 'Castle',
 	price: 900,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-4-1.jpg',
@@ -111,6 +115,7 @@ packsData.set(nanoid(), {
 	packName: '130+ Period Drama Reference Pictures',
 	price: 500,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-5-1.jpg',
@@ -143,6 +148,7 @@ packsData.set(nanoid(), {
 	packName: '700+ Panaji Reference Pictures',
 	price: 900,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-6-1.jpg',
@@ -178,6 +184,7 @@ packsData.set(nanoid(), {
 	packName: '690 Dramatic Male Poses Reference Pictures',
 	price: 900,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-7-1.jpg',
@@ -206,6 +213,7 @@ packsData.set(nanoid(), {
 	packName: '730+ Epic Cliffs Reference Pictures',
 	price: 700,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-8-1.jpg',
@@ -245,6 +253,7 @@ packsData.set(nanoid(), {
 	packName: '1200+ Samurai Reference Pictures',
 	price: 500,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-9-1.jpg',
@@ -281,6 +290,7 @@ packsData.set(nanoid(), {
 	packName: '790+Architecture Elements Reference Pictures',
 	price: 900,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-10-1.jpg',
@@ -316,6 +326,7 @@ packsData.set(nanoid(), {
 	packName: '320+ Swedish Soldier Reference Pictures',
 	price: 900,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-11-1.jpg',
@@ -356,6 +367,7 @@ packsData.set(nanoid(), {
 	packName: '900+ European Cities Reference Pictures',
 	price: 500,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-12-1.jpg',
@@ -384,6 +396,7 @@ packsData.set(nanoid(), {
 	packName: 'Male 2 Couple 1',
 	price: 900,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-1-1.jpg',
@@ -424,6 +437,7 @@ packsData.set(nanoid(), {
 	packName: '840+ Motorcycle Reference Pictures',
 	price: 800,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-13-1.jpg',
@@ -464,6 +478,7 @@ packsData.set(nanoid(), {
 	packName: '730+ Forest Historical Village Reference Pictures',
 	price: 500,
 	isFavorite: false,
+	isInCart: false,
 	previews: [
 		{
 			src: 'refpack-15-1.jpg',

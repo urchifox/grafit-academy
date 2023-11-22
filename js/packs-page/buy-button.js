@@ -1,19 +1,29 @@
 import { packsData } from './packs-data.js';
 
-const getTemplate = (id) => /*html*/`
+const getTemplate = (id, isInCart) => /*html*/`
 	<label class="buy-button" data-id="${id}">
-		<input type="checkbox" class="visually-hidden"/>
+		<input type="checkbox" name="buy" class="visually-hidden"/>
 		<span class="visually-hidden">Добавить в корзину</span>
 
-		<img src="img/refpacks/icons/buy.svg" width="30px" height="30px">
+		<span class="material-symbols-rounded buy-button__icon_border">
+			shopping_cart
+		</span>
+		<span class="material-symbols-rounded buy-button__icon_checked ${isInCart ? '' : 'hidden'}">
+			shopping_cart
+		</span>
 	</label>
 `;
 
 
 const onBuyClick = (evt) => {
-	const id = evt.target.closest('.buy-button').dataset.id;
+	const label = evt.target.closest('.buy-button');
+	const id = label.dataset.id;
 	const packData = packsData.get(id);
-	console.log(id);
+	const input = label.querySelector('input');
+	packData.isInCart = input.checked;
+
+	const cartIconFilled = label.querySelector('.buy-button__icon_checked');
+	cartIconFilled.classList.toggle('hidden');
 };
 
 export {onBuyClick, getTemplate};
