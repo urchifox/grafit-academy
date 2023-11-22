@@ -2,7 +2,7 @@ import { packsUserData } from './packs-user-data.js';
 
 const getTemplate = (id, isInCart) => /*html*/`
 	<label class="buy-button" data-id="${id}">
-		<input type="checkbox" name="buy" class="visually-hidden"/>
+		<input type="checkbox" name="buy" class="visually-hidden" ${isInCart ? 'checked' : ''}/>
 		<span class="visually-hidden">Добавить в корзину</span>
 
 		<span class="material-symbols-rounded buy-button__icon_border">
@@ -26,6 +26,7 @@ const onBuyClick = (evt) => {
 		packsUserData.inCart.splice(packsUserData.inCart.indexOf(id), 1);
 	}
 
+	localStorage.setItem('inCart', JSON.stringify(packsUserData.inCart));
 	const cartIconFilled = label.querySelector('.buy-button__icon_checked');
 	cartIconFilled.classList.toggle('hidden');
 };

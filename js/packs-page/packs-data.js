@@ -1,8 +1,6 @@
-import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js';
-
 const packsData = new Map();
 
-packsData.set(nanoid(), {
+packsData.set('853EBA39-329A-4DEF-ADA8-3A9870B0EB9E', {
 	packName: '590+ Swamp Forest Vegetation Reference Pictures',
 	price: 500,
 	previews: [
@@ -28,7 +26,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('FBD25B0D-8742-4C82-AE70-0D24027BF860', {
 	packName: 'Epic Rainforest',
 	price: 500,
 	previews: [
@@ -54,7 +52,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('17BBF395-A40F-45F9-B360-4F5DD68866AE', {
 	packName: '510+ Space Cowboy',
 	price: 800,
 	previews: [
@@ -77,7 +75,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('247832B3-43EC-4C22-B618-2B46A9C63B85', {
 	packName: 'Castle',
 	price: 900,
 	previews: [
@@ -103,7 +101,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('7C676F46-291D-46C6-A3D8-1530CF608595', {
 	packName: '130+ Period Drama Reference Pictures',
 	price: 500,
 	previews: [
@@ -134,7 +132,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('A463C41A-B505-44D7-B300-DB3D09819C90', {
 	packName: '700+ Panaji Reference Pictures',
 	price: 900,
 	previews: [
@@ -168,7 +166,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('B06D696F-2950-440D-A620-47FD0FBA63D5', {
 	packName: '690 Dramatic Male Poses Reference Pictures',
 	price: 900,
 	previews: [
@@ -195,7 +193,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('634D2AFF-68F5-435E-9203-F463F4F3B7B2', {
 	packName: '730+ Epic Cliffs Reference Pictures',
 	price: 700,
 	previews: [
@@ -233,7 +231,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('DE8351BE-D822-469C-866C-817FB59F8431', {
 	packName: '1200+ Samurai Reference Pictures',
 	price: 500,
 	previews: [
@@ -268,7 +266,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('BB5CADD4-9522-4A20-A9D1-423A00662C19', {
 	packName: '790+Architecture Elements Reference Pictures',
 	price: 900,
 	previews: [
@@ -302,7 +300,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('093B38E8-4248-4EC6-A602-F599F57F75CE', {
 	packName: '320+ Swedish Soldier Reference Pictures',
 	price: 900,
 	previews: [
@@ -341,7 +339,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('5FF15C54-3B36-4372-87FB-9434BAB60227', {
 	packName: '900+ European Cities Reference Pictures',
 	price: 500,
 	previews: [
@@ -367,8 +365,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-
-packsData.set(nanoid(), {
+packsData.set('037D9794-ACA1-4D24-A1B8-361553322CE2', {
 	packName: 'Male 2 Couple 1',
 	price: 900,
 	previews: [
@@ -407,7 +404,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('3EE3BB25-E58D-4AFA-B47B-C08C6CF43E8D', {
 	packName: '840+ Motorcycle Reference Pictures',
 	price: 800,
 	previews: [
@@ -446,7 +443,7 @@ packsData.set(nanoid(), {
 	},
 });
 
-packsData.set(nanoid(), {
+packsData.set('4B4FB705-6299-4F53-AECE-235BB1246DE4', {
 	packName: '730+ Forest Historical Village Reference Pictures',
 	price: 500,
 	previews: [
