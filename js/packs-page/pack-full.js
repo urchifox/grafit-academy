@@ -42,7 +42,7 @@ const render = (id, packData) => {
 	card.querySelector('[name="favorite"]').addEventListener('click', onFavoriteClick);
 	document.addEventListener('keydown', onEscPress);
 	root.append(card);
-	initSlider(packData.previews, PREVIEWS_ADDRESS);
+	initSlider(card, packData.previews, PREVIEWS_ADDRESS);
 	document.body.classList.add('modal-open');
 };
 

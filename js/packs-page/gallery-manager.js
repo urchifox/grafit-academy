@@ -1,9 +1,7 @@
 import {render as renderPacks} from './gallery-rendering.js';
-import {render as renderFullCard} from './pack-full.js';
 import {packsData} from './packs-data.js';
 import { maxPrice, minPrice, packDataExample } from './pack-data-manager.js';
-import {onBuyClick} from './buy-button.js';
-import {onFavoriteClick } from './favorite-button.js';
+
 
 const galleryList = document.querySelector('.packs-list');
 const filtersRoot = document.querySelector('#filters');
@@ -21,30 +19,10 @@ const maxPriceInput = filtersRoot.querySelector('.filter-btn__price-input[name="
 const originalData = Array.from(packsData);
 let processedData;
 
-
-const onGalleryClick = (evt) => {
-	if (evt.target.classList.contains('pack-card__name-link') || evt.target.classList.contains('pack-card__cover')) {
-		evt.preventDefault();
-		const id = evt.target.closest('.pack-card').dataset.id;
-		const packData = packsData.get(id);
-		renderFullCard(id, packData);
-		return;
-	}
-
-	if(evt.target.name === 'favorite') {
-		onFavoriteClick(evt);
-		return;
-	}
-
-	if(evt.target.name === 'buy') {
-		onBuyClick(evt);
-	}
-};
-
 const rerenderGallery = (callback, data) => {
 	processedData = callback(data);
 	galleryList.innerHTML = '';
-	renderPacks(processedData, onGalleryClick);
+	renderPacks(processedData);
 };
 
 const getSortedData = (data) => {
@@ -114,7 +92,7 @@ const onPriceInputChange = () => priceSlider.noUiSlider.set([minPriceInput.value
 
 const init = () => {
 	processedData = getSortedData(originalData);
-	renderPacks(processedData, onGalleryClick);
+	renderPacks(processedData);
 
 	minPriceInput.addEventListener('change', onPriceInputChange);
 	maxPriceInput.addEventListener('change', onPriceInputChange);

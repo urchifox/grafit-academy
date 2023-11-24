@@ -7,6 +7,6 @@ import { ADRESS, studentsWorksInfo } from './students-pictures-data.js';
 
 initDisclaimer();
 initAuthorization();
-initSlider(studentsWorksInfo, ADRESS);
+initSlider(document.body, studentsWorksInfo, ADRESS);
 renderPopularPacks();
 initScrollButton();

@@ -50,15 +50,16 @@ const onPreviewClick = (evt) => {
 	changePicture(targetIndex);
 };
 
-const init = (data, address) => {
-	renderSlider(data, address);
+const init = (root, data, address) => {
+	renderSlider(root, data, address);
+	const container = root.querySelector('.slider-container');
 
 	picturesData = data;
 	picturesAddress = address;
 
-	previewContainer = document.querySelector('.slider__previews');
-	previousBtn = document.querySelector('.slider__arrow_left');
-	nextBtn = document.querySelector('.slider__arrow_right');
+	previewContainer = container.querySelector('.slider__previews');
+	previousBtn = container.querySelector('.slider__arrow_left');
+	nextBtn = container.querySelector('.slider__arrow_right');
 
 	previewContainer.addEventListener('click', onPreviewClick);
 	previousBtn.addEventListener('click', onSliderBtnClick);

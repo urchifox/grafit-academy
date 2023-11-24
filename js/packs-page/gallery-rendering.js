@@ -3,6 +3,10 @@ import { createElement } from '../utils.js';
 import {getTemplate as getCartButtonTemplate} from './buy-button.js';
 import {getTemplate as getFavoriteButtonTemplate} from './favorite-button.js';
 import { packsUserData } from './packs-user-data.js';
+import {onBuyClick} from './buy-button.js';
+import {onFavoriteClick } from './favorite-button.js';
+import {render as renderFullCard} from './pack-full.js';
+import {packsData} from './packs-data.js';
 
 const root = document.querySelector('.packs-list');
 
@@ -29,7 +33,26 @@ const getTemplate = (id, {packName, price, previews}, isFavorite, isInCart) => /
 		</div>
 	</li>`;
 
-const render = (data, onListClick) => {
+const onGalleryClick = (evt) => {
+	if (evt.target.classList.contains('pack-card__name-link') || evt.target.classList.contains('pack-card__cover')) {
+		evt.preventDefault();
+		const id = evt.target.closest('.pack-card').dataset.id;
+		const packData = packsData.get(id);
+		renderFullCard(id, packData);
+		return;
+	}
+
+	if(evt.target.name === 'favorite') {
+		onFavoriteClick(evt);
+		return;
+	}
+
+	if(evt.target.name === 'buy') {
+		onBuyClick(evt);
+	}
+};
+
+const render = (data) => {
 	if (data.length === 0) {
 		const message = createElement(getEmptyListTemplate());
 		root.append(message);
@@ -43,7 +66,7 @@ const render = (data, onListClick) => {
 		fragment.append(card);
 	});
 
-	root.addEventListener('click', onListClick);
+	root.addEventListener('click', onGalleryClick);
 	root.append(fragment);
 };
 

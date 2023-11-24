@@ -1,21 +1,14 @@
-import {popularPacksData} from './popular-packs-data.js';
+import {render as renderPacks} from '../packs-page/gallery-rendering.js';
+import {packsData} from '../packs-page/packs-data.js';
 
-const root = document.querySelector('.packs-list');
-const template = document.querySelector('#popular-pack')
-	.content
-	.querySelector('.pack-card');
-const fragment = document.createDocumentFragment();
+const POPULAR_PACKS_COUNT = 4;
 
 const render = () => {
-	popularPacksData.forEach(({packName, coverSrc, price}) => {
-		const card = template.cloneNode(true);
-		card.querySelector('.pack-card__name-link').textContent = packName;
-		card.querySelector('.pack-card__cover').src = coverSrc;
-		card.querySelector('.pack-card__price').textContent = `${price}`;
-		fragment.append(card);
-	});
-
-	root.append(fragment);
+	const data = Array.from(packsData)
+		.slice()
+		.sort((a, b) => b[1].popularityRate - a[1].popularityRate)
+		.slice(0, POPULAR_PACKS_COUNT);
+	renderPacks(data);
 };
 
 export {render};
