@@ -1,23 +1,19 @@
 import {renderMainPicture, renderSlider} from './slider-previews-rendering.js';
-let picturesAddress;
-let picturesData;
-let previousBtn;
-let nextBtn;
-let previewContainer;
+
 let currentPreviewIndex = 0;
 
-const changePicture = (targetIndex) => {
-	const currentPreview = previewContainer.querySelector('.slider__preview-item_active');
+const changePicture = (sliderInfo, targetIndex) => {
+	const currentPreview = sliderInfo.previewContainer.querySelector('.slider__preview-item_active');
 	currentPreview.classList.remove('slider__preview-item_active');
 
-	const pictureInfo = picturesData[targetIndex];
-	renderMainPicture(pictureInfo, picturesAddress);
+	const pictureInfo = sliderInfo.picturesData[targetIndex];
+	renderMainPicture(sliderInfo.container, pictureInfo, sliderInfo.picturesAddress);
 
-	previewContainer.children[targetIndex].classList.add('slider__preview-item_active');
+	sliderInfo.previewContainer.children[targetIndex].classList.add('slider__preview-item_active');
 	currentPreviewIndex = targetIndex;
 };
 
-const onSliderBtnClick = (evt) => {
+const onSliderBtnClick = (evt, sliderInfo) => {
 	const button = evt.target.closest('.slider__arrow');
 
 	if(!button) {
@@ -29,41 +25,50 @@ const onSliderBtnClick = (evt) => {
 		currentPreviewIndex - 1;
 
 	if (targetIndex < 0) {
-		targetIndex = picturesData.length - 1;
+		targetIndex = sliderInfo.picturesData.length - 1;
 	}
 
-	if (targetIndex > picturesData.length - 1) {
+	if (targetIndex > sliderInfo.picturesData.length - 1) {
 		targetIndex = 0;
 	}
 
-	changePicture(targetIndex);
+	changePicture(sliderInfo, targetIndex);
 };
 
-const onPreviewClick = (evt) => {
+function onPreviewClick(evt, sliderInfo) {
 	const button = evt.target.closest('.slider__preview-btn');
 
-	if(!button) {
+	if (!button) {
 		return;
 	}
-
 	const targetIndex = Number(button.dataset.id);
-	changePicture(targetIndex);
-};
+	changePicture(sliderInfo, targetIndex);
+}
 
-const init = (root, data, address) => {
-	renderSlider(root, data, address);
-	const container = root.querySelector('.slider-container');
+const init = (root, picturesData, picturesAddress) => {
+	const sliderContainer = root.querySelector('.slider-container');
 
-	picturesData = data;
-	picturesAddress = address;
+	renderSlider(sliderContainer, picturesData, picturesAddress);
 
-	previewContainer = container.querySelector('.slider__previews');
-	previousBtn = container.querySelector('.slider__arrow_left');
-	nextBtn = container.querySelector('.slider__arrow_right');
+	const onSliderClick = (evt) => {
+		const sliderInfo = {
+			root: root,
+			container: sliderContainer,
+			previewContainer: sliderContainer.querySelector('.slider__previews'),
+			previousBtn: sliderContainer.querySelector('.slider__arrow_left'),
+			nextBtn: sliderContainer.querySelector('.slider__arrow_right'),
+			picturesData: picturesData,
+			picturesAddress: picturesAddress,
+		};
 
-	previewContainer.addEventListener('click', onPreviewClick);
-	previousBtn.addEventListener('click', onSliderBtnClick);
-	nextBtn.addEventListener('click', onSliderBtnClick);
+		if (evt.target.closest('.slider__previews')) {
+			onPreviewClick(evt, sliderInfo);
+		} else {
+			onSliderBtnClick(evt, sliderInfo);
+		}
+	};
+
+	sliderContainer.addEventListener('click', onSliderClick);
 };
 
 export {init};

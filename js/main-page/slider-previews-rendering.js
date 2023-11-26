@@ -26,21 +26,19 @@ const getTemplate = (data, picturesAddress) => /*html*/`
 	</section>
 `;
 
-const renderMainPicture = (root, datum, picturesAddress) => {
-	const container = root.querySelector('.slider-container');
+const renderMainPicture = (container, pictureInfo, picturesAddress) => {
 	const mainPicture = container.querySelector('.slider__main-img');
 	const mainPictureDescription = container.querySelector('.slider__desc');
 
-	mainPicture.src = picturesAddress + datum.src;
-	mainPictureDescription.textContent = datum.description;
+	mainPicture.src = picturesAddress + pictureInfo.src;
+	mainPictureDescription.textContent = pictureInfo.description;
 };
 
-const renderSlider = (root, data, picturesAddress) => {
-	const container = root.querySelector('.slider-container');
-	const slider = createElement(getTemplate(data, picturesAddress));
+const renderSlider = (container, picturesData, picturesAddress) => {
+	const slider = createElement(getTemplate(picturesData, picturesAddress));
 	container.append(slider);
 	slider.querySelector('.slider__preview-item').classList.add('slider__preview-item_active');
-	renderMainPicture(root, data[0], picturesAddress);
+	renderMainPicture(container, picturesData[0], picturesAddress);
 };
 
 export {renderSlider, renderMainPicture};
