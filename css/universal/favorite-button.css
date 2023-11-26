@@ -28,13 +28,15 @@
     transform: scale(1.2);
     
     transition: opacity 0.3s;
-    opacity: 1;
 }
 
 .favorite-button__icon_checked {
     color: rgb(var(--color-accent));
 }
 
-.favorite-button__icon_checked.hidden {
+.favorite-button__icon_checked {
     opacity: 0;
+}
+.favorite-button:has(input:checked) .favorite-button__icon_checked {
+    opacity: 1;
 }

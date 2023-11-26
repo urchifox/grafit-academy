@@ -9,7 +9,7 @@ const getTemplate = (id, isFavorite) => /*html*/`
 			<span  class="material-icons favorite-button__icon_border">
 				favorite_border
 			</span>
-			<span class="material-icons  favorite-button__icon_checked ${isFavorite ? '' : 'hidden'}">
+			<span class="material-icons  favorite-button__icon_checked">
 				favorite
 			</span>
 		</div>
@@ -28,8 +28,6 @@ const onFavoriteClick = (evt) => {
 	}
 
 	localStorage.setItem('favorites', JSON.stringify(packsUserData.favorites));
-	const favIconFilled = label.querySelector('.favorite-button__icon_checked');
-	favIconFilled.classList.toggle('hidden');
 };
 
 export {onFavoriteClick, getTemplate};

@@ -8,7 +8,7 @@ const getTemplate = (id, isInCart) => /*html*/`
 		<span class="material-symbols-rounded buy-button__icon_border">
 			shopping_cart
 		</span>
-		<span class="material-symbols-rounded buy-button__icon_checked ${isInCart ? '' : 'hidden'}">
+		<span class="material-symbols-rounded buy-button__icon_checked">
 			shopping_cart
 		</span>
 	</label>
@@ -27,8 +27,6 @@ const onBuyClick = (evt) => {
 	}
 
 	localStorage.setItem('inCart', JSON.stringify(packsUserData.inCart));
-	const cartIconFilled = label.querySelector('.buy-button__icon_checked');
-	cartIconFilled.classList.toggle('hidden');
 };
 
 export {onBuyClick, getTemplate};

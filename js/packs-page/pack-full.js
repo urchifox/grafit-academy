@@ -32,14 +32,38 @@ const getTemplate = (id, {packName, price}, isFavorite, isInCart) => /*html*/`
 	</article>
 `;
 
+const onFavoriteButtonClick = (evt) => {
+	const label = evt.target.closest('.favorite-button');
+	const input = label.querySelector('input');
+	const packId = label.dataset.id;
+
+	const card = document.querySelector(`.pack-card[data-id="${packId}"]`);
+	const cardInput = card.querySelector('.favorite-button input');
+
+	cardInput.checked = input.checked;
+	onFavoriteClick(evt);
+};
+
+const onBuyButtonClick = (evt) => {
+	const label = evt.target.closest('.buy-button');
+	const input = label.querySelector('input');
+	const packId = label.dataset.id;
+
+	const card = document.querySelector(`.pack-card[data-id="${packId}"]`);
+	const cardInput = card.querySelector('.buy-button input');
+
+	cardInput.checked = input.checked;
+	onBuyClick(evt);
+};
+
 const render = (id, packData) => {
 	const isFavorite = packsUserData.favorites.includes(id);
 	const isInCart = packsUserData.inCart.includes(id);
 	const card = createElement(getTemplate(id, packData, isFavorite, isInCart));
 	card.addEventListener('click', onOverlayClick);
 	card.querySelector('.pack-full__close').addEventListener('click', onCloseClick);
-	card.querySelector('[name="buy"]').addEventListener('click', onBuyClick);
-	card.querySelector('[name="favorite"]').addEventListener('click', onFavoriteClick);
+	card.querySelector('[name="buy"]').addEventListener('click', onBuyButtonClick);
+	card.querySelector('[name="favorite"]').addEventListener('click', onFavoriteButtonClick);
 	document.addEventListener('keydown', onEscPress);
 	root.append(card);
 	initSlider(card, packData.previews, PREVIEWS_ADDRESS);

@@ -30,7 +30,6 @@
     transform: scale(1.2);
     
     transition: opacity 0.3s;
-    opacity: 1;
 }
 
 .buy-button__icon_border {
@@ -42,6 +41,10 @@
   font-variation-settings: 'FILL' 1;
 }
 
-.buy-button__icon_checked.hidden {
+.buy-button__icon_checked {
     opacity: 0;
+}
+
+.buy-button:has(input:checked) .buy-button__icon_checked {
+    opacity: 1;
 }
