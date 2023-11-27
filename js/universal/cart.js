@@ -7,6 +7,17 @@ const cart = document.querySelector('#cart');
 const list = cart.querySelector('.menu-dropdown__list');
 const gallery = document.querySelector('.pack-market');
 
+const getMessageTemplate = () => /*html*/`
+	<li class="menu-dropdown__item cart__message">
+		К сожалению, в вашей корзине пока что нет товаров
+	</li>
+`;
+
+const renderMessage = () => {
+	const message = createElement(getMessageTemplate());
+	list.append(message);
+};
+
 const getTemplate = (id, {packName, previews}) => /*html*/`
     <li data-id="${id}" class="menu-dropdown__item">
         <a href="#" class="menu-dropdown__link">
@@ -25,6 +36,9 @@ const getTemplate = (id, {packName, previews}) => /*html*/`
 `;
 
 const addToCart = (packId) => {
+	const message = list.querySelector('.cart__message');
+	message?.remove();
+
 	const packInfo = packsData.get(packId);
 	const listItem = createElement(getTemplate(packId, packInfo));
 	list.append(listItem);
@@ -33,6 +47,10 @@ const addToCart = (packId) => {
 const deleteFromCart = (packId) => {
 	const listItem = list.querySelector(`.menu-dropdown__item[data-id="${packId}"]`);
 	listItem.remove();
+
+	if (packsUserData.inCart.length === 0) {
+		renderMessage();
+	}
 };
 
 const onPackClick = (evt) => {
@@ -56,7 +74,12 @@ const onPackClick = (evt) => {
 };
 
 const render = () => {
-	packsUserData.inCart.forEach((id) => addToCart(id));
+	if (packsUserData.inCart.length === 0) {
+		renderMessage();
+	} else {
+		packsUserData.inCart.forEach((id) => addToCart(id));
+	}
+
 	list.addEventListener('click', onPackClick);
 };
 
