@@ -87,11 +87,20 @@
                     </li>
                 </ul>
                 <ul class="main-nav__user-navigation">
-                    <li class="main-nav__user-navigation-item">
-                        <button class="main-nav__profile-btn" >
+                    <li id="cart" class="main-nav__user-navigation-item profile-menu">
+                        <button class="main-nav__profile-btn profile-menu__button" >
                             <img class="main-nav__profile-icon" src="img/header/shop-bucket.svg" width="34px" height="34px">
-                            <span class="main-nav__profile-tooltip">Корзина</span>
+                            <span class="visually-hidden">Корзина</span>
                         </button>
+                        <div class="profile-menu__dropdown">
+                            <p class="profile-menu__name">Корзина</p>
+                            <ul class="profile-menu__list">
+                               
+                            </ul>
+                            <a class="profile-menu__item">
+                                <a id="log-out" href="#" class="profile-menu__link">Перейти к оформлению</a>
+                            </a>
+                        </div>
                     </li>
                     <li id="login-temp" class="main-nav__user-navigation-item">
                         <a href="#"  class="main-nav__profile-btn" >

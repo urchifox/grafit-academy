@@ -1,3 +1,4 @@
+import { addToCart, deleteFromCart } from '../universal/cart.js';
 import { packsUserData } from './packs-user-data.js';
 
 const getTemplate = (id, isInCart) => /*html*/`
@@ -22,8 +23,10 @@ const onBuyClick = (evt) => {
 
 	if (input.checked) {
 		packsUserData.inCart.push(id);
+		addToCart(id);
 	} else {
 		packsUserData.inCart.splice(packsUserData.inCart.indexOf(id), 1);
+		deleteFromCart(id);
 	}
 
 	localStorage.setItem('inCart', JSON.stringify(packsUserData.inCart));
