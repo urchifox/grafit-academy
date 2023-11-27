@@ -1,5 +1,6 @@
 @import url("./authorization.css");
 @import url("./menu-dropdown.css");
+@import url("./cart.css");
 
 .header *:focus {
     border-radius: 5px;
