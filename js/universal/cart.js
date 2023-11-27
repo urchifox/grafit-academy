@@ -2,6 +2,7 @@ import { packsData } from '../packs-page/packs-data.js';
 import { packsUserData } from '../packs-page/packs-user-data.js';
 import { createElement } from '../utils.js';
 import {render as renderPack} from '../packs-page/pack-full.js';
+import { PREVIEWS_ADDRESS } from '../packs-page/pack-data-manager.js';
 
 const cart = document.querySelector('#cart');
 const list = cart.querySelector('.menu-dropdown__list');
@@ -22,7 +23,7 @@ const renderMessage = () => {
 const getTemplate = (id, {packName, previews}) => /*html*/`
     <li data-id="${id}" class="menu-dropdown__item">
         <a href="#" class="menu-dropdown__link">
-			<img src="../../img/refpacks/covers/${previews[0].src}" class="cart__cover">
+			<img src="${PREVIEWS_ADDRESS}${previews[0].src}" class="cart__cover">
 			${packName}
 			<div class="menu-dropdown__link-comment cart__delete">
 				<button class="cart__delete-button">
