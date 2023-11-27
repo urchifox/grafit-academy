@@ -3,11 +3,11 @@ import { packsUserData } from '../packs-page/packs-user-data.js';
 import { createElement } from '../utils.js';
 
 const cart = document.querySelector('#cart');
-const list = cart.querySelector('.profile-menu__list');
+const list = cart.querySelector('.menu-dropdown__list');
 
 const getTemplate = (id, {packName}) => /*html*/`
-    <li data-id="${id}" class="profile-menu__item">
-        <a href="#" class="profile-menu__link">${packName}</a>
+    <li data-id="${id}" class="menu-dropdown__item">
+        <a href="#" class="menu-dropdown__link">${packName}</a>
     </li>
 `;
 
@@ -18,7 +18,7 @@ const addToCart = (packId) => {
 };
 
 const deleteFromCart = (packId) => {
-	const listItem = list.querySelector(`.profile-menu__item[data-id="${packId}"]`);
+	const listItem = list.querySelector(`.menu-dropdown__item[data-id="${packId}"]`);
 	listItem.remove();
 };
 
