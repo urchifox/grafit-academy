@@ -1,3 +1,19 @@
+.cart__counter {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    padding: 2px 6px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-detail);
+    color: rgb(var(--color-accent));
+    background-color: rgb(var(--color-background));
+    opacity: 0;
+}
+
 .cart__message {
     padding: 0 15px;
     font-style: italic;

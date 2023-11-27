@@ -6,6 +6,7 @@ import {render as renderPack} from '../packs-page/pack-full.js';
 const cart = document.querySelector('#cart');
 const list = cart.querySelector('.menu-dropdown__list');
 const gallery = document.querySelector('.pack-market');
+const counter = document.querySelector('.cart__counter');
 
 const getMessageTemplate = () => /*html*/`
 	<li class="menu-dropdown__item cart__message">
@@ -38,10 +39,13 @@ const getTemplate = (id, {packName, previews}) => /*html*/`
 const addToCart = (packId) => {
 	const message = list.querySelector('.cart__message');
 	message?.remove();
+	counter.style.opacity = 1;
 
 	const packInfo = packsData.get(packId);
 	const listItem = createElement(getTemplate(packId, packInfo));
 	list.append(listItem);
+
+	counter.textContent = packsUserData.inCart.length;
 };
 
 const deleteFromCart = (packId) => {
@@ -50,7 +54,11 @@ const deleteFromCart = (packId) => {
 
 	if (packsUserData.inCart.length === 0) {
 		renderMessage();
+		counter.style.opacity = 0;
+		return;
 	}
+
+	counter.textContent = packsUserData.inCart.length;
 };
 
 const onPackClick = (evt) => {
@@ -78,8 +86,10 @@ const render = () => {
 		renderMessage();
 	} else {
 		packsUserData.inCart.forEach((id) => addToCart(id));
+		counter.style.opacity = 1;
 	}
 
+	counter.textContent = packsUserData.inCart.length;
 	list.addEventListener('click', onPackClick);
 };
 
