@@ -35,46 +35,48 @@
 				<li class="main-nav__site-navigation-item">
 					<a href="packs.html" class="main-nav__site-nav-link" >Рефы</a>
 				</li>
-				<li class="main-nav__site-navigation-item main-nav__dropdown dropdown">
-					<a href="#" class="main-nav__site-nav-link dropdown__target" >Курсы</a>
-					<ul class="dropdown__list">
-						<li class="dropdown__item">
-							<a href="#" class="dropdown__link" >2D<span class="dropdown__link-comment">смотреть все</span></a>
-							<ul class="dropdown__sublist">
-								<li class="dropdown__subitem">
-									<a href="#" class="dropdown__link" >Рендер иллюстрации</a>
-								</li>
-								<li class="dropdown__subitem">
-									<a href="#" class="dropdown__link" >UI-design</a>
-								</li>
-								<li class="dropdown__subitem">
-									<a href="#" class="dropdown__link" >Стилизация</a>
-								</li>
-								<li class="dropdown__subitem">
-									<a href="#" class="dropdown__link" >Реалистичный персонаж</a>
-								</li>
-							</ul> 
-						</li>
-						<li class="dropdown__item">
-							<a href="#" class="dropdown__link" >3D<span class="dropdown__link-comment">смотреть все</span></a>
-							<ul class="dropdown__sublist">
-								<li class="dropdown__subitem">
-									<a href="#" class="dropdown__link" >Скульптинг в Blender</a>
-								</li>
-							</ul> 
-						</li>
-						<li class="dropdown__item">
-							<a href="#" class="dropdown__link" >Анимация<span class="dropdown__link-comment">смотреть все</span></a>
-							<ul class="dropdown__sublist">
-								<li class="dropdown__subitem">
-									<a href="#" class="dropdown__link" >Анимация иллюстрации в Blender</a>
-								</li>
-								<li class="dropdown__subitem">
-									<a href="#" class="dropdown__link" >Анимация в Spine</a>
-								</li>
-							</ul> 
-						</li>
-					</ul>
+				<li class="main-nav__site-navigation-item main-nav__dropdown menu-dropdown">
+					<a href="#" class="main-nav__site-nav-link menu-dropdown__target" >Курсы</a>
+					<div class="menu-dropdown__content menu-dropdown__content_center-oriented">
+						<ul class="menu-dropdown__list">
+							<li class="menu-dropdown__item">
+								<a href="#" class="menu-dropdown__link menu-dropdown__heading" >2D<span class="menu-dropdown__link-comment">смотреть все</span></a>
+								<ul class="menu-dropdown__sublist">
+									<li class="menu-dropdown__subitem">
+										<a href="#" class="menu-dropdown__link" >Рендер иллюстрации</a>
+									</li>
+									<li class="menu-dropdown__subitem">
+										<a href="#" class="menu-dropdown__link" >UI-design</a>
+									</li>
+									<li class="menu-dropdown__subitem">
+										<a href="#" class="menu-dropdown__link" >Стилизация</a>
+									</li>
+									<li class="menu-dropdown__subitem">
+										<a href="#" class="menu-dropdown__link" >Реалистичный персонаж</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-dropdown__item">
+								<a href="#" class="menu-dropdown__link menu-dropdown__heading" >3D<span class="menu-dropdown__link-comment">смотреть все</span></a>
+								<ul class="menu-dropdown__sublist">
+									<li class="menu-dropdown__subitem">
+										<a href="#" class="menu-dropdown__link" >Скульптинг в Blender</a>
+									</li>
+								</ul>
+							</li>
+							<li class="menu-dropdown__item">
+								<a href="#" class="menu-dropdown__link menu-dropdown__heading" >Анимация<span class="menu-dropdown__link-comment">смотреть все</span></a>
+								<ul class="menu-dropdown__sublist">
+									<li class="menu-dropdown__subitem">
+										<a href="#" class="menu-dropdown__link" >Анимация иллюстрации в Blender</a>
+									</li>
+									<li class="menu-dropdown__subitem">
+										<a href="#" class="menu-dropdown__link" >Анимация в Spine</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</li>
 				<li class="main-nav__site-navigation-item">
 					<a href="#" class="main-nav__site-nav-link" >Туториалы</a>
@@ -86,11 +88,21 @@
 				</li>
 			</ul>
 			<ul class="main-nav__user-navigation">
-				<li class="main-nav__user-navigation-item">
-					<button class="main-nav__profile-btn" >
+				<li id="cart" class="main-nav__user-navigation-item menu-dropdown">
+					<button class="main-nav__profile-btn menu-dropdown__target" >
 						<img class="main-nav__profile-icon" src="img/header/shop-bucket.svg" width="34px" height="34px">
-						<span class="main-nav__profile-tooltip">Корзина</span>
+						<span class="visually-hidden">Корзина</span>
 					</button>
+					<div class="menu-dropdown__content menu-dropdown__content_right-oriented">
+						<p class="menu-dropdown__heading">Корзина</p>
+						<ul class="menu-dropdown__list">
+						   
+						</ul>
+						<div class="menu-dropdown__divider"></div>
+						<a class="menu-dropdown__item">
+							<a id="log-out" href="#" class="menu-dropdown__link">Перейти к оформлению</a>
+						</a>
+					</div>
 				</li>
 				<li id="login-temp" class="main-nav__user-navigation-item">
 					<a href="#"  class="main-nav__profile-btn" >

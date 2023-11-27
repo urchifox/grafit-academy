@@ -196,3 +196,14 @@
     top: 110%;
     opacity: 1;
 }
+
+.user-icon {
+    color: rgb(var(--color-background));
+    transform: scale(1.4);
+}
+.user-icon:hover {
+    transform: scale(1.7);
+}
+.user-icon:active {
+    transform: scale(1.2);
+}
