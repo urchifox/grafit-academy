@@ -1,11 +1,16 @@
 {
   "devDependencies": {
+    "@linthtml/linthtml": "^0.9.5",
     "eslint": "^8.46.0",
-    "eslint-config-htmlacademy": "^9.1.1"
+    "eslint-config-htmlacademy": "^9.1.1",
+    "linthtml-config-htmlacademy": "^1.0.14",
+    "stylelint": "^16.0.2",
+    "stylelint-config-htmlacademy": "^3.0.2"
   },
   "scripts": {
     "fix": "eslint js/ --fix",
-    "lint": "eslint js/"
+    "lint:script": "eslint js/",
+    "lint:html": "linthtml *.html --config .linthtmlrc"
   },
   "dependencies": {
     "nanoid": "^5.0.3",
