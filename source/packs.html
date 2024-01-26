@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+        <meta name="description" content="Рефпаки для художников и не только от онлайн-школы цифрого рисунка Grafit Academy">
+        <meta property="og:title" content="Grafit Academy">
+        <meta property="og:description" content="Рефпаки для художников и не только от онлайн-школы цифрого рисунка Grafit Academy">
+        <meta property="og:image" content="img/black-owl.jpg">
+        <meta property="og:url" content="https://grafitacademy.com/">
+        <title>Grafit Academy</title>
+        <!-- шаблон для вставки фавиконки -->
+        <link rel="icon" type="image/png" href="" sizes="">
+        <link rel="icon" type="image/svg" href="" sizes="">
+        <link rel="icon" type="image/x-icon" href="" sizes="">
+            <!-- подключение гугл-иконок для кнопок -->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+            rel="stylesheet">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <!-- стили страницы -->
+            <link rel="stylesheet" href="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.css">
+        <link rel="stylesheet" href="./styles/styles.css">
+            <!-- ниже стили для просмотра границ основных блоков -->
+            <!-- <link href="css/outline.css" rel="stylesheet">  <link href="css/outline-settings.css" rel="stylesheet">  -->
+        </head>
+    <body>
+        <header id="header" class="header">
+            <nav class="main-nav header__main-nav">
+                <a href="index.html" class="main-nav__logo-link logo" >
+                    <img src="img/header/logo.png" alt="Логотип" width="81" height="70">
+                    <span class="visually-hidden">Перейти на главную</span>
+                </a>
+                <ul class="main-nav__site-navigation">
+                    <li class="main-nav__site-navigation-item">
+                        <a href="packs.html" class="main-nav__site-nav-link main-nav__site-nav-link_current" >Рефы</a>
+                    </li>
+                    <li class="main-nav__site-navigation-item main-nav__dropdown menu-dropdown">
+                        <a href="#" class="main-nav__site-nav-link menu-dropdown__target" >Курсы</a>
+                        <div class="menu-dropdown__content menu-dropdown__content_center-oriented">
+                            <ul class="menu-dropdown__list">
+                                <li class="menu-dropdown__item">
+                                    <a href="#" class="menu-dropdown__link menu-dropdown__heading" >2D<span class="menu-dropdown__link-comment">смотреть все</span></a>
+                                    <ul class="menu-dropdown__sublist">
+                                        <li class="menu-dropdown__subitem">
+                                            <a href="#" class="menu-dropdown__link" >Рендер иллюстрации</a>
+                                        </li>
+                                        <li class="menu-dropdown__subitem">
+                                            <a href="#" class="menu-dropdown__link" >UI-design</a>
+                                        </li>
+                                        <li class="menu-dropdown__subitem">
+                                            <a href="#" class="menu-dropdown__link" >Стилизация</a>
+                                        </li>
+                                        <li class="menu-dropdown__subitem">
+                                            <a href="#" class="menu-dropdown__link" >Реалистичный персонаж</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-dropdown__item">
+                                    <a href="#" class="menu-dropdown__link menu-dropdown__heading" >3D<span class="menu-dropdown__link-comment">смотреть все</span></a>
+                                    <ul class="menu-dropdown__sublist">
+                                        <li class="menu-dropdown__subitem">
+                                            <a href="#" class="menu-dropdown__link" >Скульптинг в Blender</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="menu-dropdown__item">
+                                    <a href="#" class="menu-dropdown__link menu-dropdown__heading" >Анимация<span class="menu-dropdown__link-comment">смотреть все</span></a>
+                                    <ul class="menu-dropdown__sublist">
+                                        <li class="menu-dropdown__subitem">
+                                            <a href="#" class="menu-dropdown__link" >Анимация иллюстрации в Blender</a>
+                                        </li>
+                                        <li class="menu-dropdown__subitem">
+                                            <a href="#" class="menu-dropdown__link" >Анимация в Spine</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="main-nav__site-navigation-item">
+                        <a href="#" class="main-nav__site-nav-link" >Туториалы</a>
+                        <span class="main-nav__site-nav-tooltip">Эта страница пока не готова :с</span>
+                    </li>
+                    <li class="main-nav__site-navigation-item">
+                        <a href="#" class="main-nav__site-nav-link" >Статьи</a>
+                        <span class="main-nav__site-nav-tooltip">Эта страница пока не готова :с</span>
+                    </li>
+                </ul>
+                <ul class="main-nav__user-navigation">
+                    <li id="cart" class="main-nav__user-navigation-item menu-dropdown">
+                        <button class="main-nav__profile-btn menu-dropdown__target" >
+                            <img class="main-nav__profile-icon" src="img/header/shop-bucket.svg" width="34px" height="34px">
+                            <span class="visually-hidden">Корзина</span>
+                        </button>
+                        <span class="cart__counter"></span>
+                        <div class="menu-dropdown__content menu-dropdown__content_right-oriented">
+                            <p class="menu-dropdown__heading">Корзина</p>
+                            <ul class="menu-dropdown__list">
+
+                            </ul>
+                            <div class="menu-dropdown__divider"></div>
+                            <a class="menu-dropdown__item">
+                                <a id="log-out" href="#" class="menu-dropdown__link">Перейти к оформлению</a>
+                            </a>
+                        </div>
+                    </li>
+                    <li id="login-temp" class="main-nav__user-navigation-item">
+                        <a href="#"  class="main-nav__profile-btn" >
+                            <img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30px" height="30px">
+                            <span class="main-nav__profile-tooltip">Авторизация</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- переключение темы -->
+            <!-- переключение языка -->
+        </header>
+        <main class="main body__main">
+            <section class="main__block pack-market">
+                <h1 class="visually-hidden">Рефпаки от студии Графит</h1>
+
+                <section class="filters pack-market__filters">
+                    <div class="filters__header">
+                        <h2 class="filters__title">Фильтры</h2>
+                        <label class="filters__toogle-btn">
+                            <span class="visually-hidden">Скрыть фильтры</span>
+                            <input class="filters__toogle-checkbox visually-hidden" type="checkbox">
+                            <span aria-hidden="true" class="material-icons-round filters__toogle-icon">
+                                keyboard_double_arrow_left
+                            </span>
+                        </label>
+                    </div>
+                    <form id="filters" action="">
+                        <fieldset id="category-filters" class="filters__group">
+                            <legend class="filters__group-name">Содержание пака</legend>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc">Натура</span>
+                                <input type="checkbox" name="type" value="person" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc filter-btn__desc_sub">Обнаженная натура</span>
+                                <input type="checkbox" name="tag" value="nudity" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc filter-btn__desc_sub">В белье</span>
+                                <input type="checkbox" name="tag" value="inUnderwear" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc filter-btn__desc_sub">В костюме</span>
+                                <input type="checkbox" name="tag" value="inOutfit" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc">Окружение</span>
+                                <input type="checkbox" name="type" value="environment" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc filter-btn__desc_sub">Природа</span>
+                                <input type="checkbox" name="tag" value="nature" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc filter-btn__desc_sub">Архитектура</span>
+                                <input type="checkbox" name="tag" value="city" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                        </fieldset>
+                        <fieldset class="filters__group">
+                            <legend class="filters__group-name">Стоимость</legend>
+                            <div id="slider"></div>
+                            <label class=" filter-btn__prices">
+                                <input class="filter-btn__price-input" type="number" name="min-interval" value="0">
+                                <span>&mdash;</span>
+                                <input class="filter-btn__price-input" type="number" name="max-interval" value="900">
+                            </label>
+                            <label class="filter-btn">
+                                <span class="filter-btn__desc">По акции</span>
+                                <input type="checkbox"  name="specialOffer" class="filter-btn__checkbox visually-hidden">
+                            </label>
+                        </fieldset>
+                    </form>
+                </section>
+
+                <section class="sorting pack-market__sorting">
+                    <h2 class="sorting__title">Сортировать по:</h2>
+                    <select class="sort-options" >
+                        <option value="popularityRate">
+                            популярности
+                        </option>
+                        <option value="packName">
+                            названию
+                        </option>
+                        <option value="price">
+                            цене
+                        </option>
+                    </select>
+                    <label class="sort-order-btn sorting__sort-order-btn">
+                        <span class="visually-hidden">по возрастанию</span>
+                        <input type="checkbox"  class="sort-order-btn__checkbox visually-hidden">
+                        <span class="sort-order-btn__icon"></span>
+                    </label>
+                    <label aria-hidden="true" class="view-btn sorting__view-btn">
+                        <input type="checkbox" class="view-btn__checkbox visually-hidden">
+                        <span class="material-icons-round red view-btn__icon_view-module">
+                            view_module
+                        </span>
+                        <span class="material-icons-round red view-btn__icon_view-list">
+                            view_list
+                        </span>
+                    </label>
+                    <label aria-hidden="true" class="zoom-btn sorting__zoom-btn">
+                        <input type="checkbox" class="zoom-btn__checkbox visually-hidden">
+                        <span class="material-icons-round red zoom-btn__icon_zoom-in">
+                            zoom_in
+                        </span>
+                        <span class="material-icons-round red zoom-btn__icon_zoom-out">
+                            zoom_out
+                        </span>
+                    </label>
+                </section>
+
+                <ul class="packs-list ">
+                </ul>
+            </section>
+        </main>
+        <footer class="footer body__footer">
+            <div class="footer__container">
+                <p class="copyright">
+                    <img src="img/footer/copyright.png" alt="копирайт">
+                </p>
+                <section class="contacts">
+                    <h2 class="visually-hidden">Контактная информация</h2>
+                    <ul class="contacts__list">
+                        <li class="contacts__socials">
+                            <ul class="social-list contacts__social-list">
+                                <li class="social-list__item">
+                                    <a href="https://www.artstation.com/grafit" class="social-list__link" >
+                                        <img src="img/footer/artstation.png" alt="Arstation">
+                                        <span class="visually-hidden">Artstation</span>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="https://www.behance.net/grafitart" class="social-list__link" >
+                                        <img src="img/footer/behance.png" alt="Behance">
+                                        <span class="visually-hidden">Behance</span>
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="https://vk.com/studiyagrafit" class="social-list__link" >
+                                        <img src="img/footer/vk.png" alt="VK">
+                                        <span class="visually-hidden">VK</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="contacts__mail">
+                            <a href="mailto:work@grafitart.com" class="contacts__mail-link" >
+                                <img src="img/footer/mail.png" alt="work@grafitart.com">
+                                <span class="visually-hidden">work@grafitart.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <a href="#header" class="scroll-up  scroll-up_hidden footer__scroll-up">
+                <span class="scroll-up__icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">
+                        <path d="M440-647 244-451q-12 12-28 11.5T188-452q-11-12-11.5-28t11.5-28l264-264q6-6 13-8.5t15-2.5q8 0 15 2.5t13 8.5l264 264q11 11 11 27.5T772-452q-12 12-28.5 12T715-452L520-647v447q0 17-11.5 28.5T480-160q-17 0-28.5-11.5T440-200v-447Z"/>
+                    </svg>
+                </span>
+                <span class="visually-hidden">Вернуться к началу</span>
+            </a>
+        </footer>
+
+
+        <template id="log-in">
+            <li class="main-nav__user-navigation-item">
+                <a href="#" id="login-btn" class="main-nav__profile-btn" >
+                    <img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30px" height="30px">
+                    <span class="main-nav__profile-tooltip">Авторизация</span>
+                </a>
+            </li>
+        </template>
+
+        <template id="authorization">
+            <section class="authorization body__authorization">
+                <div class="authorization__container">
+                    <h2 class="authorization__title">Войти или создать профиль</h2>
+                    <div class="authorization__forms-container authorization__forms-container_start">
+                        <form class="authorization__form" id="authorization-step1" name="authorization-step1" action="" method="post">
+                            <p class="authorization__instruction">Введите номер телефона</p>
+                            <p class="authorization__detail">Мы отправим код или позвоним. Отвечать на звонок не нужно.</p>
+                            <label for="tel-number" class="visually-hidden">Телефон</label>
+                            <input id="tel-number" class="authorization__input" type="tel" autocomplete="on" required placeholder="Телефон">
+                            <label for="send-code" class="visually-hidden">Отправить код</label>
+                            <input id="send-code" class="authorization__submit" type="submit" value="Получить код">
+                        </form>
+                        <form class="authorization__form"  id="authorization-step2" name="authorization-step2" action="" method="post">
+                            <p class="authorization__instruction">Смс с кодом было успешно отправлено на номер <span id="phone-text"></span>.</p>
+                            <p class="authorization__detail">Введите код из смс в поле ниже.</p>
+                            <label for="code" class="visually-hidden">Код из СМС</label>
+                            <input id="code" class="authorization__input" type="password" required>
+                            <label for="continue" class="visually-hidden">Продолжить</label>
+                            <input id="continue" class="authorization__submit" type="submit" value="Продолжить">
+                            <label for="back" class="visually-hidden">Продолжить</label>
+                            <input id="back" class="authorization__return" type="submit" value="Вернуться назад">
+                        </form>
+                    </div>
+                    <button class="authorization__close">
+                        <span class="visually-hidden">Закрыть окно авторизации</span>
+                        <span aria-hidden="true" class="material-icons-round">
+                            close
+                        </span>
+                    </button>
+                </div>
+            </section>
+        </template>
+
+        <template id="profile">
+            <li class="main-nav__user-navigation-item menu-dropdown">
+                <button class="main-nav__profile-btn menu-dropdown__target user-icon" >
+                    <span class="visually-hidden">Личный кабинет</span>
+                    <span aria-hidden class="material-icons-round">
+                        account_circle
+                    </span>
+                </button>
+                <div class="menu-dropdown__content menu-dropdown__content_right-oriented">
+                    <p class="menu-dropdown__heading">Неопознанный юзер</p>
+                    <ul class="menu-dropdown__list">
+                        <li class="menu-dropdown__item">
+                            <a href="#" class="menu-dropdown__link">Настройки профиля</a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a href="#" class="menu-dropdown__link">Учебный кабинет</a>
+                        </li>
+                        <li class="menu-dropdown__item">
+                            <a href="#" class="menu-dropdown__link">Избранное</a>
+                        </li>
+                        <li aria-hidden="true" class="menu-dropdown__divider"></li>
+                        <li class="menu-dropdown__item">
+                            <a id="log-out" href="#" class="menu-dropdown__link">Выйти</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </template>
+
+            <!-- js скрипты -->
+        <script src="https://unpkg.com/nouislider@14.6.3/distribute/nouislider.min.js"></script>
+        <script type="module" src="cripts/index.js"></script>
+    </body>
+</html>
