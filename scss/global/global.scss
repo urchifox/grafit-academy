@@ -1,0 +1,19 @@
+
+*:focus {
+  outline: none;
+}
+*:focus-visible {
+  outline:  rgb(var(--color-accent-bright)) solid 2px;
+  border-radius: 4px;
+  outline-offset: 2px;
+}
+
+.material-icons-round.red {
+  color: rgb(var(--color-accent));
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
