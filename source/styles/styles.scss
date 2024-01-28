@@ -5,23 +5,23 @@
 @use "./global/helpers";
 
 // REUSABLE BLOCKS
-@use './blocks/disclaimer';
-@use './blocks/slider';
-@use './blocks/filters';
-@use './blocks/sorting';
-@use './blocks/packs-list';
-@use './blocks/buy-button';
-@use './blocks/favorite-button';
-@use './blocks/price-slider';
+@use "./blocks/disclaimer";
+@use "./blocks/slider";
+@use "./blocks/filters";
+@use "./blocks/sorting";
+@use "./blocks/packs-list";
+@use "./blocks/buy-button";
+@use "./blocks/favorite-button";
+@use "./blocks/price-slider";
 
 // SECTIONS / ARTICLES
-@use './blocks/pack-market';
-@use './blocks/pack-full';
-@use './blocks/next-course';
-@use './blocks/upcoming-courses';
+@use "./blocks/pack-market";
+@use "./blocks/pack-full";
+@use "./blocks/next-course";
+@use "./blocks/upcoming-courses";
 
 // MAIN BLOCKS
-@use './blocks/body';
-@use './blocks/header';
-@use './blocks/main';
-@use './blocks/footer';
+@use "./blocks/body";
+@use "./blocks/header";
+@use "./blocks/main";
+@use "./blocks/footer";

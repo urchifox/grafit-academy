@@ -1,50 +1,48 @@
 .buy-button {
-    position: relative;
-    margin-right: 5px;
+  position: relative;
+  margin-right: 5px;
 
-    padding: 2px 2px;
-    border: none;
-    width: 35px;
-    height: 35px;
-    
-    background-color: transparent;
-    transition: transform 0.3s;
-    cursor: pointer;
+  padding: 2px 2px;
+  border: none;
+  width: 35px;
+  height: 35px;
+
+  background-color: transparent;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .buy-button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
+
 .buy-button:active {
-    transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 
-.buy-button__icon_border, 
+.buy-button__icon_border,
 .buy-button__icon_checked {
-    position: absolute;
-    top: 4px;
-	bottom: 0;
-	left: 0;
-	right: 0;
-    transform: scale(1.2);
-    
-    transition: opacity 0.3s;
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: scale(1.2);
+
+  transition: opacity 0.3s;
 }
 
 .buy-button__icon_border {
-    font-variation-settings: 'FILL' 0;
+  font-variation-settings: "FILL" 0;
 }
 
 .buy-button__icon_checked {
-    color: rgb(var(--color-accent));
-  font-variation-settings: 'FILL' 1;
-}
-
-.buy-button__icon_checked {
-    opacity: 0;
+  color: rgb(var(--color-accent));
+  font-variation-settings: "FILL" 1;
+  opacity: 0;
 }
 
 .buy-button:has(input:checked) .buy-button__icon_checked {
-    opacity: 1;
+  opacity: 1;
 }
