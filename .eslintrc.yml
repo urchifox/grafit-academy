@@ -13,9 +13,4 @@ parserOptions:
 globals:
   noUiSlider: readonly
   Pristine: readonly
-# здесь можно переписать правила, которые не нравятся. Например сделать нормальные отступы 
-rules:
-  indent:
-    - error
-    - tab
-    - SwitchCase: 1
+# здесь можно переписать правила, которые не нравятся. Например сделать нормальные отступы
