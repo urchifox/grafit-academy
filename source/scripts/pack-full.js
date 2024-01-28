@@ -10,86 +10,86 @@ import { packsUserData } from './packs-user-data.js';
 const root = document.querySelector('.pack-market');
 
 const getTemplate = (id, {packName, price}, isFavorite, isInCart) => /*html*/`
-	<article class="pack-full pack-market__pack-full">
-		<div class="pack-full_container">
-			<h2 class="pack-full__name">${packName}</h2>
+  <article class="pack-full pack-market__pack-full">
+    <div class="pack-full_container">
+      <h2 class="pack-full__name">${packName}</h2>
 
-			<div class="slider-container"></div>
+      <div class="slider-container"></div>
 
-			<div class="pack-full__actions-container">
-				<p class="pack-full__price">${price}<span class="visually-hidden">рублей</span></p>
-				${getCartButtonTemplate(id, isInCart)}
-				${getFavoriteButtonTemplate(id, isFavorite)}
-			</div>
+      <div class="pack-full__actions-container">
+        <p class="pack-full__price">${price}<span class="visually-hidden">рублей</span></p>
+        ${getCartButtonTemplate(id, isInCart)}
+        ${getFavoriteButtonTemplate(id, isFavorite)}
+      </div>
 
-			<button class="pack-full__close">
-				<span class="visually-hidden">Закрыть окно авторизации</span>
-				<span aria-hidden="true" class="material-icons-round">
-					close
-				</span>
-			</button>
-		</div>
-	</article>
+      <button class="pack-full__close">
+        <span class="visually-hidden">Закрыть окно авторизации</span>
+        <span aria-hidden="true" class="material-icons-round">
+          close
+        </span>
+      </button>
+    </div>
+  </article>
 `;
 
 const onFavoriteButtonClick = (evt) => {
-	const label = evt.target.closest('.favorite-button');
-	const input = label.querySelector('input');
-	const packId = label.dataset.id;
+  const label = evt.target.closest('.favorite-button');
+  const input = label.querySelector('input');
+  const packId = label.dataset.id;
 
-	const card = document.querySelector(`.pack-card[data-id="${packId}"]`);
-	const cardInput = card.querySelector('.favorite-button input');
+  const card = document.querySelector(`.pack-card[data-id="${packId}"]`);
+  const cardInput = card.querySelector('.favorite-button input');
 
-	cardInput.checked = input.checked;
-	onFavoriteClick(evt);
+  cardInput.checked = input.checked;
+  onFavoriteClick(evt);
 };
 
 const onBuyButtonClick = (evt) => {
-	const label = evt.target.closest('.buy-button');
-	const input = label.querySelector('input');
-	const packId = label.dataset.id;
+  const label = evt.target.closest('.buy-button');
+  const input = label.querySelector('input');
+  const packId = label.dataset.id;
 
-	const card = document.querySelector(`.pack-card[data-id="${packId}"]`);
-	const cardInput = card.querySelector('.buy-button input');
+  const card = document.querySelector(`.pack-card[data-id="${packId}"]`);
+  const cardInput = card.querySelector('.buy-button input');
 
-	cardInput.checked = input.checked;
-	onBuyClick(evt);
+  cardInput.checked = input.checked;
+  onBuyClick(evt);
 };
 
 const render = (id, packData) => {
-	const isFavorite = packsUserData.favorites.includes(id);
-	const isInCart = packsUserData.inCart.includes(id);
-	const card = createElement(getTemplate(id, packData, isFavorite, isInCart));
-	card.addEventListener('click', onOverlayClick);
-	card.querySelector('.pack-full__close').addEventListener('click', onCloseClick);
-	card.querySelector('[name="buy"]').addEventListener('click', onBuyButtonClick);
-	card.querySelector('[name="favorite"]').addEventListener('click', onFavoriteButtonClick);
-	document.addEventListener('keydown', onEscPress);
-	root.append(card);
-	initSlider(card, packData.previews, PREVIEWS_ADDRESS);
-	document.body.classList.add('modal-open');
+  const isFavorite = packsUserData.favorites.includes(id);
+  const isInCart = packsUserData.inCart.includes(id);
+  const card = createElement(getTemplate(id, packData, isFavorite, isInCart));
+  card.addEventListener('click', onOverlayClick);
+  card.querySelector('.pack-full__close').addEventListener('click', onCloseClick);
+  card.querySelector('[name="buy"]').addEventListener('click', onBuyButtonClick);
+  card.querySelector('[name="favorite"]').addEventListener('click', onFavoriteButtonClick);
+  document.addEventListener('keydown', onEscPress);
+  root.append(card);
+  initSlider(card, packData.previews, PREVIEWS_ADDRESS);
+  document.body.classList.add('modal-open');
 };
 
 const close = () => {
-	document.querySelector('.pack-full').remove();
-	document.removeEventListener('keydown', onEscPress);
-	document.body.classList.remove('modal-open');
+  document.querySelector('.pack-full').remove();
+  document.removeEventListener('keydown', onEscPress);
+  document.body.classList.remove('modal-open');
 };
 
 function onCloseClick () {
-	close();
+  close();
 }
 
 function onEscPress (evt) {
-	if (evt.key === 'Escape') {
-		close();
-	}
+  if (evt.key === 'Escape') {
+    close();
+  }
 }
 
 function onOverlayClick (evt) {
-	if (evt.target.classList.contains('pack-full')) {
-		close();
-	}
+  if (evt.target.classList.contains('pack-full')) {
+    close();
+  }
 }
 
 export {render};

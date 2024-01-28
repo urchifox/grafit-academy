@@ -20,85 +20,85 @@ const originalData = Array.from(packsData);
 let processedData;
 
 const rerenderGallery = (callback, data) => {
-	processedData = callback(data);
-	galleryList.innerHTML = '';
-	renderPacks(processedData);
+  processedData = callback(data);
+  galleryList.innerHTML = '';
+  renderPacks(processedData);
 };
 
 const getSortedData = (data) => {
-	const value = sortingParameterSelector.value;
-	const ascending = sortingOrderSelector.checked;
+  const value = sortingParameterSelector.value;
+  const ascending = sortingOrderSelector.checked;
 
-	if (packDataExample[value] === 'string') {
-		return (ascending) ?
-			data.slice().sort((a, b) => a[1][value].localeCompare(b[1][value])) :
-			data.slice().sort((a, b) => b[1][value].localeCompare(a[1][value]));
-	}
+  if (packDataExample[value] === 'string') {
+    return (ascending) ?
+      data.slice().sort((a, b) => a[1][value].localeCompare(b[1][value])) :
+      data.slice().sort((a, b) => b[1][value].localeCompare(a[1][value]));
+  }
 
-	return (ascending) ?
-		data.slice().sort((a, b) => a[1][value] - b[1][value]) :
-		data.slice().sort((a, b) => b[1][value] - a[1][value]);
+  return (ascending) ?
+    data.slice().sort((a, b) => a[1][value] - b[1][value]) :
+    data.slice().sort((a, b) => b[1][value] - a[1][value]);
 };
 
 const getReversedData = (data) => data.reverse();
 
 const onSortingParameterChange = () => {
-	rerenderGallery(getSortedData, processedData);
+  rerenderGallery(getSortedData, processedData);
 };
 
 const onSortingOrderChange = () => {
-	rerenderGallery(getReversedData, processedData);
+  rerenderGallery(getReversedData, processedData);
 };
 
 const getFilteredData = (data, conditions) => data.filter(([,datum]) => conditions.every((condition) => condition(datum)));
 
 const onFiltersChange = () => {
-	const filtrationConditions = [];
+  const filtrationConditions = [];
 
-	const checkedTypes = [...typeCheckboxes].reduce((accumulator, checkbox) =>
-		checkbox.checked ? [...accumulator, checkbox.value] : [...accumulator]
-	, []);
-	const checkedTags = [...tagsCheckboxes].reduce((accumulator, checkbox) =>
-		checkbox.checked ? [...accumulator, checkbox.value] : [...accumulator]
-	, []);
+  const checkedTypes = [...typeCheckboxes].reduce((accumulator, checkbox) =>
+    checkbox.checked ? [...accumulator, checkbox.value] : [...accumulator]
+  , []);
+  const checkedTags = [...tagsCheckboxes].reduce((accumulator, checkbox) =>
+    checkbox.checked ? [...accumulator, checkbox.value] : [...accumulator]
+  , []);
 
-	if (checkedTypes.length > 0 || checkedTags.length > 0) {
-		filtrationConditions.push((datum) =>
-			checkedTypes.includes(datum.type) ||
-			Object.keys(datum.tags).some((tag) => checkedTags.includes(tag) && datum.tags[tag] === true)
-		);
-	}
+  if (checkedTypes.length > 0 || checkedTags.length > 0) {
+    filtrationConditions.push((datum) =>
+      checkedTypes.includes(datum.type) ||
+      Object.keys(datum.tags).some((tag) => checkedTags.includes(tag) && datum.tags[tag] === true)
+    );
+  }
 
-	if (specialOfferCheckbox.checked) {
-		filtrationConditions.push((datum) => datum.specialOffer === true);
-	}
+  if (specialOfferCheckbox.checked) {
+    filtrationConditions.push((datum) => datum.specialOffer === true);
+  }
 
-	if (minPriceInput.value > minPrice) {
-		filtrationConditions.push((datum) => datum.price >= minPriceInput.value);
-	}
+  if (minPriceInput.value > minPrice) {
+    filtrationConditions.push((datum) => datum.price >= minPriceInput.value);
+  }
 
-	if (maxPriceInput.value < maxPrice) {
-		filtrationConditions.push((datum) => datum.price <= maxPriceInput.value);
-	}
+  if (maxPriceInput.value < maxPrice) {
+    filtrationConditions.push((datum) => datum.price <= maxPriceInput.value);
+  }
 
-	const filteredData = filtrationConditions.length > 0 ?
-		getFilteredData(originalData, filtrationConditions) :
-		originalData;
+  const filteredData = filtrationConditions.length > 0 ?
+    getFilteredData(originalData, filtrationConditions) :
+    originalData;
 
-	rerenderGallery(getSortedData, filteredData);
+  rerenderGallery(getSortedData, filteredData);
 };
 
 const onPriceInputChange = () => priceSlider.noUiSlider.set([minPriceInput.value, maxPriceInput.value]);
 
 const init = () => {
-	processedData = getSortedData(originalData);
-	renderPacks(processedData);
+  processedData = getSortedData(originalData);
+  renderPacks(processedData);
 
-	minPriceInput.addEventListener('change', onPriceInputChange);
-	maxPriceInput.addEventListener('change', onPriceInputChange);
-	filtersRoot.addEventListener('change', onFiltersChange);
-	sortingParameterSelector.addEventListener('change', onSortingParameterChange);
-	sortingOrderSelector.addEventListener('change', onSortingOrderChange);
+  minPriceInput.addEventListener('change', onPriceInputChange);
+  maxPriceInput.addEventListener('change', onPriceInputChange);
+  filtersRoot.addEventListener('change', onFiltersChange);
+  sortingParameterSelector.addEventListener('change', onSortingParameterChange);
+  sortingOrderSelector.addEventListener('change', onSortingOrderChange);
 };
 
 export {init, onFiltersChange};
