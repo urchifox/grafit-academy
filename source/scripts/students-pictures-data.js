@@ -1,37 +1,37 @@
-const ADDRESS = 'img/students-works/';
+const ADDRESS = 'images/studio-works/';
 
 const studentsWorksInfo = [
   {
-    src: 'main-photo-1.jpg',
-    description: 'Работа нашего ученика Михаила Пищулина',
+    src: 'studio-work-3d-1@1x.jpg',
+    description: '3d handpaint сцена, которую сделали наши 3д-моделлеры',
   },
   {
-    src: 'main-photo-2.jpg',
-    description: 'Работа нашей ученицы Александры Беловой',
+    src: 'studio-work-3d-2@1x.jpg',
+    description: 'Набор из более 45 пропсов для создания полноценной 3d сцены от нашей 3д-команды',
   },
   {
-    src: 'main-photo-3.jpg',
-    description: 'Работа нашей ученицы Екатерины Грачевой',
+    src: 'studio-work-kazak-1@1x.jpg',
+    description: 'Наброски от Вальдемара Казака, сделанные по нашим рефпакам',
   },
   {
-    src: 'course-2.jpg',
-    description: 'заглушка',
+    src: 'studio-work-kazak-2@1x.jpg',
+    description: 'Постер от Вальдемара Казака, вдохновленный нашими рефпаками',
   },
   {
-    src: 'main-photo-1.jpg',
-    description: 'Работа нашего ученика Михаила Пищулина',
+    src: 'studio-work-kazak-3@1x.jpg',
+    description: 'Иллюстрация от Вальдемара Казака, сделанная по нашим рефпакам',
   },
   {
-    src: 'main-photo-2.jpg',
-    description: 'Работа нашей ученицы Александры Беловой',
+    src: 'studio-work-jazens-1@1x.jpg',
+    description: 'Работа Оксаны Турляй для внутреннего конкурса',
   },
   {
-    src: 'main-photo-3.jpg',
-    description: 'Работа нашей ученицы Екатерины Грачевой',
+    src: 'studio-work-chumak-1@1x.jpg',
+    description: 'Наброски от нашего арт-директора Андрея Чумака, выполненные по нашим рефпакам',
   },
   {
-    src: 'course-2.jpg',
-    description: 'заглушка',
+    src: 'studio-work-chumak-2@1x.jpg',
+    description: 'Наброски от нашего арт-директора Андрея Чумака, выполненные по нашим рефпакам',
   },
 ];
 
