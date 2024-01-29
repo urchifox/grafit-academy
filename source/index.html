@@ -28,8 +28,17 @@
   <header class="header body__header" id="header">
     <nav class="main-nav header__main-nav">
       <a class="main-nav__logo-link logo" href="#" >
-        <img src="img/header/logo.png" alt="Логотип" width="81" height="70">
-        <span class="visually-hidden">Перейти на главную</span>
+        <picture>
+          <source type="image/webp"
+            srcset="images/logo@1x.webp 1x,
+                    images/logo@2x.webp 2x"
+            width="81" height="70">
+          <img
+            src="images/logo@1x.png"
+            srcset="images/logo@2x.png 2x"
+            width="81" height="270"
+            alt="Перейти на главную">
+        </picture>
       </a>
       <ul class="main-nav__site-navigation">
         <li class="main-nav__site-navigation-item">
@@ -135,43 +144,63 @@
       <section class="next-course main__next-course">
         <div class="next-course__info">
           <h3 class="next-course__course-name">
-            <a class="next-course__course-name-link" href="#">Курс по стилизации</a>
+            <a class="next-course__course-name-link" href="#">Реалистичный персонаж</a>
           </h3>
           <div class="next-course__dates">
-            <time datetime="2023-02-10">10 февраля</time>
+            <time datetime="2023-28-11">28 ноября</time>
             -
-            <time datetime="2023-04-20">20 апреля</time>
+            <time datetime="2024-01-20">20 января</time>
           </div>
           <div class="next-course__desc">
-            Освой приемы стилизации вместе с нашим лид-артистом по иллюстрации Михаилом Бабкиным!
+            В рамках курса вы познакомитесь с особенностями концепта реалистичного персонажа, узнаете специфику рабочих процессов, обновите базовые знания света, цвета и анатомии и научитесь грамотно вести работу над реалистичным рендером.
           </div>
           <a class="next-course__details" href="#">Узнать подробности</a>
           <div class="next-course__price">3300<span class="visually-hidden">рублей</span></div>
           <button class="next-course__book" type="button">Записаться</button>
         </div>
         <a class="next-course__link-img" href="#" tabindex="-1">
-          <img class="next-course__img" src="img/courses/course-1.jpg" width="0" height="0" alt="Курс по стилизации">
+          <picture>
+            <source type="image/webp"
+              srcset="images/course-cover-realistic-character@1x.webp 1x,
+                      images/course-cover-realistic-character@2x.webp 2x"
+              width="850" height="567">
+            <img class="next-course__img"
+              src="images/course-cover-realistic-character@1x.png"
+              srcset="images/course-cover-realistic-character@2x.png 2x"
+              width="850" height="567"
+              alt="Курс реалистичный персонаж">
+          </picture>
         </a>
       </section>
       <section class="next-course main__next-course">
         <div class="next-course__info">
           <h3 class="next-course__course-name">
-            <a class="next-course__course-name-link" href="#">UI / UX</a>
+            <a class="next-course__course-name-link" href="#">Скульптинг в Blender</a>
           </h3>
           <div class="next-course__dates">
-            <time datetime="2023-02-16">16 февраля</time>
+            <time datetime="2024-01-28">28 января</time>
             -
-            <time datetime="2023-04-30">30 апреля</time>
+            <time datetime="2024-02-30">30 февраля</time>
           </div>
           <div class="next-course__desc">
-            Научись делать завлекающие интерфейсы с нашей художницей по интефейсам Юлией Бойко!
+            Знание Blender и 3D-моделирования предоставляет ряд неоспоримых преимуществ для художников, которые хотят развиваться и построить успешную карьеру в креативной индустрии.
           </div>
           <a class="next-course__details" href="#">Узнать подробности</a>
           <div class="next-course__price">2800<span class="visually-hidden">рублей</span></div>
           <button class="next-course__book" type="button">Записаться</button>
         </div>
         <a class="next-course__link-img" href="#" tabindex="-1">
-          <img class="next-course__img" src="img/courses/course-2.jpg" width="0" height="0" alt="UI / UX">
+          <picture>
+            <source type="image/webp"
+              srcset="images/course-cover-blender@1x.webp 1x,
+                      images/course-cover-blender@2x.webp 2x"
+              width="850" height="567">
+            <img class="next-course__img"
+              src="images/course-cover-blender@1x.png"
+              srcset="images/course-cover-blender@2x.png 2x"
+              width="850" height="567"
+              alt="Курс скульптинг в Blender">
+          </picture>
         </a>
       </section>
     </article>
@@ -226,7 +255,17 @@
   <footer class="footer body__footer">
     <div class="footer__container">
       <p class="copyright">
-        <img src="img/footer/copyright.png" width="0" height="0" alt="копирайт">
+        <picture>
+          <source type="image/webp"
+            srcset="images/copyright@1x.webp 1x,
+                    images/copyright@2x.webp 2x"
+            width="190" height="23">
+          <img
+            src="images/copyright@1x.png"
+            srcset="images/copyright@2x.png 2x"
+            width="190" height="23"
+            alt="Копирайт">
+        </picture>
       </p>
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
@@ -235,28 +274,64 @@
             <ul class="social-list contacts__social-list">
               <li class="social-list__item">
                 <a class="social-list__link" href="https://www.artstation.com/grafit">
-                  <img src="img/footer/artstation.png" width="0" height="0" alt="Arstation">
-                  <span class="visually-hidden">Artstation</span>
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/artstation@1x.webp 1x,
+                              images/artstation@2x.webp 2x"
+                      width="50" height="50">
+                    <img
+                      src="images/artstation@1x.png"
+                      srcset="images/artstation@2x.png 2x"
+                      width="50" height="50"
+                      alt="Artstation">
+                  </picture>
                 </a>
               </li>
               <li class="social-list__item">
                 <a class="social-list__link" href="https://www.behance.net/grafitart">
-                  <img src="img/footer/behance.png" width="0" height="0" alt="Behance">
-                  <span class="visually-hidden">Behance</span>
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/behance@1x.webp 1x,
+                              images/behance@2x.webp 2x"
+                      width="59" height="50">
+                    <img
+                      src="images/behance@1x.png"
+                      srcset="images/behance@2x.png 2x"
+                      width="59" height="50"
+                      alt="Behance">
+                  </picture>
                 </a>
               </li>
               <li class="social-list__item">
                 <a class="social-list__link" href="https://vk.com/studiyagrafit">
-                  <img src="img/footer/vk.png" width="0" height="0" alt="VK">
-                  <span class="visually-hidden">VK</span>
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/vk@1x.webp 1x,
+                              images/vk@2x.webp 2x"
+                      width="60" height="50">
+                    <img
+                      src="images/vk@1x.png"
+                      srcset="images/vk@2x.png 2x"
+                      width="60" height="50"
+                      alt="VK">
+                  </picture>
                 </a>
               </li>
             </ul>
           </li>
           <li class="contacts__mail">
             <a class="contacts__mail-link" href="mailto:work@grafitart.com">
-              <img src="img/footer/mail.png" width="0" height="0" alt="work@grafitart.com">
-              <span class="visually-hidden">work@grafitart.com</span>
+              <picture>
+                <source type="image/webp"
+                  srcset="images/mail@1x.webp 1x,
+                          images/mail@2x.webp 2x"
+                  width="200" height="31">
+                <img
+                  src="images/mail@1x.png"
+                  srcset="images/mail@2x.png 2x"
+                  width="200" height="31"
+                  alt="work@grafitart.com">
+              </picture>
             </a>
           </li>
         </ul>

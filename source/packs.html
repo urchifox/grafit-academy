@@ -30,8 +30,17 @@
         <header class="header" id="header">
             <nav class="main-nav header__main-nav">
                 <a class="main-nav__logo-link logo" href="index.html">
-                    <img src="img/header/logo.png" alt="Логотип" width="81" height="70">
-                    <span class="visually-hidden">Перейти на главную</span>
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/logo@1x.webp 1x,
+                              images/logo@2x.webp 2x"
+                      width="81" height="70">
+                    <img
+                      src="images/logo@1x.png"
+                      srcset="images/logo@2x.png 2x"
+                      width="81" height="270"
+                      alt="Перейти на главную">
+                  </picture>
                 </a>
                 <ul class="main-nav__site-navigation">
                     <li class="main-nav__site-navigation-item">
@@ -228,7 +237,17 @@
         <footer class="footer body__footer">
             <div class="footer__container">
                 <p class="copyright">
-                    <img src="img/footer/copyright.png" width="0" height="0" alt="копирайт">
+                  <picture>
+                    <source type="image/webp"
+                      srcset="images/copyright@1x.webp 1x,
+                              images/copyright@2x.webp 2x"
+                      width="190" height="23">
+                    <img
+                      src="images/copyright@1x.png"
+                      srcset="images/copyright@2x.png 2x"
+                      width="190" height="23"
+                      alt="Копирайт">
+                  </picture>
                 </p>
                 <section class="contacts">
                     <h2 class="visually-hidden">Контактная информация</h2>
@@ -237,28 +256,64 @@
                             <ul class="social-list contacts__social-list">
                                 <li class="social-list__item">
                                     <a class="social-list__link" href="https://www.artstation.com/grafit">
-                                        <img src="img/footer/artstation.png" width="0" height="0" alt="Arstation">
-                                        <span class="visually-hidden">Artstation</span>
+                                      <picture>
+                                        <source type="image/webp"
+                                          srcset="images/artstation@1x.webp 1x,
+                                                  images/artstation@2x.webp 2x"
+                                          width="50" height="50">
+                                        <img
+                                          src="images/artstation@1x.png"
+                                          srcset="images/artstation@2x.png 2x"
+                                          width="50" height="50"
+                                          alt="Artstation">
+                                      </picture>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
                                     <a class="social-list__link" href="https://www.behance.net/grafitart">
-                                        <img src="img/footer/behance.png" width="0" height="0" alt="Behance">
-                                        <span class="visually-hidden">Behance</span>
+                                      <picture>
+                                        <source type="image/webp"
+                                          srcset="images/behance@1x.webp 1x,
+                                                  images/behance@2x.webp 2x"
+                                          width="59" height="50">
+                                        <img
+                                          src="images/behance@1x.png"
+                                          srcset="images/behance@2x.png 2x"
+                                          width="59" height="50"
+                                          alt="Behance">
+                                      </picture>
                                     </a>
                                 </li>
                                 <li class="social-list__item">
                                     <a class="social-list__link" href="https://vk.com/studiyagrafit">
-                                        <img src="img/footer/vk.png" width="0" height="0" alt="VK">
-                                        <span class="visually-hidden">VK</span>
+                                      <picture>
+                                        <source type="image/webp"
+                                          srcset="images/vk@1x.webp 1x,
+                                                  images/vk@2x.webp 2x"
+                                          width="60" height="50">
+                                        <img
+                                          src="images/vk@1x.png"
+                                          srcset="images/vk@2x.png 2x"
+                                          width="60" height="50"
+                                          alt="VK">
+                                      </picture>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="contacts__mail">
                             <a class="contacts__mail-link" href="mailto:work@grafitart.com">
-                                <img src="img/footer/mail.png" width="0" height="0" alt="work@grafitart.com">
-                                <span class="visually-hidden">work@grafitart.com</span>
+                              <picture>
+                                <source type="image/webp"
+                                  srcset="images/mail@1x.webp 1x,
+                                          images/mail@2x.webp 2x"
+                                  width="200" height="31">
+                                <img
+                                  src="images/mail@1x.png"
+                                  srcset="images/mail@2x.png 2x"
+                                  width="200" height="31"
+                                  alt="work@grafitart.com">
+                              </picture>
                             </a>
                         </li>
                     </ul>
