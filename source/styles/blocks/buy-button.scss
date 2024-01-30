@@ -10,39 +10,41 @@
   background-color: transparent;
   transition: transform 0.3s;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+
 }
 
-.buy-button:hover {
-  transform: scale(1.2);
-}
+.buy-button__checkbox {
+  --icon-color: rgb(var(--color-text-basic));
+  --icon-url: url(../../images/icons/stack.svg#basket_empty);
 
-.buy-button:active {
-  transform: scale(0.8);
-}
+  position: relative;
+  appearance: none;
+  width: 25px;
+  height: 25px;
 
+  &:checked {
+    --icon-color: rgb(var(--color-accent));
+    --icon-url: url(../../images/icons/stack.svg#basket_full);
+  }
 
-.buy-button__icon_border,
-.buy-button__icon_checked {
-  position: absolute;
-  top: 4px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform: scale(1.2);
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  transition: opacity 0.3s;
-}
+    width: 100%;
+    height: 100%;
 
-.buy-button__icon_border {
-  font-variation-settings: "FILL" 0;
-}
-
-.buy-button__icon_checked {
-  color: rgb(var(--color-accent));
-  font-variation-settings: "FILL" 1;
-  opacity: 0;
-}
-
-.buy-button:has(input:checked) .buy-button__icon_checked {
-  opacity: 1;
+    background-color: var(--icon-color);
+    mask-image: var(--icon-url);
+  }
 }
