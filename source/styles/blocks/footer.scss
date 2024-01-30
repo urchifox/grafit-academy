@@ -84,6 +84,8 @@
 }
 
 .scroll-up {
+  position: relative;
+
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -91,6 +93,44 @@
   text-decoration: none;
   background-color: rgb(var(--color-accent));
   transition: opacity 0.3s, transform 0.3s, filter 0.1s;
+
+  &_hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(2px);
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &_shown {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    &:active {
+      opacity: 0.7;
+      transform: scale(0.9);
+    }
+
+    &:focus-visible {
+      border-radius: 50%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+
+    background-color: rgb(var(--color-background));
+    mask-image: url(../../images/icons/stack.svg#arrow_upward);
+  }
 }
 
 .footer__scroll-up {
@@ -99,36 +139,10 @@
   bottom: 5%;
 }
 
-.scroll-up__icon {
-  margin-top: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: rgb(var(--color-background));
-}
-
-.scroll-up_hidden {
-  opacity: 0;
-  transform: scale(0.8);
-  filter: blur(2px);
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.scroll-up_shown {
-  opacity: 0.5;
-}
-
-.scroll-up_shown:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.scroll-up_shown:active {
-  opacity: 0.7;
-  transform: scale(0.9);
-}
-
-.scroll-up_shown:focus-visible {
-  border-radius: 50%;
-}
+// .scroll-up__icon {
+//   margin-top: 5px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   fill: rgb(var(--color-background));
+// }
