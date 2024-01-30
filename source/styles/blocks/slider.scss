@@ -104,36 +104,42 @@
   filter: none;
 }
 
-
-.arrow {
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  color: rgb(var(--color-accent) / 0.5);
-  transition: transform 0.5s;
-  cursor: pointer;
-}
-
-.arrow:hover {
-  color: rgb(var(--color-accent));
-  transform: translateY(-50%) scale(2.2);
-}
-
-.arrow:active {
-  transform: translateY(-50%) scale(1.8);
-}
-
 .slider__arrow {
   position: absolute;
   z-index: 1;
   top: 50%;
-  transform: translateY(-50%) scale(2);
-}
+  transform-origin: 50% 50%;
+  transform: translateY(-50%) rotate(var(--arrow-angle)) scale(2);
 
-.slider__arrow_left {
-  left: 0;
-}
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  mask-image: url(../../images/icons/stack.svg#navigate_next);
+  background-color: rgb(var(--color-accent) / 0.5);
 
-.slider__arrow_right {
-  right: 0;
+  color: rgb(var(--color-accent) / 0.5);
+  transition: transform 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(var(--color-accent));
+    transform: translateY(-50%) rotate(var(--arrow-angle)) scale(2.2);
+  }
+
+  &:active {
+    transform: translateY(-50%) rotate(var(--arrow-angle)) scale(1.8);
+  }
+
+  &_left {
+    --arrow-angle: 180deg;
+
+    left: 0;
+  }
+
+  &_right {
+    --arrow-angle: 0deg;
+
+    right: 0;
+  }
 }

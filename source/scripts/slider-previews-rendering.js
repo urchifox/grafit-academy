@@ -13,11 +13,11 @@ const getTemplate = (data, picturesAddress) => /*html*/`
     <figure class="slider__main-illustration">
       <img class="slider__main-img" src="" alt="">
       <figcaption class="slider__desc"></figcaption>
-      <button name="previous" aria-label="Предыдущее изображение" class="arrow slider__arrow slider__arrow_left  material-icons-round" >
-        <span aria-hidden="true">chevron_left</span>
+      <button class="slider__arrow slider__arrow_left">
+        <span class="visually-hidden">Предыдущее изображение</span>
       </button>
-      <button name="next" aria-label="Следующее изображение" class="arrow slider__arrow slider__arrow_right material-icons-round" >
-        <span aria-hidden="true">navigate_next</span>
+      <button class="slider__arrow slider__arrow_right">
+        <span class="visually-hidden">Следующее изображение</span>
       </button>
     </figure>
     <ul class="slider__previews">
