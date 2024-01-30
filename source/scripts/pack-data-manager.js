@@ -1,6 +1,6 @@
 import { packsData } from './packs-data.js';
 
-const PREVIEWS_ADDRESS = 'img/refpacks/covers/';
+const PREVIEWS_ADDRESS = 'images/refpacks-covers/';
 
 const packDataExample = {
   packName: 'string',

@@ -5,15 +5,15 @@ packsData.set('853EBA39-329A-4DEF-ADA8-3A9870B0EB9E', {
   price: 500,
   previews: [
     {
-      src: 'refpack-14-1.jpg',
+      src: 'refpack-14-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-14-2.jpg',
+      src: 'refpack-14-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-14-3.jpg',
+      src: 'refpack-14-3-h550@1x.jpg',
       description: '',
     },
   ],
@@ -31,15 +31,15 @@ packsData.set('FBD25B0D-8742-4C82-AE70-0D24027BF860', {
   price: 500,
   previews: [
     {
-      src: 'refpack-2-1.jpg',
+      src: 'refpack-2-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-2-2.jpg',
+      src: 'refpack-2-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-2-3.jpg',
+      src: 'refpack-2-3-h550@1x.jpg',
       description: '',
     },
   ],
@@ -57,11 +57,11 @@ packsData.set('17BBF395-A40F-45F9-B360-4F5DD68866AE', {
   price: 800,
   previews: [
     {
-      src: 'refpack-3-1.jpg',
+      src: 'refpack-3-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-3-2.jpg',
+      src: 'refpack-3-2-h550@1x.jpg',
       description: '',
     },
   ],
@@ -80,15 +80,15 @@ packsData.set('247832B3-43EC-4C22-B618-2B46A9C63B85', {
   price: 900,
   previews: [
     {
-      src: 'refpack-4-1.jpg',
+      src: 'refpack-4-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-4-2.jpg',
+      src: 'refpack-4-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-4-2.jpg',
+      src: 'refpack-4-2-h550@1x.jpg',
       description: '',
     },
   ],
@@ -106,19 +106,19 @@ packsData.set('7C676F46-291D-46C6-A3D8-1530CF608595', {
   price: 500,
   previews: [
     {
-      src: 'refpack-5-1.jpg',
+      src: 'refpack-5-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-5-2.jpg',
+      src: 'refpack-5-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-5-3.jpg',
+      src: 'refpack-5-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-5-4.jpg',
+      src: 'refpack-5-4-h550@1x.jpg',
       description: '',
     },
   ],
@@ -137,23 +137,23 @@ packsData.set('A463C41A-B505-44D7-B300-DB3D09819C90', {
   price: 900,
   previews: [
     {
-      src: 'refpack-6-1.jpg',
+      src: 'refpack-6-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-6-2.jpg',
+      src: 'refpack-6-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-6-3.jpg',
+      src: 'refpack-6-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-6-4.jpg',
+      src: 'refpack-6-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-6-5.jpg',
+      src: 'refpack-6-5-h550@1x.jpg',
       description: '',
     },
   ],
@@ -171,15 +171,15 @@ packsData.set('B06D696F-2950-440D-A620-47FD0FBA63D5', {
   price: 900,
   previews: [
     {
-      src: 'refpack-7-1.jpg',
+      src: 'refpack-7-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-7-2.jpg',
+      src: 'refpack-7-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-7-3.jpg',
+      src: 'refpack-7-3-h550@1x.jpg',
       description: '',
     },
   ],
@@ -198,27 +198,27 @@ packsData.set('634D2AFF-68F5-435E-9203-F463F4F3B7B2', {
   price: 700,
   previews: [
     {
-      src: 'refpack-8-1.jpg',
+      src: 'refpack-8-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-8-2.jpg',
+      src: 'refpack-8-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-8-3.jpg',
+      src: 'refpack-8-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-8-4.jpg',
+      src: 'refpack-8-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-8-5.jpg',
+      src: 'refpack-8-5-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-8-6.jpg',
+      src: 'refpack-8-6-h550@1x.jpg',
       description: '',
     },
   ],
@@ -236,23 +236,23 @@ packsData.set('DE8351BE-D822-469C-866C-817FB59F8431', {
   price: 500,
   previews: [
     {
-      src: 'refpack-9-1.jpg',
+      src: 'refpack-9-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-9-2.jpg',
+      src: 'refpack-9-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-9-3.jpg',
+      src: 'refpack-9-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-9-4.jpg',
+      src: 'refpack-9-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-9-5.jpg',
+      src: 'refpack-9-5-h550@1x.jpg',
       description: '',
     },
   ],
@@ -271,23 +271,23 @@ packsData.set('BB5CADD4-9522-4A20-A9D1-423A00662C19', {
   price: 900,
   previews: [
     {
-      src: 'refpack-10-1.jpg',
+      src: 'refpack-10-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-10-2.jpg',
+      src: 'refpack-10-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-10-3.jpg',
+      src: 'refpack-10-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-10-4.jpg',
+      src: 'refpack-10-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-10-5.jpg',
+      src: 'refpack-10-5-h550@1x.jpg',
       description: '',
     },
   ],
@@ -305,27 +305,27 @@ packsData.set('093B38E8-4248-4EC6-A602-F599F57F75CE', {
   price: 900,
   previews: [
     {
-      src: 'refpack-11-1.jpg',
+      src: 'refpack-11-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-11-2.jpg',
+      src: 'refpack-11-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-11-3.jpg',
+      src: 'refpack-11-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-11-4.jpg',
+      src: 'refpack-11-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-11-5.jpg',
+      src: 'refpack-11-5-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-11-6.jpg',
+      src: 'refpack-11-6-h550@1x.jpg',
       description: '',
     },
   ],
@@ -344,15 +344,15 @@ packsData.set('5FF15C54-3B36-4372-87FB-9434BAB60227', {
   price: 500,
   previews: [
     {
-      src: 'refpack-12-1.jpg',
+      src: 'refpack-12-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-12-2.jpg',
+      src: 'refpack-12-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-12-3.jpg',
+      src: 'refpack-12-3-h550@1x.jpg',
       description: '',
     },
   ],
@@ -370,27 +370,27 @@ packsData.set('037D9794-ACA1-4D24-A1B8-361553322CE2', {
   price: 900,
   previews: [
     {
-      src: 'refpack-1-1.jpg',
+      src: 'refpack-1-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-1-2.jpg',
+      src: 'refpack-1-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-1-3.jpg',
+      src: 'refpack-1-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-1-4.jpg',
+      src: 'refpack-1-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-1-5.jpg',
+      src: 'refpack-1-5-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-1-6.jpg',
+      src: 'refpack-1-6-h550@1x.jpg',
       description: '',
     },
   ],
@@ -409,27 +409,27 @@ packsData.set('3EE3BB25-E58D-4AFA-B47B-C08C6CF43E8D', {
   price: 800,
   previews: [
     {
-      src: 'refpack-13-1.jpg',
+      src: 'refpack-13-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-13-2.jpg',
+      src: 'refpack-13-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-13-3.jpg',
+      src: 'refpack-13-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-13-4.jpg',
+      src: 'refpack-13-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-13-5.jpg',
+      src: 'refpack-13-5-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-13-6.jpg',
+      src: 'refpack-13-6-h550@1x.jpg',
       description: '',
     },
   ],
@@ -448,27 +448,27 @@ packsData.set('4B4FB705-6299-4F53-AECE-235BB1246DE4', {
   price: 500,
   previews: [
     {
-      src: 'refpack-15-1.jpg',
+      src: 'refpack-15-1-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-15-2.jpg',
+      src: 'refpack-15-2-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-15-3.jpg',
+      src: 'refpack-15-3-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-15-4.jpg',
+      src: 'refpack-15-4-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-15-5.jpg',
+      src: 'refpack-15-5-h550@1x.jpg',
       description: '',
     },
     {
-      src: 'refpack-15-6.jpg',
+      src: 'refpack-15-6-h550@1x.jpg',
       description: '',
     },
   ],
