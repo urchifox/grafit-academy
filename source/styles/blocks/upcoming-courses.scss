@@ -51,25 +51,30 @@
   opacity: 1;
 }
 
-.let-me-know__button:checked ~ .let-me-know__icon_not-checked {
-  opacity: 0;
-}
+.let-me-know__button {
+  --icon-color: rgb(var(--color-text-basic));
+  --icon-url: url(../../images/icons/stack.svg#alarm);
 
-.let-me-know__icon_checked {
-  opacity: 0;
-}
+  position: relative;
+  appearance: none;
+  width: 24px;
+  height: 24px;
 
-.let-me-know__button:checked ~ .let-me-know__icon_checked {
-  opacity: 1;
-  color: #008000;
-}
+  &:checked {
+    --icon-color:  #008000;
+    --icon-url: url(../../images/icons/stack.svg#alarm_on);
+  }
 
-.let-me-know__button:focus ~ .let-me-know__icon {
-  outline: none;
-}
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
 
-.let-me-know__button:focus-visible ~ .let-me-know__icon {
-  outline: rgb(var(--color-accent-bright)) solid 2px;
-  border-radius: 30%;
-  outline-offset: 2px;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--icon-color);
+    mask-image: var(--icon-url);
+  }
 }
