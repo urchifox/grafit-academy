@@ -96,17 +96,42 @@
 
 
 .view-btn {
-  margin-left: 20px;
+  margin-left: 10px;
   cursor: pointer;
   vertical-align: middle;
   position: relative;
-  padding: 3px 12px;
 }
 
 .view-btn:has(.view-btn__checkbox:focus-visible) {
   outline: rgb(var(--color-accent-bright)) solid 2px;
   border-radius: 4px;
   outline-offset: 5px;
+}
+
+.view-btn__checkbox {
+  --icon-url: url(../../images/icons/stack.svg#view_list);
+
+  position: relative;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+
+  &:checked {
+    --icon-url: url(../../images/icons/stack.svg#view_module);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(var(--color-accent));
+    mask-image: var(--icon-url);
+  }
 }
 
 .view-btn__icon_view-list,
@@ -136,10 +161,35 @@
 
 .zoom-btn {
   position: relative;
-  margin-left: 20px;
-  padding: 3px 12px;
+  margin-left: 10px;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.zoom-btn__checkbox {
+  --icon-url: url(../../images/icons/stack.svg#zoom_in);
+
+  position: relative;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+
+  &:checked {
+    --icon-url: url(../../images/icons/stack.svg#zoom_out);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(var(--color-accent));
+    mask-image: var(--icon-url);
+  }
 }
 
 .zoom-btn:has(.zoom-btn__checkbox:focus-visible) {
