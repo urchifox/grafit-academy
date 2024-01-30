@@ -25,6 +25,31 @@
   text-align: center;
 }
 
+.filters__toogle-checkbox {
+  position: relative;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+
+  &:checked {
+    transform: scale(-1, 1);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(var(--color-accent));
+    mask-image: url(../../images/icons/stack.svg#double_arrow_left);
+  }
+}
+
+
 .filters:has(.filters__toogle-checkbox:checked) .filters__title {
   text-align: left;
 }
