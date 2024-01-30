@@ -228,13 +228,12 @@
 
 .user-icon {
   color: rgb(var(--color-background));
-  transform: scale(1.4);
-}
 
-.user-icon:hover {
-  transform: scale(1.7);
-}
+  &:hover {
+    transform: scale(1.2);
+  }
 
-.user-icon:active {
-  transform: scale(1.2);
+  &:active {
+    transform: scale(0.9);
+  }
 }
