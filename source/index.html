@@ -391,28 +391,29 @@
   </template>
 
   <template id="profile">
-    <li class="main-nav__user-navigation-item profile-menu">
-      <button class="main-nav__profile-btn main-nav__profile-btn_user profile-menu__button" type="button">
-        <span class="visually-hidden">Личный кабинет</span>
+    <li class="main-nav__user-navigation-item menu-dropdown">
+      <button class="main-nav__profile-btn main-nav__profile-btn_user menu-dropdown__target user-icon" type="button">
+          <span class="visually-hidden">Личный кабинет</span>
       </button>
-      <div class="profile-menu__dropdown">
-        <p class="profile-menu__name">Неопознанный юзер</p>
-        <ul class="profile-menu__list">
-          <li class="profile-menu__item">
-            <a class="profile-menu__link" href="#">Настройки профиля</a>
-          </li>
-          <li class="profile-menu__item">
-            <a class="profile-menu__link" href="#">Учебный кабинет</a>
-          </li>
-          <li class="profile-menu__item">
-            <a class="profile-menu__link" href="#">Избранное</a>
-          </li>
-          <li class="profile-menu__item">
-            <a class="profile-menu__link" id="log-out" href="#">Выйти</a>
-          </li>
-        </ul>
+      <div class="menu-dropdown__content menu-dropdown__content_right-oriented">
+          <p class="menu-dropdown__heading">Неопознанный юзер</p>
+          <ul class="menu-dropdown__list">
+              <li class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="profile.html">Настройки профиля</a>
+              </li>
+              <li class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="cabinet.html">Учебный кабинет</a>
+              </li>
+              <li class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" href="favorites.html">Избранное</a>
+              </li>
+              <li class="menu-dropdown__divider" aria-hidden="true"></li>
+              <li class="menu-dropdown__item">
+                  <a class="menu-dropdown__link" id="log-out" href="logout.html">Выйти</a>
+              </li>
+          </ul>
       </div>
-    </li>
+  </li>
   </template>
 
   <script src="scripts/index.js" type="module"></script>
