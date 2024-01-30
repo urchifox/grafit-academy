@@ -102,8 +102,7 @@
                 </ul>
                 <ul class="main-nav__user-navigation">
                     <li class="main-nav__user-navigation-item menu-dropdown cart" id="cart">
-                        <button class="main-nav__profile-btn menu-dropdown__target" type="button">
-                            <img class="main-nav__profile-icon" src="img/header/shop-bucket.svg" width="34" height="34" alt="">
+                        <button class="main-nav__profile-btn main-nav__profile-btn_cart menu-dropdown__target" type="button">
                             <span class="visually-hidden">Корзина</span>
                         </button>
                         <span class="cart__counter"></span>
@@ -119,8 +118,7 @@
                         </div>
                     </li>
                     <li class="main-nav__user-navigation-item" id="login-temp">
-                        <a class="main-nav__profile-btn" href="#">
-                            <img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30" height="30" alt="">
+                        <a class="main-nav__profile-btn main-nav__profile-btn_login" href="#">
                             <span class="main-nav__profile-tooltip">Авторизация</span>
                         </a>
                     </li>
@@ -327,8 +325,7 @@
 
         <template id="log-in">
             <li class="main-nav__user-navigation-item">
-                <a class="main-nav__profile-btn" href="#" id="login-btn">
-                    <img class="main-nav__profile-icon" src="img/header/user_icon.svg" width="30" height="30" alt="">
+                <a class="main-nav__profile-btn main-nav__profile-btn_login" href="#" id="login-btn">
                     <span class="main-nav__profile-tooltip">Авторизация</span>
                 </a>
             </li>
@@ -370,11 +367,8 @@
 
         <template id="profile">
             <li class="main-nav__user-navigation-item menu-dropdown">
-                <button class="main-nav__profile-btn menu-dropdown__target user-icon" type="button">
+                <button class="main-nav__profile-btn main-nav__profile-btn_user menu-dropdown__target user-icon" type="button">
                     <span class="visually-hidden">Личный кабинет</span>
-                    <span class="material-icons-round" aria-hidden="true">
-                        account_circle
-                    </span>
                 </button>
                 <div class="menu-dropdown__content menu-dropdown__content_right-oriented">
                     <p class="menu-dropdown__heading">Неопознанный юзер</p>

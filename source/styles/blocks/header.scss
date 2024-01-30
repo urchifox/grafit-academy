@@ -174,18 +174,31 @@
   align-items: center;
   justify-content: center;
 
-  background-color: transparent;
+  background-color: rgb(var(--color-background));
+  mask-image: var(--icon-url);
 
   transition: transform 0.3s;
   cursor: pointer;
-}
 
-.main-nav__profile-btn:hover {
-  transform: scale(1.2);
-}
+  &:hover {
+    transform: scale(1.2);
+  }
 
-.main-nav__profile-btn:active {
-  transform: scale(0.9);
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &_cart {
+    --icon-url: url(../../images/icons/stack.svg#shopping_cart);
+  }
+
+  &_login {
+    --icon-url: url(../../images/icons/stack.svg#login);
+  }
+
+  &_user {
+    --icon-url: url(../../images/icons/stack.svg#account_circle);
+  }
 }
 
 .main-nav__profile-tooltip {
