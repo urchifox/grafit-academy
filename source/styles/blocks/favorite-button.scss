@@ -19,28 +19,6 @@
   }
 }
 
-
-// .favorite-button__icon_border,
-// .favorite-button__icon_checked {
-//   position: absolute;
-//   top: 4px;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   transform: scale(1.2);
-
-//   transition: opacity 0.3s;
-// }
-
-// .favorite-button__icon_checked {
-//   color: rgb(var(--color-accent));
-//   opacity: 0;
-// }
-
-// .favorite-button:has(input:checked) .favorite-button__icon_checked {
-//   opacity: 1;
-// }
-
 .favorite-button__checkbox {
   --icon-color: rgb(var(--color-text-basic));
   --icon-url: url(../../images/icons/stack.svg#favorite_off);
