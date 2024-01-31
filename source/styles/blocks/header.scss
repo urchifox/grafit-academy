@@ -1,18 +1,14 @@
-@use "./authorization.scss";
-@use "./menu-dropdown.scss";
-@use "./cart.scss";
-
 .header *:focus {
   border-radius: 5px;
-  outline: 1px rgb(var(--color-background));
+  outline: 1px var(--color-background);
   outline-offset: 5px;
 }
 
 .header *:focus-visible {
   border-radius: 5px;
-  outline: 1px rgb(var(--color-background));
+  outline: 1px var(--color-background);
   outline-offset: 5px;
-  box-shadow: rgb(var(--color-background)) 0 0 3px 3px;
+  box-shadow: var(--color-background) 0 0 3px 3px;
 }
 
 .header {
@@ -78,12 +74,12 @@
   display: block;
   padding: 5px 10px;
 
-  font-family: var(--font-family-accent);
+  font-family: $font-family-accent;
   font-size: var(--font-size-important);
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(var(--color-background));
+  color: var(--color-background);
 
   transition: transform 0.3s;
 }
@@ -103,7 +99,7 @@
   width: 100%;
   height: 1px;
 
-  background-color: rgb(var(--color-background));
+  background-color: var(--color-background);
   opacity: 0;
 
   transition: top 0.3s linear, opacity 0.3s linear;
@@ -125,14 +121,14 @@
 
   padding: 3px 6px;
   width: 100%;
-  border: 2px dotted rgb(var(--color-background));
+  border: 2px dotted var(--color-background);
   border-top: none;
   border-radius: 5px;
 
   font-size: var(--font-size-detail);
   text-align: center;
-  color: rgb(var(--color-background));
-  background-color: rgb(var(--color-accent));
+  color: var(--color-background);
+  background-color: var(--color-accent);
   opacity: 0;
 
   transition: top 0.3s linear, transform 0.3s, opacity 0.3s;
@@ -174,7 +170,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: rgb(var(--color-background));
+  background-color: var(--color-background);
   mask-image: var(--icon-url);
 
   transition: transform 0.3s;
@@ -208,13 +204,13 @@
   transform: translateX(-50%);
 
   padding: 3px 6px;
-  border: 1px solid rgb(var(--color-background));
+  border: 1px solid var(--color-background);
   border-radius: 5px;
 
-  color: rgb(var(--color-background));
+  color: var(--color-background);
   font-size: var(--font-size-basic);
   opacity: 0;
-  background-color: rgb(var(--color-accent));
+  background-color: var(--color-accent);
 
   pointer-events: none;
   transition: top 0.3s, opacity 0.3s;
@@ -227,7 +223,7 @@
 }
 
 .user-icon {
-  color: rgb(var(--color-background));
+  color: var(--color-background);
 
   &:hover {
     transform: scale(1.2);

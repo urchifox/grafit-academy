@@ -20,7 +20,7 @@
 }
 
 .favorite-button__checkbox {
-  --icon-color: rgb(var(--color-text-basic));
+  --icon-color: var(--color-text-basic);
   --icon-url: url(../../images/icons/stack.svg#favorite_off);
 
   position: relative;
@@ -29,7 +29,7 @@
   height: 25px;
 
   &:checked {
-    --icon-color: rgb(var(--color-accent));
+    --icon-color: var(--color-accent);
     --icon-url: url(../../images/icons/stack.svg#favorite_on);
   }
 

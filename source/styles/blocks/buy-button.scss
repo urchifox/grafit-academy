@@ -22,7 +22,7 @@
 }
 
 .buy-button__checkbox {
-  --icon-color: rgb(var(--color-text-basic));
+  --icon-color: var(--color-text-basic);
   --icon-url: url(../../images/icons/stack.svg#basket_empty);
 
   position: relative;
@@ -31,7 +31,7 @@
   height: 25px;
 
   &:checked {
-    --icon-color: rgb(var(--color-accent));
+    --icon-color: var(--color-accent);
     --icon-url: url(../../images/icons/stack.svg#basket_full);
   }
 
