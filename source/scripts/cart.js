@@ -28,9 +28,6 @@ const getTemplate = (id, {packName, previews}) => /*html*/`
       <div class="menu-dropdown__link-comment cart__delete">
         <button class="cart__delete-button">
           <span class="visually-hidden">Удалить из корзины</span>
-          <span aria-hidden="true" class="material-icons-round">
-            close
-          </span>
         </button>
       </div>
     </a>

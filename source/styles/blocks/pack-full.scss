@@ -82,20 +82,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: rgb(var(--color-accent));
+  mask-image: url(../../images/icons/stack.svg#close);
   opacity: 0.5;
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .pack-full__close:hover {
   transform: scale(1.2);
-  color: rgb(var(--color-accent));
   opacity: 1;
 }
 
 .pack-full__close:active {
   transform: scale(1);
-  color: rgb(var(--color-accent-bright));
+  background-color: rgb(var(--color-accent-bright));
   opacity: 1;
 }
 

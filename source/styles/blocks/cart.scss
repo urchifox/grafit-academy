@@ -45,20 +45,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: rgb(var(--color-text-basic));
+  mask-image: url(../../images/icons/stack.svg#close);
   opacity: 0.5;
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .cart__delete-button:hover {
   transform: translateY(-50%) scale(1.2);
-  color: rgb(var(--color-background));
+  background-color: rgb(var(--color-background));
   opacity: 1;
 }
 
 .cart__delete-button:active {
   transform: translateY(-50%) scale(1);
-  color: rgb(var(--color-background));
+  background-color: rgb(var(--color-background));
   opacity: 1;
 }
 
