@@ -1,27 +1,32 @@
 // GLOBAL
-@use "./global/variables";
-@use "./global/fonts";
-@use "./global/global";
-@use "./global/helpers";
+@import "./global/variables";
+@import "./global/functions";
+@import "./global/fonts";
+@import "./global/global";
+@import "./global/helpers";
 
 // REUSABLE BLOCKS
-@use "./blocks/disclaimer";
-@use "./blocks/slider";
-@use "./blocks/filters";
-@use "./blocks/sorting";
-@use "./blocks/packs-list";
-@use "./blocks/buy-button";
-@use "./blocks/favorite-button";
-@use "./blocks/price-slider";
+@import "./blocks/container";
+@import "./blocks/authorization.scss";
+@import "./blocks/menu-dropdown.scss";
+@import "./blocks/cart.scss";
+@import "./blocks/disclaimer";
+@import "./blocks/slider";
+@import "./blocks/filters";
+@import "./blocks/sorting";
+@import "./blocks/packs-list";
+@import "./blocks/buy-button";
+@import "./blocks/favorite-button";
+@import "./blocks/price-slider";
 
 // SECTIONS / ARTICLES
-@use "./blocks/pack-market";
-@use "./blocks/pack-full";
-@use "./blocks/next-course";
-@use "./blocks/upcoming-courses";
+@import "./blocks/pack-market";
+@import "./blocks/pack-full";
+@import "./blocks/next-course";
+@import "./blocks/upcoming-courses";
 
 // MAIN BLOCKS
-@use "./blocks/body";
-@use "./blocks/header";
-@use "./blocks/main";
-@use "./blocks/footer";
+@import "./blocks/body";
+@import "./blocks/header";
+@import "./blocks/main";
+@import "./blocks/footer";

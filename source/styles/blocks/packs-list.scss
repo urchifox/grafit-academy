@@ -12,7 +12,7 @@
   padding: 10px;
   width: 280px;
   border-radius: 10px;
-  box-shadow: 0 0 2px 1px rgb(var(--color-accent) / 0.5);
+  box-shadow: 0 0 2px 1px color-opacity(var(--color-accent), 0.5);
   display: grid;
   grid-template-areas:
     "cover"
@@ -22,7 +22,7 @@
 }
 
 .pack-card:hover {
-  box-shadow: 0 0 3px 1px rgb(var(--color-accent) / 0.8);
+  box-shadow: 0 0 3px 1px color-opacity(var(--color-accent), 0.8);
 }
 
 .pack-card__img-link {
@@ -51,11 +51,11 @@
 
 .pack-card__name-link {
   text-decoration: none;
-  color: rgb(var(--color-accent));
+  color: var(--color-accent);
 }
 
 .pack-card__name-link:hover {
-  color: rgb(var(--color-accent-bright));
+  color: var(--color-accent-bright);
 }
 
 .pack-card__price-n-btns {

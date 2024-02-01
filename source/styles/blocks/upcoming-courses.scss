@@ -7,7 +7,7 @@
 
 .upcoming-course {
   padding: 15px 40px;
-  border: rgb(var(--color-accent)) 1px solid;
+  border: var(--color-accent) 1px solid;
   border-radius: 30px;
   display: flex;
   gap: 40px;
@@ -52,7 +52,7 @@
 }
 
 .let-me-know__button {
-  --icon-color: rgb(var(--color-text-basic));
+  --icon-color: var(--color-text-basic);
   --icon-url: url(../../images/icons/stack.svg#alarm);
 
   position: relative;

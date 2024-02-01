@@ -1,16 +1,47 @@
+// SCREEN SIZES
+$breakpoint-small: 320px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1280px;
+$breakpoint-gap: 0.02px;
 
+$max-content-width: 1220px;
+
+// MEDIA QUERIES
+$on-small: "screen and (max-width: #{$breakpoint-medium - $breakpoint-gap})";
+$on-medium: "screen and (min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - $breakpoint-gap})";
+$on-large: "screen and (min-width: #{$breakpoint-large})";
+$on-medium-large: "screen and (min-width: #{$breakpoint-medium})";
+$on-small-medium: "screen and (max-width: #{$breakpoint-large - $breakpoint-gap})";
+
+// ADAPTIVE SIZES
 :root {
-  --color-background: 255 255 255;
-  --color-text-basic: 0 0 0;
-  --color-accent: 200 35 0;
-  --color-accent-bright: 250 60 12;
+  --side-padding: 20px;
 
-  --font-family-basic: "Raleway", "Verdana", "Geneva", sans-serif;
-  --font-family-accent: "Cormorant Garamond", "Times New Roman", "Times", serif;
+  @media #{$on-medium-large} {
+    --side-padding: 30px;
+  }
+}
 
+// FONTS OPTIONS
+$font-family-basic: "Raleway", "Verdana", "Geneva", sans-serif;
+$font-family-accent: "Cormorant Garamond", "Times New Roman", "Times", serif;
+:root {
   --font-size-detail: 14px;
   --font-size-basic: 18px;
   --font-size-important: 22px;
   --font-size-subheading: 35px;
   --font-size-heading: 40px;
 }
+
+// COLORS
+:root {
+  --color-background: #ffffff;
+  --color-text-basic: #000000;
+  --color-accent: #c82300;
+  --color-accent-bright: #fa3c0c;
+}
+
+// TRANSITION
+$transition-time-basic: 0.3s;
+$transition-timing-function-basic: ease-out;
+$transition-basic: $transition-time-basic $transition-timing-function-basic;
