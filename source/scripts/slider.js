@@ -1,7 +1,5 @@
 import {renderMainPicture, renderSlider} from './slider-previews-rendering.js';
 
-let currentPreviewIndex = 0;
-
 const changePicture = (sliderInfo, targetIndex) => {
   const currentPreview = sliderInfo.previewContainer.querySelector('.slider__preview-item_active');
   currentPreview.classList.remove('slider__preview-item_active');
@@ -10,7 +8,7 @@ const changePicture = (sliderInfo, targetIndex) => {
   renderMainPicture(sliderInfo.container, pictureInfo, sliderInfo.picturesAddress);
 
   sliderInfo.previewContainer.children[targetIndex].classList.add('slider__preview-item_active');
-  currentPreviewIndex = targetIndex;
+  sliderInfo.currentPreviewIndex = targetIndex;
 };
 
 const onSliderBtnClick = (evt, sliderInfo) => {
@@ -20,9 +18,9 @@ const onSliderBtnClick = (evt, sliderInfo) => {
     return;
   }
 
-  let targetIndex = (button.name === 'next') ?
-    currentPreviewIndex + 1 :
-    currentPreviewIndex - 1;
+  let targetIndex = (button.classList.contains('slider__arrow_right')) ?
+    sliderInfo.currentPreviewIndex + 1 :
+    sliderInfo.currentPreviewIndex - 1;
 
   if (targetIndex < 0) {
     targetIndex = sliderInfo.picturesData.length - 1;
@@ -50,16 +48,18 @@ const init = (root, picturesData, picturesAddress) => {
 
   renderSlider(sliderContainer, picturesData, picturesAddress);
 
+  const sliderInfo = {
+    root: root,
+    container: sliderContainer,
+    previewContainer: sliderContainer.querySelector('.slider__previews'),
+    previousBtn: sliderContainer.querySelector('.slider__arrow_left'),
+    nextBtn: sliderContainer.querySelector('.slider__arrow_right'),
+    picturesData: picturesData,
+    picturesAddress: picturesAddress,
+    currentPreviewIndex: 0,
+  };
+
   const onSliderClick = (evt) => {
-    const sliderInfo = {
-      root: root,
-      container: sliderContainer,
-      previewContainer: sliderContainer.querySelector('.slider__previews'),
-      previousBtn: sliderContainer.querySelector('.slider__arrow_left'),
-      nextBtn: sliderContainer.querySelector('.slider__arrow_right'),
-      picturesData: picturesData,
-      picturesAddress: picturesAddress,
-    };
 
     if (evt.target.closest('.slider__previews')) {
       onPreviewClick(evt, sliderInfo);
