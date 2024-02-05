@@ -165,20 +165,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: var(--color-accent);
+  mask-image: url(../../images/icons/stack.svg#close);
   opacity: 0.5;
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .authorization__close:hover {
   transform: scale(1.2);
-  color: var(--color-accent);
   opacity: 1;
 }
 
 .authorization__close:active {
   transform: scale(1);
-  color: var(--color-accent-bright);
+  background-color: var(--color-accent-bright);
   opacity: 1;
 }
 
